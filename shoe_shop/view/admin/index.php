@@ -1,12 +1,13 @@
 <?php
-    include "../model/pdo.php";
-    include "../model/danh_muc.php";
+    include "../../model/pdo.php";
+    include "../../model/danhmuc.php";
+    include "../../admin/danhmuc.php";
     include "header.php";
     if (isset($_GET['act'])) {
         $act=$_GET['act'];
         switch ($act) {
-            case '':
-                # code...
+            case 'adddm':
+                adddm();
                 break;
             
             default:
