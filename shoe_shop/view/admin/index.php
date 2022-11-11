@@ -7,9 +7,22 @@
         $act=$_GET['act'];
         switch ($act) {
             case 'adddm':
-                adddm();
-                break;
+                    adddm();
+                    break;
+            case 'lisdm':
+                    listdm();
+                    break;
             
+            case 'xoadm':
+                    xoadm();
+                    break;
+
+            case 'suadm':
+                suadm();
+                break;
+            case 'updatedm':
+                updatedm();
+                break;
             default:
                 include "home.php";
                 break;
