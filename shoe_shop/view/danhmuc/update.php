@@ -1,37 +1,45 @@
 <?php
-
-
 if (is_array($dm)) {
     extract($dm);
 }
 ?>
-<div class="row">
-            <div class="row frmtitle">
-                <h1>Cập nhật</h1>
-
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row">
+          
+            <div class="form-group  col-md-12">
+              <span class="thong-tin-thanh-toan">
+                <h5>Cập nhật danh mục </h5>
+              </span>
             </div>
-            <div class="row frmcontent">
-                <form action="index.php?act=updatedm" method="post">
-                    <div class="row mb10">
-                        Mã loại <br>
-                        <input type="text" name="maloai" id="" disabled>
-                    </div>
-                    <div class="row mb10">
-                        Tên loại <br>
-                        <input type="text" name="tenloai" id="" value="<?php if(isset($name)&&($name!="")) echo $name ;?>">
-                    </div>
-                    <div class="row mb10">
-                        <input type="hidden" name="id" value="<?php if(isset($id)&&($id>0)) echo $id ;?>">
-                        <input type="submit" value="Cập nhật" name="capnhat" id="">
-                        <input type="reset" value="Nhập lại">
-                        <a href="index.php?act=lisdm"><input type="button" value="Danh sách"></a>
-                    </div>
-                    <?php
-                    if (isset($thongbao)&&($thongbao!=""))
-                    echo $thongbao;
-                    ?>
-
-                </form>
+            <form action="index.php?act=updatedm" method="post">
+            <div class="form-group col-md-12">
+              <label class="control-label">ID danh mục </label>
+              <input class="form-control" type="text" name="maloai" id="" disabled require>
             </div>
+            <div class="form-group col-md-12">
+              <label class="control-label"> Tên danh mục </label>
+              <input type="text" name="tenloai" class="form-control" id="" value="<?php if(isset($name)&&($name!="")) echo $name ;?>" required>
+            </div>
+          </div>
+          <BR>
+          <input type="hidden" name="id" value="<?php if(isset($id)&&($id>0)) echo $id ;?>">
+          <button class="btn btn-save" type="submit" value="Cập nhật" name="capnhat">Lưu lại</button>
+          <a href="index.php?act=lisdm"><input type="button" value="Danh sách" class="btn btn-save"></a>
+
+          <BR>
+          <?php
+            if (isset($thongbao) && ($thongbao != ""))
+            echo $thongbao
+            ?>
+           </form>
         </div>
-    </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+   </div>
+
+
+
+

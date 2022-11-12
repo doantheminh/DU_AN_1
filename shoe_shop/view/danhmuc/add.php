@@ -1,22 +1,26 @@
-<style>
-    .error{
-        color: red;
-    }
-</style>
-<div class="row">
-    <div class="row frmtitle">
-        <h1>Thêm mới khách hàng</h1>
 
-    </div>
-    <div class="row frmcontent">
-        <form action="index.php?act=adddm" method="post">
-            <div class="row mb10">
-                Mã loại <br>
-                <input type="text" name="maloai" id="" disabled>
+<div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row">
+          <style>
+              .error{
+                  color: red;
+              }
+          </style>
+            <div class="form-group  col-md-12">
+              <span class="thong-tin-thanh-toan">
+                <h5>Thêm mới danh mục </h5>
+              </span>
             </div>
-            <div class="row mb10">
-                Tên loại <br>
-                <input type="text" name="tenloai" id="">
+            <form action="index.php?act=adddm" method="post">
+            <div class="form-group col-md-12">
+              <label class="control-label">ID danh mục mới</label>
+              <input class="form-control" type="text" name="maloai" id="" disabled require>
+            </div>
+            <div class="form-group col-md-12">
+              <label class="control-label">Nhập tên danh mục mới</label>
+              <input class="form-control" type="text" name="tenloai" required>
             </div>
             <div class="error">
                 <?php
@@ -25,17 +29,25 @@
                 }
                 ?>
             </div>
-            <div class="row mb10">
-                <input type="submit" value="Thêm mới" name="themmoi" id="">
-                <input type="reset" value="Nhập lại">
-                <a href="index.php?act=lisdm"><input type="button" value="Danh sách"></a>
-            </div>
-            <?php
-            if (isset($thongbao) && ($thongbao != ""))
-                echo $thongbao;
-            ?>
 
-        </form>
-    </div>
-</div>
-</div>
+           
+          </div>
+          <BR>
+          <button class="btn btn-save" type="submit" value="Thêm mới" name="themmoi">Lưu lại</button>
+          <a href="index.php?act=lisdm"><input type="button" value="Danh sách" class="btn btn-save"></a>
+
+          <BR>
+          <?php
+            if (isset($thongbao) && ($thongbao != ""))
+            echo $thongbao
+            ?>
+           </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+   </div>
+
+
+
+
