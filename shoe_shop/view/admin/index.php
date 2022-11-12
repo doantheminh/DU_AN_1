@@ -2,6 +2,9 @@
     include "../../model/pdo.php";
     include "../../model/danhmuc.php";
     include "../../admin/danhmuc.php";
+    include "../../model/sanpham.php";
+    // goi controller
+    include "../../admin/sanpham.php";
     include "header.php";
     if (isset($_GET['act'])) {
         $act=$_GET['act'];
@@ -23,12 +26,28 @@
             case 'updatedm':
                 updatedm();
                 break;
+            case 'addsp';
+                addsp();
+                break;
+            case 'listsp';
+                listsp();
+                break;
             default:
                 include "home.php";
+                break;
+            case 'xoasp':
+                xoasp();
+                break;
+            case 'suasp':
+                suasp();
+                break;
+            case 'updatesp':
+                updatesp();
                 break;
         }
         # code...
     }else {
-        include "footer.php";
+        include "home.php";
     }
+    include "footer.php"
 ?>
