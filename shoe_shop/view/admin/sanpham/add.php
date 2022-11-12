@@ -1,75 +1,71 @@
-<style>
-    .error{
-        color: red;
-    }
-</style>
-<div class="row">
-    <div class="row frmtitle">
-        <h1>Thêm mới sản phẩm</h1>
 
+
+<main class="app-content">
+    <div class="app-title">
+      <ul class="app-breadcrumb breadcrumb">
+        <li class="breadcrumb-item">Danh sách sản phẩm</li>
+        <li class="breadcrumb-item"><a href="#">Thêm sản phẩm</a></li>
+      </ul>
     </div>
-    <div class="row frmcontent">
-        <form action="../admin/index.php?act=addsp" method="post" enctype="multipart/form-data">
-            <div class="row mb10">
-                Danh mục <br>
-                <select name="iddm" id="">
-                    <option value="123" >hello</option>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tile">
+          <h3 class="tile-title">Tạo mới sản phẩm</h3>
+          <div class="tile-body">
+            <form class="row" action="index.php?act=addsp" method="post" enctype="multipart/form-data">
+
+              <div class="form-group col-md-3">
+                <label class="control-label">Tên sản phẩm</label>
+                <input class="form-control" type="text"  name="tensp">
+              </div>
+
+              <div class="form-group col-md-3">
+                <label  class="control-label">Danh mục</label>
+
+                <select name="iddm" class="form-control">
                     <?php
                     foreach ($listdanhmuc as $danhmuc) {
+
                         extract($danhmuc);
                         echo '<option value="' . $id . '">' . $name . '</option>';
                     }
                     ?>
                 </select>
-            </div>
-            <div class="row mb10">
-                Tên sản phẩm <br>
-                <input type="text" name="tensp" id="">
-            </div>
-            <div class="error">
-                <?php
-                if (isset($error['tensp'])) {
-                    echo $error['tensp'];
-                }
-                ?>
-            </div>
-            <div class="row mb10">
-                Giá sản phẩm <br>
-                <input type="text" name="giasp" id="">
-            </div>
-            <div class="error">
-                <?php
-                if (isset($error['giasp'])) {
-                    echo $error['giasp'];
-                }
-                ?>
-            </div>
-            <div class="row mb10">
-                Hình sản phẩm <br>
-                <input type="file" name="hinh" id="">
-            </div>
-            <div class="row mb10">
-                Mô tả sản phẩm <br>
-                <textarea name="mota" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div class="error">
-                <?php
-                if (isset($error['mota'])) {
-                    echo $error['mota'];
-                }
-                ?>
-            </div>
-            <div class="row mb10">
-                <input type="submit" value="Thêm mới" name="themmoi" id="">
-                <input type="reset" value="Nhập lại">
-                <a href="index.php?act=listsp"><input type="button" value="Danh sách"></a>
-            </div>
-            <?php
-            if (isset($thongbao) && ($thongbao != ""))
-                echo $thongbao;
-            ?>
+              </div>
 
-        </form>
-    </div>
-</div>
-</div>
+              <div class="form-group col-md-3">
+                <label class="control-label">Giá bán</label>
+                <input class="form-control" type="text"  name="giasp" >
+              </div>
+
+              <div class="form-group col-md-12">
+                <label class="control-label">Ảnh sản phẩm</label>
+                <div id="myfileupload">
+                  <input type="file" id="uploadfile" name="hinh">
+                </div>
+                <div id="thumbbox">
+                  <img height="450" width="400" alt="Thumb image" id="thumbimage" style="display: none" />
+                  <a class="removeimg" href="javascript:"></a>
+                </div>
+                <div id="boxchoice">
+                  <a href="javascript:" class="Choicefile"><i class="fas fa-cloud-upload-alt"></i> Chọn ảnh</a>
+                  <p style="clear:both"></p>
+                </div>
+    
+              </div>
+              <div class="form-group col-md-12">
+                <label class="control-label">Mô tả sản phẩm</label>
+                <textarea class="form-control" name="mota" ></textarea>
+              </div>
+              <input class="btn btn-save" type="submit" value="Thêm mới" name="themmoi" id="">
+
+              <input type="reset" value="Nhập lại" class="btn btn-save">
+
+              <a href="index.php?act=listsp"><input type="button" value="Danh sách" class="btn btn-save"></a>
+
+
+</form>
+          </div>
+            
+        </div>
+  </main>

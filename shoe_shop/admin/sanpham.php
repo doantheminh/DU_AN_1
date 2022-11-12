@@ -1,6 +1,6 @@
 <?php
 
-// include "model/sanpham.php";
+
 function listsp(){
     if (isset($_POST['listok']) && ($_POST['listok'])) {
         $kyw = $_POST['kyw'];
