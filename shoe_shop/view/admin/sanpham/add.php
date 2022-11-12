@@ -16,7 +16,6 @@
                     <option value="123" >hello</option>
                     <?php
                     foreach ($listdanhmuc as $danhmuc) {
-
                         extract($danhmuc);
                         echo '<option value="' . $id . '">' . $name . '</option>';
                     }

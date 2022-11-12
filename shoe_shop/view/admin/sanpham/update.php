@@ -1,6 +1,4 @@
 <?php
-
-
 if (is_array($sanpham)) {
     extract($sanpham);
 }
@@ -11,16 +9,24 @@ if(is_file($hinhpath)){
     $hinh="no photo";
 }
 ?>
-<div class="row">
-            <div class="row frmtitle">
-                <h1>Cập nhật hàng hóa</h1>
-            </div>
-            <div class="row frmcontent">
-            <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data">
-                    <div class="row mb10">
-                        <!-- Mã sản phẩm <br>
-                        <input type="text" name="masp" id="" disabled> -->
-                        <select name="iddm" id="">
+
+
+    <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-body">
+
+      <div class="row">
+        <div class="form-group  col-md-12">
+          <span class="thong-tin-thanh-toan">
+            <h5>Chỉnh sửa thông tin sản phẩm cơ bản</h5>
+          </span>
+        </div>
+      </div>
+      <div class="row">
+      <div class="form-group col-md-6">
+      <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data">
+            <label for="exampleSelect1" class="control-label">Danh mục</label>
+            <select name="iddm" class="form-control">
                         <option value="0" selected  >Tất cả</option>
                             <?php
                             foreach ($listdanhmuc as $danhmuc) {
@@ -29,36 +35,36 @@ if(is_file($hinhpath)){
                             }
                             ?>
                        </select>
-                    </div>
-                    <div class="row mb10">
+          </div>
+          <div class="form-group col-md-6">
                         Tên tên sản phẩm <br>
-                        <input type="text" name="tensp" value="<?=$name?>">
+                        <input type="text" name="tensp" value="<?=$name?>" class="form-control">
                     </div>
-                    <div class="row mb10">
+                    <div class="form-group col-md-6">
                         Giá sản phẩm <br>
-                        <input type="text" name="giasp" value="<?=$price?>" id="" >
+                        <input type="text" name="giasp" value="<?=$price?>" id="" class="form-control">
                     </div>
-                    <div class="row mb10">
+                    <div class="form-group col-md-6">
                         Hình sản phẩm <br>
-                        <input type="file" name="hinh" id="" >
+                        <input type="file" name="hinh" id="" class="form-control">
                         <?=$hinh?>
                     </div>
-                    <div class="row mb10">
+                    <div class="form-group col-md-6">
                         Mô tả sản phẩm <br>
-                        <textarea name="mota" id="" cols="30" rows="10"><?=$mota?></textarea>
+                        <textarea name="mota" id="" cols="30" rows="10"><?=$mota?></textarea class="form-control">
                     </div>
-                    <div class="row mb10">
-                        <input type="hidden" name="id" value="<?=$id?>">
-                        <input type="submit" value="Cập nhật" name="capnhat" id="">
-                        <input type="reset" value="Nhập lại">
-                        <a href="index.php?act=listsp"><input type="button" value="Danh sách"></a>
-                    </div>
-                    <?php
-                    if (isset($thongbao)&&($thongbao!=""))
-                    echo $thongbao;
-                    ?>
+      </div>
 
-                </form>
-            </div>
-        </div>
+      <BR>
+      <input type="hidden" name="id" value="<?=$id?>">
+      <input type="submit" value="Cập nhật" name="capnhat" class="btn btn-save">
+      <input type="reset" value="Nhập lại" class="btn btn-cancel">
+      <a href="index.php?act=listsp"><input type="button" value="Danh sách" class="btn btn-cancel"></a>
+
+      <BR>   </form>
     </div>
+ 
+    <div class="modal-footer">
+    </div>
+  </div>
+</div>

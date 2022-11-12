@@ -11,12 +11,12 @@
             }
             
         }
-        include "../danhmuc/add.php";
+        include "danhmuc/add.php";
     }
         function listdm()
     {
         $listdanhmuc = loadall_danhmuc();
-        include "../danhmuc/list.php";
+        include "danhmuc/list.php";
     }
 
     function xoadm()
@@ -26,7 +26,7 @@
         }
 
         $listdanhmuc = loadall_danhmuc();
-        include "../danhmuc/list.php";
+        include "danhmuc/list.php";
     }
     function suadm()
     {
@@ -36,7 +36,7 @@
         }
         $listdanhmuc = loadall_danhmuc();
 
-        include "../danhmuc/update.php";
+        include "danhmuc/update.php";
     }
     function updatedm()
     {
@@ -48,6 +48,6 @@
         }
 
         $listdanhmuc = loadall_danhmuc();
-        include "../danhmuc/list.php";
+        include "danhmuc/list.php";
     }
 ?>

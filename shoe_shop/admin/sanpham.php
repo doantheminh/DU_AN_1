@@ -44,7 +44,7 @@ function addsp(){
         }
     }
     $listdanhmuc = loadall_danhmuc();
-    include "../../view/sanpham/add.php";
+    include "sanpham/add.php";
 }
 
 function updatesp(){
