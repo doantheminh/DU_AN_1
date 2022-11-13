@@ -1,53 +1,74 @@
 <?php
-    include "../../model/pdo.php";
-    include "../../model/danhmuc.php";
-    include "../../admin/danhmuc.php";
-    include "../../model/sanpham.php";
-    // goi controller
-    include "../../admin/sanpham.php";
-    include "header.php";
-    if (isset($_GET['act'])) {
-        $act=$_GET['act'];
-        switch ($act) {
-            case 'adddm':
-                    adddm();
-                    break;
-            case 'lisdm':
-                    listdm();
-                    break;
-            
-            case 'xoadm':
-                    xoadm();
-                    break;
+include "../../model/pdo.php";
+include "../../model/sanpham.php";
+include "../../model/danhmuc.php";
+include "../../model/taikhoan.php";
+include "../../model/binhluan.php";
+include "../../model/cart.php";
+include "../../controller/admin/danhmuc.php";
+include "../../controller/admin/sanpham.php";
+include "../../controller/admin/binhluan.php";
+include "../../controller/admin/thongke.php";
+include "../../controller/admin/taikhoan.php";
 
-            case 'suadm':
-                suadm();
-                break;
-            case 'updatedm':
-                updatedm();
-                break;
-            case 'addsp';
-                addsp();
-                break;
-            case 'listsp';
-                listsp();
-                break;
-            default:
-                include "home.php";
-                break;
-            case 'xoasp':
-                xoasp();
-                break;
-            case 'suasp':
-                suasp();
-                break;
-            case 'updatesp':
-                updatesp();
-                break;
-        }
-        # code...
-    }else {
-        include "home.php";
+include "header.php";
+if (isset($_GET['act'])) {
+    $act = $_GET['act'];
+    switch ($act) {
+        case 'adddm':
+            //
+            adddm();
+            break;
+        case 'xoadm':
+            xoadm();
+            break;
+        case 'suadm':
+            suadm();
+            break;
+        case 'updatedm':
+            updatedm();
+            break;
+        case 'lisdm':
+            listdm();
+            break;
+            /**controller cho sp */
+        case 'addsp':
+            addsp();
+            break;
+        case 'xoasp':
+            xoasp();
+            break;
+        case 'suasp':
+            suasp();
+            break;
+            /**  ------------------------    */
+        case 'xoabl':
+            xoabl();
+            break;
+        case 'listsp':
+            listsp();
+            break;
+        case 'updatesp':
+            updatesp();
+            break;
+        case 'dskh':
+            listtaikhoan();
+            break;
+        case 'dsbl':
+            dsbl();
+            break;
+        case 'thongke':
+            listthongke();
+            
+            break;
+        case 'bieudo':
+            listbieudo();
+            break;
+        default:
+            include "home.php";
+            break;
     }
-    include "footer.php"
-?>
+} else {
+    include "home.php";
+}
+include "footer.php";

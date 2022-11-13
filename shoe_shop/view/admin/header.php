@@ -76,7 +76,7 @@
     </div>
     <hr>
     <ul class="app-menu">
-      <li><a class="app-menu__item haha" href="index.php"><i class='app-menu__icon bx bx-cart-alt'></i>
+      <li><a class="app-menu__item haha" href="../../index.php"><i class='app-menu__icon bx bx-cart-alt'></i>
           <span class="app-menu__label">POS Bán Hàng</span></a></li>
       <li><a class="app-menu__item active" href="index.php"><i class='app-menu__icon bx bx-tachometer'></i><span
             class="app-menu__label">Bảng điều khiển</span></a></li>
@@ -84,19 +84,23 @@
             class='app-menu__icon bx bx-purchase-tag-alt'></i>
             <span class="app-menu__label">Quản lý danh mục</span></a>
       </li>
+      <li><a class="app-menu__item" href="index.php?act=dsbl"><i
+            class='app-menu__icon bx bx-purchase-tag-alt'></i>
+            <span class="app-menu__label">Quản lý bình luận</span></a>
+      </li>
       <li><a class="app-menu__item " href="#"><i class='app-menu__icon bx bx-id-card'></i> <span
             class="app-menu__label">Quản lý nhân viên</span></a></li>
-      <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-user-voice'></i><span
+      <li><a class="app-menu__item" href="index.php?act=dskh"><i class='app-menu__icon bx bx-user-voice'></i><span
             class="app-menu__label">Quản lý khách hàng</span></a></li>
       <li><a class="app-menu__item" href="index.php?act=addsp"><i
             class='app-menu__icon bx bx-purchase-tag-alt'></i>
             <span class="app-menu__label">Quản lý sản phẩm</span></a>
       </li>
-      <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-task'></i><span
+      <li><a class="app-menu__item" href="index.php?act=listbill"><i class='app-menu__icon bx bx-task'></i><span
             class="app-menu__label">Quản lý đơn hàng</span></a></li>
 
 
-      <li><a class="app-menu__item" href="#"><i
+      <li><a class="app-menu__item" href="index.php?act=thongke"><i
             class='app-menu__icon bx bx-pie-chart-alt-2'></i><span class="app-menu__label">Báo cáo doanh thu</span></a>
       </li>
 
