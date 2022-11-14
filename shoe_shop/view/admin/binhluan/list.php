@@ -1,12 +1,20 @@
-<div class="row">
-            <div class="row frmtitle">
-                <h1>Danh sách bình luận</h1>
-            </div>
-            <div class="row frmcontent">
-                <div class="row mb10 frmdsloai">
-                    <table>
+
+
+        <main class="app-content">
+        <div class="app-title">
+            <ul class="app-breadcrumb breadcrumb side">
+                <li class="breadcrumb-item active"><a href="#"><b>Danh sách bình luận</b></a></li>
+            </ul>
+            <div id="clock"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tile">
+                    <div class="tile-body">
+
+                          <table class="table table-hover table-bordered" id="sampleTable">
                         <tr>
-                            <th></th>
+                            <th width="10"><input type="checkbox" ></th>
                             <th>ID</th>
                             <th>Nội dung bình luận</th>
                             <th>IDUser</th>
@@ -25,18 +33,15 @@
                             <td>'.$iduser.'</td>
                             <td>'.$idpro.'</td>
                             <td>'.$ngaybinhluan.'</td>
-                            <td><a href="'.$xoabl.'"> <input type="button" value="Xóa"></a></td>
+
+                            <td><a href="'.$xoabl.'"> <input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>
                         </tr>';
                         }
                         ?>
                         
                     </table>
-                </div>
-                <div class="row mb10">
-                    <input type="button" value="Chọn tất cả">
-                    <input type="button" value="Bỏ chọn tất cả">
-                    <input type="button" value="Xóa các thư mục đã chọn">
-                    <a href="index.php?act=adddm"><input type="button" value="Nhập thêm"></a>
+                    </div>
                 </div>
             </div>
         </div>
+    </main>

@@ -42,6 +42,16 @@ if (isset($_GET['act'])) {
             suasp();
             break;
             /**  ------------------------    */
+        case 'dskh':
+            listtaikhoan();
+            break;
+        case 'suatk':
+            uptadetk();
+            break;
+        case 'xoatk':
+            deletetk();
+            break;
+            /**------------------------------- */
         case 'xoabl':
             xoabl();
             break;
@@ -51,9 +61,7 @@ if (isset($_GET['act'])) {
         case 'updatesp':
             updatesp();
             break;
-        case 'dskh':
-            listtaikhoan();
-            break;
+
         case 'dsbl':
             dsbl();
             break;
