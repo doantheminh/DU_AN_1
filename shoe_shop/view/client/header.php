@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> -->
-    <title>Shoe Shop</title>
-    <link rel="stylesheet" href="view/client/css/style.css">
-</head>
-<style></style>
-<body>
-    <div class="boxcenter">
-        <div class="row mb header" style="color: red;">
-            <h1>X SHOP</h1>
-        </div>
-        <div class="row mb menu">
-            <ul>
-              <li><a href="index.php">Trang chủ</a></li>
-              <li><a href="index.php?act=gioithieu">Giới thiệu</a></li>
-              <li><a href="index.php?act=lienhe">Liên hệ</a></li>
-              <li><a href="index.php?act=gopy">Góp ý</a></li>
-              <li><a href="index.php?act=hoidap">Hỏi đáp</a></li>
-            </ul>
-        </div>
+
 
 <!doctype html>
 <html class="no-js" lang="">
@@ -35,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- favicon
         ============================================ -->
-        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <link rel="shortcut icon" type="view/client/image/x-icon" href="view/client/img/favicon.ico">
         <!-- Google Fonts
         ============================================ -->
         <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet' type='text/css'>
@@ -44,46 +20,46 @@
         <!-- All css -->
         <!-- Bootstrap CSS
         ============================================ -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="view/client/css/bootstrap.min.css">
         <!-- Bootstrap CSS
         ============================================ -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="view/client/css/font-awesome.min.css">
         <!-- owl.carousel CSS
         ============================================ -->
-        <link rel="stylesheet" href="css/owl.carousel.css">
-        <link rel="stylesheet" href="css/owl.theme.css">
-        <link rel="stylesheet" href="css/owl.transitions.css">
+        <link rel="stylesheet" href="view/client/css/owl.carousel.css">
+        <link rel="stylesheet" href="view/client/css/owl.theme.css">
+        <link rel="stylesheet" href="view/client/css/owl.transitions.css">
         <!-- jquery-ui CSS
         ============================================ -->
-        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="view/client/css/jquery-ui.css">
         <!-- meanmenu CSS
         ============================================ -->
-        <link rel="stylesheet" href="css/meanmenu.min.css">
+        <link rel="stylesheet" href="view/client/css/meanmenu.min.css">
         <!-- nivoslider CSS
         ============================================ -->
-        <link rel="stylesheet" href="lib/css/nivo-slider.css">
-        <link rel="stylesheet" href="lib/css/preview.css">
+        <link rel="stylesheet" href="view/client/lib/css/nivo-slider.css">
+        <link rel="stylesheet" href="view/client/lib/css/preview.css">
         <!-- animate CSS
         ============================================ -->
-        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="view/client/css/animate.css">
         <!-- magic CSS
         ============================================ -->
-        <link rel="stylesheet" href="css/magic.css">
+        <link rel="stylesheet" href="view/client/css/magic.css">
         <!-- normalize CSS
         ============================================ -->
-        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="view/client/css/normalize.css">
         <!-- main CSS
         ============================================ -->
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="view/client/css/main.css">
         <!-- style CSS
         ============================================ -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="view/client/style.css">
         <!-- responsive CSS
         ============================================ -->
-        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="view/client/css/responsive.css">
         <!-- modernizr JS
         ============================================ -->
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="view/client/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -123,7 +99,7 @@
                                 </div>
                                 <div class="cart-menu">
                                     <ul>
-                                        <li><a href="#"> <img src="img/icon-cart.png" alt=""> <span>2</span> </a>
+                                        <li><a href="#"> <img src="view/client/img/icon-cart.png" alt=""> <span>2</span> </a>
                                             <div class="cart-info">
                                                 <ul>
                                                     <li>
@@ -166,7 +142,7 @@
                         <div class="col-lg-3">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="img/logo.png" alt="">
+                                    <img src="view/client/img/logo.png" alt="">
                                 </a>
                             </div>
                         </div>

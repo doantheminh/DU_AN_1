@@ -80,14 +80,14 @@ $dstop10 = loadall_sanpham_top10(); ?>
 <div class="row mb ">
     <div class="boxtitle">Danh mục</div>
     <div class="boxcontent2 menudoc">
-        <ul>
+        <ul class="nav tab-navigation" role="tablist">
             <?php
             foreach ($dsdm as $dm) {
                 extract($dm);
                 $linkdm = "index.php?act=sanpham&iddm=" . $id;
-                echo '<li>
-                                            <a href="' . $linkdm . '">' . $name . '</a>
-                                          </li>';
+                echo '<lirole="presentation">
+                       <a class="active" href="' . $linkdm . '">' . $name . '</a>
+                      </li>';
             }
             ?>
 
