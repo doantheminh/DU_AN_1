@@ -69,7 +69,7 @@ $dstop10 = loadall_sanpham_top10(); ?>
 
             </form>
             <li>
-                <a href="index.php?act=quenmk.php">Quên mật khẩu</a>
+                <a href="index.php?act=quenmk">Quên mật khẩu</a>
             </li>
             <li>
                 <a href="index.php?act=dangky">Đăng ký thành viên</a>
@@ -85,7 +85,7 @@ $dstop10 = loadall_sanpham_top10(); ?>
             foreach ($dsdm as $dm) {
                 extract($dm);
                 $linkdm = "index.php?act=sanpham&iddm=" . $id;
-                echo '<lirole="presentation">
+                echo '<li role="presentation">
                        <a class="active" href="' . $linkdm . '">' . $name . '</a>
                       </li>';
             }

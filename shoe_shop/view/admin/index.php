@@ -10,7 +10,6 @@ include "../../controller/admin/sanpham.php";
 include "../../controller/admin/binhluan.php";
 include "../../controller/admin/thongke.php";
 include "../../controller/admin/taikhoan.php";
-
 include "header.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];

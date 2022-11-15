@@ -69,6 +69,7 @@
         <!-- Add your site or application content here -->
         <!-- header area start -->
         <header>
+            
             <div class="top-link">
                 <div class="container">
                     <div class="row">
@@ -79,10 +80,12 @@
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-3 position-relative">
+                            
                             <div class="dashboard">
+                                
                                 <div class="account-menu">
                                     <ul>
-                                        <li>
+                                        <li>        
                                             <a href="#">
                                                 <i class="fa fa-bars"></i>
                                             </a>
@@ -99,7 +102,7 @@
                                 </div>
                                 <div class="cart-menu">
                                     <ul>
-                                        <li><a href="#"> <img src="view/client/img/icon-cart.png" alt=""> <span>2</span> </a>
+                                        <li><a href="index.php?act=mybill"> <img src="view/client/img/icon-cart.png" alt=""> <span>2</span> </a>
                                             <div class="cart-info">
                                                 <ul>
                                                     <li>
@@ -141,7 +144,7 @@
                     <div class="row">
                         <div class="col-lg-3">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <img src="view/client/img/logo.png" alt="">
                                 </a>
                             </div>
@@ -150,7 +153,7 @@
                             <div class="mainmenu">
                                 <nav>
                                     <ul>
-                                        <li><a href="index.html">Home</a>
+                                        <li><a href="index.php">Home</a>
                                             <div class="sub-menu">
                                                 <span>
                                                     <a href="index.html">Home version 1</a>
@@ -262,7 +265,7 @@
                                                     <a href="my-account.html">My account</a>
                                                 </span>
                                                 <span>
-                                                    <a href="shop.html">Shop</a>
+                                                    <a href="index.php">Shop</a>
                                                 </span>
                                                 <span>
                                                     <a href="shop-list.html">Shop list</a>
@@ -271,7 +274,7 @@
                                                     <a href="single-product.html">Single Shop</a>
                                                 </span>
                                                 <span>
-                                                    <a href="login.html">Login page</a>
+                                                    <a href="index.php?act=dangky">Login page</a>
                                                 </span>
                                                 <span>
                                                     <a href="register.html">Ragister page</a>
@@ -386,7 +389,7 @@
                                                 <li><a href="shop-list.html">Shop list</a></li>
                                                 <li><a href="single-product.html">Single Shop</a></li>
                                                 <li><a href="wishlist.html">Wishlist</a></li>
-                                                <li><a href="login.html">login page</a></li>
+                                                <li><a href="index.php?act=dangky">login page</a></li>
                                                 <li><a href="register.html">register page</a></li>
                                             </ul>
                                         </li>
@@ -400,4 +403,3 @@
         </header>
         <!-- header area end -->
         <!-- slider area start -->
-        

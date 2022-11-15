@@ -1,6 +1,5 @@
 <?php
 include "model/taikhoan.php";
-
 function dangnhap()
 {
     if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
@@ -17,13 +16,14 @@ function dangnhap()
             if (is_array($checkuser)) {
                 $_SESSION['user'] = $checkuser;
                 $thongbao = "Đã đăng nhập thành công.";
-                header('Location:index.php');
+                // include "index.php";
+                    // header('Location:index.php');
             } else {
                 $thongbao = "Tài khoản không tồn tại.Vui lòng kiểm tra lại.";
             }
         }
     }
-    include "view/taikhoan/dangky.php";
+    include "view/taikhoan/dangnhap.php";
 }
 
 function dangky()

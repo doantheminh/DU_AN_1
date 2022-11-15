@@ -1,4 +1,7 @@
-<div class="shopping-cart"> 
+
+
+
+            <div class="shopping-cart"> 
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -19,12 +22,11 @@
                         <div class="login">
                             <div class="login-form-container">
                                 <div class="login-text">
-                                    <h2>Đăng ký</h2>
-                                    <span>Please login using account detail bellow.</span>
+                                    <h2>Đăng Nhập</h2>
+                                    <span>Hãy đăng nhập để sử dụng các chức năng của chúng tôi</span>
                                 </div>
                                 <div class="login-form">
-                                    <form action="index.php?act=dangky" method="post">
-                                        <input type="email" name="email" placeholder="Email" id="" require>
+                                    <form action="index.php?act=dangnhap" method="post">
                                         <input type="text" name="user" placeholder="Username" require>
                                         <input type="password" name="pass" placeholder="Password" require>
                                         <div class="button-box">
@@ -32,10 +34,9 @@
                                                 <input type="checkbox" id="remember">
                                                 <label for="remember">Remember me</label>
                                             </div>
-                                            <input type="submit" value="Đăng ký" name="dangky" class="default-btn">
-                                            <a href="index.php?act=dangnhap" class="default-btn">Đăng Nhập</a>
+                                            <input type="submit" value="Đăng nhập" name="dangnhap" class="default-btn">
+                                            <a href="index.php?act=dangky" class="default-btn">Đăng Ký</a>
                                             <a href="index.php?act=quenmk" class="default-btn">Quên mật khẩu</a>                                            
-                                            
                                         </div>
                                     </form>
                                 </div>
