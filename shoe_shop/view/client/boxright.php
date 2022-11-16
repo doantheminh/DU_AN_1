@@ -29,7 +29,7 @@ $dstop10 = loadall_sanpham_top10(); ?>
                     </li>
                 <?php } ?>
                 <li>
-                    <a href="index.php?act=thoat">Thoát</a>
+                    <a href="index.php?act=thoat">Thoát</a> 
                 </li>
             </div>
 

@@ -69,9 +69,6 @@
         </div>
         
     </div>
-        
-    <div class="boxphai">
-            <?php include "view/client/boxright.php";?>
-         </div>
+
     </div>
 </div>

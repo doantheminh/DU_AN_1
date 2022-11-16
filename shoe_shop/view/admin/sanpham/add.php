@@ -58,9 +58,7 @@
                 <textarea class="form-control" name="mota" ></textarea>
               </div>
               <input class="btn btn-save" type="submit" value="Thêm mới" name="themmoi" id="">
-
               <input type="reset" value="Nhập lại" class="btn btn-save">
-
               <a href="index.php?act=listsp"><input type="button" value="Danh sách" class="btn btn-save"></a>
 
 

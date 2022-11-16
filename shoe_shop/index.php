@@ -41,11 +41,18 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             break;
         case 'addtocart':
             addtocart();
+
             break;
         case 'delcart':
             //lỗi
             delcart();
             break;
+
+            // bill
+
+            case 'billcomfirm':
+                billcomfirm();
+                break;
         case 'viewcart':
             include "view/client/cart/viewcart.php";
             break;

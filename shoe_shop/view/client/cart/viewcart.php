@@ -57,9 +57,6 @@ td {
         <a href="index.php?act=bill"><input type="button" value="Đồng ý đặt hàng"><a href="index.php?act=delcart"><input type="button" value="Xóa giỏ hàng"></a>
             </div>
         </div>
-        <div class="boxphai">
-            <?php include "view/boxright.php";
-            ?>
-        </div>
+
     
 </div>

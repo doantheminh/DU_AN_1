@@ -95,14 +95,14 @@
                                                 <li><a href="cart.html">my cart</a></li>
                                                 <li><a href="checkout.html">Checkout</a></li>
                                                 <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="login.html">Log in</a></li>
+                                                <li><a href="index.php?act=dangnhap">Log in</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="cart-menu">
                                     <ul>
-                                        <li><a href="index.php?act=mybill"> <img src="view/client/img/icon-cart.png" alt=""> <span>2</span> </a>
+                                        <li><a href="index.php?act=addtocart"> <img src="view/client/img/icon-cart.png" alt=""> <span>2</span> </a>
                                             <div class="cart-info">
                                                 <ul>
                                                     <li>
