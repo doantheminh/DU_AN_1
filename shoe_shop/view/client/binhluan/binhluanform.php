@@ -6,34 +6,6 @@
     $dsbl=loadall_binhluan($idpro);
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <style>
-    .binhluan table{
-    width: 90%;
-    margin-left:5%;
-
-  }
-  .binhluan table td:nth-child(1){
-    width: 50%;
-  }
-  .binhluan table td:nth-child(2){
-    width: 20%;
-  }
-  .binhluan table td:nth-child(3){
-    width: 30%;
-  }
-    </style>
-</head>
-<body>
-    
-
 <div class="row mb " >
                     <div class="boxtitle">Bình luận</div>
                     <div class="boxcontent2 binhluan">
@@ -70,5 +42,108 @@
                 </div>
 
 
-</body>
-</html>
+
+
+<div class="row">
+                                            <div class="col-md-5">
+                                                <div class="product-review">
+                                                    <p> <a href="#"> plaza</a> <span>Review by</span> plaza </p>
+                                                    <div class="product-rating-info">
+                                                        <p>value</p>
+                                                        <div class="ratings">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star-half-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-rating-info">
+                                                        <p>Quality</p>
+                                                        <div class="ratings">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star-half-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-rating-info">
+                                                        <p>Price</p>
+                                                        <div class="ratings">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star-half-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="review-date">
+                                                        <p>plaza <em> (Posted on 8/27/2015)</em></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="rate-product hidden-xs">
+                                                    <div class="rate-product-heading">
+                                                        <h3>You're reviewing: Fusce aliquam</h3>
+                                                        <h3>How do you rate this product? <em>*</em></h3>
+                                                    </div>
+                                                    <form action="#">
+                                                        <!-- <table class="product-review-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>1 star</th>
+                                                                    <th>2 star</th>
+                                                                    <th>3 star</th>
+                                                                    <th>4 star</th>
+                                                                    <th>5 star</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Price</th>
+                                                                    <td> <input type="radio" class="radio" name="ratings[1]"> </td>
+                                                                    <td> <input type="radio" class="radio" name="ratings[1]"> </td>
+                                                                    <td> <input type="radio" class="radio" name="ratings[1]"> </td>
+                                                                    <td> <input type="radio" class="radio" name="ratings[1]"> </td>
+                                                                    <td> <input type="radio" class="radio" name="ratings[1]"> </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Value</th>
+                                                                    <td> <input type="radio" class="radio" name="ratings[2]"> </td>
+                                                                    <td> <input type="radio" class="radio" name="ratings[2]"> </td>
+                                                                    <td> <input type="radio" class="radio" name="ratings[2]"> </td>
+                                                                    <td> <input type="radio" class="radio" name="ratings[2]"> </td>
+                                                                    <td> <input type="radio" class="radio" name="ratings[2]"> </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Quality</th>
+                                                                    <td> <input type="radio" class="radio" name="ratings[3]"> </td>
+                                                                    <td> <input type="radio" class="radio" name="ratings[3]"> </td>
+                                                                    <td> <input type="radio" class="radio" name="ratings[3]"> </td>
+                                                                    <td> <input type="radio" class="radio" name="ratings[3]"> </td>
+                                                                    <td> <input type="radio" class="radio" name="ratings[3]"> </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table> -->
+                                                        <ul class="form-list">
+                                                            <!-- <li>    
+                                                                <label> nickname <em>*</em> </label>
+                                                                <input type="text">
+                                                            </li>
+                                                            <li>
+                                                                <label> Summary of Your Review <em>*</em> </label>
+                                                                <input type="text">
+                                                            </li> -->
+                                                            <li>
+                                                                <label> Review <em>*</em> </label>
+                                                                <textarea cols="3" rows="5"></textarea>
+                                                            </li>
+                                                        </ul>
+                                                        <button type="submit"> submit review</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>

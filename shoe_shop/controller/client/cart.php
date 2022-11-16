@@ -22,4 +22,5 @@ function delcart(){
     }
     header('Location:index.php?act=viewcart');
 }
+
 ?>

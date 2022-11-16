@@ -211,109 +211,16 @@
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="tab2">
+
                                     <div class="single-p-tab-content">
+                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                                        <script>
+                                        $(document).ready(function(){
+                                            $("#binhluan").load("view/client/binhluan/binhluanform.php", {idpro: <?=$id?>});
+                                        });
+                                        </script>
                                         <div class="row">
-                                            <div class="col-md-5">
-                                                <div class="product-review">
-                                                    <p> <a href="#"> plaza</a> <span>Review by</span> plaza </p>
-                                                    <div class="product-rating-info">
-                                                        <p>value</p>
-                                                        <div class="ratings">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-half-o"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-rating-info">
-                                                        <p>Quality</p>
-                                                        <div class="ratings">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-half-o"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-rating-info">
-                                                        <p>Price</p>
-                                                        <div class="ratings">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-half-o"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="review-date">
-                                                        <p>plaza <em> (Posted on 8/27/2015)</em></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-7">
-                                                <div class="rate-product hidden-xs">
-                                                    <div class="rate-product-heading">
-                                                        <h3>You're reviewing: Fusce aliquam</h3>
-                                                        <h3>How do you rate this product? <em>*</em></h3>
-                                                    </div>
-                                                    <form action="#">
-                                                        <table class="product-review-table">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th></th>
-                                                                    <th>1 star</th>
-                                                                    <th>2 star</th>
-                                                                    <th>3 star</th>
-                                                                    <th>4 star</th>
-                                                                    <th>5 star</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <th>Price</th>
-                                                                    <td> <input type="radio" class="radio" name="ratings[1]"> </td>
-                                                                    <td> <input type="radio" class="radio" name="ratings[1]"> </td>
-                                                                    <td> <input type="radio" class="radio" name="ratings[1]"> </td>
-                                                                    <td> <input type="radio" class="radio" name="ratings[1]"> </td>
-                                                                    <td> <input type="radio" class="radio" name="ratings[1]"> </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>Value</th>
-                                                                    <td> <input type="radio" class="radio" name="ratings[2]"> </td>
-                                                                    <td> <input type="radio" class="radio" name="ratings[2]"> </td>
-                                                                    <td> <input type="radio" class="radio" name="ratings[2]"> </td>
-                                                                    <td> <input type="radio" class="radio" name="ratings[2]"> </td>
-                                                                    <td> <input type="radio" class="radio" name="ratings[2]"> </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>Quality</th>
-                                                                    <td> <input type="radio" class="radio" name="ratings[3]"> </td>
-                                                                    <td> <input type="radio" class="radio" name="ratings[3]"> </td>
-                                                                    <td> <input type="radio" class="radio" name="ratings[3]"> </td>
-                                                                    <td> <input type="radio" class="radio" name="ratings[3]"> </td>
-                                                                    <td> <input type="radio" class="radio" name="ratings[3]"> </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                        <ul class="form-list">
-                                                            <li>
-                                                                <label> nickname <em>*</em> </label>
-                                                                <input type="text">
-                                                            </li>
-                                                            <li>
-                                                                <label> Summary of Your Review <em>*</em> </label>
-                                                                <input type="text">
-                                                            </li>
-                                                            <li>
-                                                                <label> Review <em>*</em> </label>
-                                                                <textarea cols="3" rows="5"></textarea>
-                                                            </li>
-                                                        </ul>
-                                                        <button type="submit"> submit review</button>
-                                                    </form>
-                                                </div>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -342,19 +249,10 @@
                     <div class="related-slider">
                         <div class="col-md-12">
                             <div class="single-product">
-                                <div class="product-img">
-                                <?php
-                                        foreach ($sp_cung_loai as $sp_cung_loai) {
-                                            extract($sp_cung_loai);
-                                            $linksp="index.php?act=sanphamct&idsp=".$id;
-                                            echo '
-                                            <a href="single-product.html">
+                                <div class="product-img"> 
+                                <a href="single-product.html">
                                             <img src="<?=$img?>" alt="" class="primary-img">
-                                            <img src="<?=$img?>" alt="" class="secondary-img"></a>
-                                            <li><a href="'.$linksp.'">'.$name.'</a></li>';
-                                        }
-                                ?>
-   
+                                            <img src="<?=$img?>" alt="" class="secondary-img"></a> 
                                 </div>
                                 <div class="product-price">
                                     <div class="product-name">
@@ -366,132 +264,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="single-product">
-                                <div class="product-img">
-                                    <a href="single-product.html">
-                                        <img src="img/product/23.png" alt="" class="primary-img">
-                                        <img src="img/product/24.png" alt="" class="secondary-img">
-                                    </a>
-                                </div>
-                                <div class="product-price">
-                                    <div class="product-name">
-                                        <a href="single-product.html" title="Fusce aliquam">Fusce aliquam</a>
-                                    </div>
-                                    <div class="price-rating">
-                                        <span>$170.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="single-product">
-                                <div class="product-img">
-                                    <a href="single-product.html">
-                                        <img src="img/product/21.png" alt="" class="primary-img">
-                                        <img src="img/product/22.png" alt="" class="secondary-img">
-                                    </a>
-                                </div>
-                                <div class="product-price">
-                                    <div class="product-name">
-                                        <a href="single-product.html" title="Fusce aliquam">Fusce aliquam</a>
-                                    </div>
-                                    <div class="price-rating">
-                                        <span>$170.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="single-product">
-                                <div class="product-img">
-                                    <a href="single-product.html">
-                                        <img src="img/product/19.png" alt="" class="primary-img">
-                                        <img src="img/product/20.png" alt="" class="secondary-img">
-                                    </a>
-                                </div>
-                                <div class="product-price">
-                                    <div class="product-name">
-                                        <a href="single-product.html" title="Fusce aliquam">Fusce aliquam</a>
-                                    </div>
-                                    <div class="price-rating">
-                                        <span>$170.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="single-product">
-                                <div class="product-img">
-                                    <a href="single-product.html">
-                                        <img src="img/product/17.png" alt="" class="primary-img">
-                                        <img src="img/product/18.png" alt="" class="secondary-img">
-                                    </a>
-                                </div>
-                                <div class="product-price">
-                                    <div class="product-name">
-                                        <a href="single-product.html" title="Fusce aliquam">Fusce aliquam</a>
-                                    </div>
-                                    <div class="price-rating">
-                                        <span>$170.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="single-product">
-                                <div class="product-img">
-                                    <a href="single-product.html">
-                                        <img src="img/product/15.png" alt="" class="primary-img">
-                                        <img src="img/product/16.png" alt="" class="secondary-img">
-                                    </a>
-                                </div>
-                                <div class="product-price">
-                                    <div class="product-name">
-                                        <a href="single-product.html" title="Fusce aliquam">Fusce aliquam</a>
-                                    </div>
-                                    <div class="price-rating">
-                                        <span>$170.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="single-product">
-                                <div class="product-img">
-                                    <a href="single-product.html">
-                                        <img src="img/product/13.png" alt="" class="primary-img">
-                                        <img src="img/product/14.png" alt="" class="secondary-img">
-                                    </a>
-                                </div>
-                                <div class="product-price">
-                                    <div class="product-name">
-                                        <a href="single-product.html" title="Fusce aliquam">Fusce aliquam</a>
-                                    </div>
-                                    <div class="price-rating">
-                                        <span>$170.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="single-product">
-                                <div class="product-img">
-                                    <a href="single-product.html">
-                                        <img src="img/product/11.png" alt="" class="primary-img">
-                                        <img src="img/product/12.png" alt="" class="secondary-img">
-                                    </a>
-                                </div>
-                                <div class="product-price">
-                                    <div class="product-name">
-                                        <a href="single-product.html" title="Fusce aliquam">Fusce aliquam</a>
-                                    </div>
-                                    <div class="price-rating">
-                                        <span>$170.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
