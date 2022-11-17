@@ -6,7 +6,7 @@
     function loadall_binhluan($idpro){
         $sql="select * from binhluan where 1";
         if($idpro>0) $sql.=" AND idpro='".$idpro."'";
-        $sql.=" order by id desc";
+        $sql.=" order by id  desc limit 0,5";
         $listbl=pdo_query($sql);
         return $listbl;
     }

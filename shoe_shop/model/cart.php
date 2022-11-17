@@ -12,14 +12,19 @@
             $xoa_td2='';
 
         }
-       echo'<tr>
-                    <th>Hình</th>
-                    <th>Sản phẩm</th>
-                    <th>Đơn giá</th>
-                    <th>Số lượng</th>
-                    <th>Thành tiền</th>
-                    '.$xoasp_th.'
-                </tr>';
+       echo'
+       <thead>
+                                    <tr>
+                                        <th class="cart-item-img"></th>
+                                        <th class="cart-product-name">Product Name</th>
+                                        <th class="edit"></th>
+                                        <th class="move-wishlist">Move to Wishlist</th>
+                                        <th class="unit-price">Unit Price</th>
+                                        <th class="quantity">Qty</th>
+                                        <th class="subtotal">Subtotal</th>
+                                        <th class="remove-icon"></th>
+                                    </tr>
+                                </thead>';
             foreach ($_SESSION['mycart'] as $cart) {
                 $hinh=$img_path.$cart[2];
                 $ttien=$cart[3]*$cart[4];
@@ -31,22 +36,49 @@
 
                 }
                 
-                echo'<tr> 
+                echo'
+                <tbody class="text-center">
+                <tr>
+                    <td class="cart-item-img">
+                        <a href="#">
+                            <img src="" alt="">
+                        </a>
+                    </td>
+                    <td class="cart-product-name">
+                        <a href="single-product.html">'.$cart[1].'</a>
+                    </td>
+                    <td class="edit">
+                        <a href="#">Edit</a>
+                    </td>
+                    <td class="move-wishlist">
+                        <a href="#">Move</a>
+                    </td>
+                    <td class="unit-price">
+                        <span>'.$cart[3].'</span>
+                    </td>
+                    <td class="quantity">
+                        <span>'.$cart[4].'</span>
+                    </td>
+                    <td class="subtotal">
+                        <span>'.$ttien.'</span>
+                    </td>
+                    <td class="remove-icon">
+                        <a href="'.$xoasp_td.'">
+                            <img src="view/client/img/cart/btn_remove.png" alt="">
+                        </a>
+                    </td>
+                </tr>
                 
-                    <td><img src="'.$hinh.'" height="70px"></td>
-                    <td>'.$cart[1].'</td>
-                    <td>'.$cart[3].'</td>
-                    <td>'.$cart[4].'</td>
-                    <td>'.$ttien.'</td>
-                        '.$xoasp_td.'
-                    </tr>';
+            </tbody>
+            ';
                     $i+=1;
             }
-            echo '<tr> 
-            <td colspan="4">Tổng đơn hàng</td>
-            <td>'.$tong.'</td>
-            '.$xoa_td2.'
-            </tr>';
+           echo '
+           <div class="col-md-4">   
+           <div class="totals">
+               <h3>Tổng: <span>'.$tong.'</span></h3>
+           </div>
+           ';
         
     }
 
@@ -156,3 +188,5 @@ function delete_bill($id){
 }
 
 ?>
+
+                        

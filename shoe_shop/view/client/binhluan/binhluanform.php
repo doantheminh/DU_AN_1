@@ -6,29 +6,7 @@
     $dsbl=loadall_binhluan($idpro);
 
 ?>
-<div class="row mb " >
-                    <div class="boxtitle">Bình luận</div>
-                    <div class="boxcontent2 binhluan">
-                        <table>
-                            <?php
-                                foreach ($dsbl as $bl) {
-                                    extract($bl);
-                                    echo '<tr><td>'.$noidung.'</td>';
-                                    echo '<td>'.$iduser.'</td>';
-                                    echo '<td>'.$ngaybinhluan.'</td></tr>';
 
-                                          
-                                }
-                            ?>
-                        </table>
-                    </div>
-                    <div class="boxfooter binhluanform">
-                        <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
-                            <input type="hidden" name="idpro" value="<?=$idpro?>">
-                            <input type="text" name="noidung" id="">
-                            <input type="submit" value="Bình luận" name="guibinhluan">
-                        </form>
-                    </div>
                     <?php
                     if (isset($_POST['guibinhluan'])&&($_POST['guibinhluan'])) {
                         $noidung=$_POST['noidung'];
@@ -39,57 +17,37 @@
                         header("Location:".$_SERVER['HTTP_REFERER']);
                     }
                     ?>
-                </div>
+
 
 
 
 
 <div class="row">
                                             <div class="col-md-5">
+                                            <?php
+                                            foreach ($dsbl as $bl) {
+                                                extract($bl);
+                                                echo '
                                                 <div class="product-review">
-                                                    <p> <a href="#"> plaza</a> <span>Review by</span> plaza </p>
-                                                    <div class="product-rating-info">
-                                                        <p>value</p>
-                                                        <div class="ratings">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-half-o"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-rating-info">
-                                                        <p>Quality</p>
-                                                        <div class="ratings">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-half-o"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-rating-info">
-                                                        <p>Price</p>
-                                                        <div class="ratings">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-half-o"></i>
-                                                        </div>
-                                                    </div>
+                                                    <p> <a href="#"></a> <span>Review by - </span>'.$iduser.'</p>
+                                                    
                                                     <div class="review-date">
-                                                        <p>plaza <em> (Posted on 8/27/2015)</em></p>
+                                                        <p>'.$noidung.'</p>
+                                                        <p>'.$ngaybinhluan.'</p><br>
                                                     </div>
-                                                </div>
+                                                </div>';
+                                 
+
+                                            }
+                                        ?>
                                             </div>
                                             <div class="col-md-7">
                                                 <div class="rate-product hidden-xs">
-                                                    <div class="rate-product-heading">
+                                                    <div class="rate-product-heading">  
                                                         <h3>You're reviewing: Fusce aliquam</h3>
                                                         <h3>How do you rate this product? <em>*</em></h3>
                                                     </div>
-                                                    <form action="#">
+                                                    <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
                                                         <!-- <table class="product-review-table">
                                                             <thead>
                                                                 <tr>
@@ -137,12 +95,16 @@
                                                                 <label> Summary of Your Review <em>*</em> </label>
                                                                 <input type="text">
                                                             </li> -->
+                                                            <input type="hidden" name="idpro" value="<?=$idpro?>">
+
                                                             <li>
                                                                 <label> Review <em>*</em> </label>
-                                                                <textarea cols="3" rows="5"></textarea>
+                                                                <textarea cols="3" rows="5" name="noidung"></textarea>
                                                             </li>
                                                         </ul>
-                                                        <button type="submit"> submit review</button>
+                                                        <input type="submit" value="Bình luận" name="guibinhluan">
+
+                                                        <!-- <button type="submit"> submit review</button> -->
                                                     </form>
                                                 </div>
                                             </div>

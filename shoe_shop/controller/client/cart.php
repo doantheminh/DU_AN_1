@@ -31,7 +31,6 @@ function billcomfirm(){
         $address=$_POST['address'];
         $tel=$_POST['tel'];
         $pttt=$_POST['pttt'];
-
         $ngaydathang=date('h:i:sa d/m/Y');
         $tongdonhang=tongdonhang();
        $idbill=insert_bill($iduser,$name,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang);

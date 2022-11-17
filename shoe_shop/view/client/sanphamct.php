@@ -1,51 +1,10 @@
-<div class="row mb ">
-            <div class="boxtrai mr">
-            <div class="row mb">
-                <?php
-                        extract($onesp);
-                ?>
-                    <div class="boxtitle"><?=$name?></div>
-                    <div class=" row boxcontent">
-                       <?php
-                        $img="upload/".$img;
-                        echo '<div class="row mb spct"><img src="'.$img.'"></div>';
-                        echo $mota;
-                       ?>
-                    </div>
-                </div>
+
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
                         <script>
                         $(document).ready(function(){
                             $("#binhluan").load("view/client/binhluan/binhluanform.php", {idpro: <?=$id?>});
                         });
                         </script>
-                <div class="row " id="binhluan">
-                    
-                </div>
-                <div class="row mb">
-                    <div class="boxtitle">Sản phẩm cùng loại</div>
-                    <div class=" row boxcontent">
-                       <?php
-                            foreach ($sp_cung_loai as $sp_cung_loai) {
-                                extract($sp_cung_loai);
-                                $linksp="index.php?act=sanphamct&idsp=".$id;
-                                echo '<li><a href="'.$linksp.'">'.$name.'</a></li>';
-                            }
-                       ?>
-                    </div>
-                </div>
-            </div>
-            <div class="boxphai ">
-            <?php
-                include "boxright.php";
-               ?>
-            </div>
-        </div>
-
-
-
-
-
 
                 <!-- single product area start -->
                 <div class="Single-product-location home2">
@@ -164,22 +123,24 @@
                                 <div class="price-box">
                                     <span>$170</span>
                                 </div>
-                                <div class="single-cart">
+                                <!-- <div class="single-cart">
                                     <div class="cart-plus-minus">
                                         <label>Qty: </label>
                                         <input class="cart-plus-minus-box" type="text" name="qtybutton" value="0">
+                                        
                                         <div class="actions">
                                                     <form action="index.php?act=addtocart" method="post">
                                                       <input type="hidden" name="id" value="'.$id.'">
                                                       <input type="hidden" name="name" value="'.$name.'">
                                                       <input type="hidden" name="img" value="'.$img.'">
                                                       <input type="hidden" name="price" value="'.$price.'">
+                                                      <input type="submit" value="Mua" name="addtocart">
                                                       <button type="submit" class="cart-btn" title="Add to cart" name="addtocart">add to cart</button>
                                                         </form>
                                                    </div>
                                     </div>
 
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -189,6 +150,7 @@
         <!-- single product details end -->
         <!-- single product tab start -->
         <div class="single-product-tab-area">
+
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -211,15 +173,11 @@
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="tab2">
-
                                     <div class="single-p-tab-content">
-                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-                                        <script>
-                                        $(document).ready(function(){
-                                            $("#binhluan").load("view/client/binhluan/binhluanform.php", {idpro: <?=$id?>});
-                                        });
-                                        </script>
-                                        <div class="row">
+                                        <div class="row" id="binhluan">
+                                            <div class="col-md-5">
+                    
+                                            </div>
 
                                         </div>
                                     </div>
@@ -247,23 +205,35 @@
                 </div>
                 <div class="row">
                     <div class="related-slider">
-                        <div class="col-md-12">
-                            <div class="single-product">
+                       
+                        <?php
+                            foreach ($sp_cung_loai as $sp_cung_loai) {
+                                extract($sp_cung_loai);
+                                $linksp="index.php?act=sanphamct&idsp=".$id;
+                                $img="upload/".$img;
+
+                                echo '
+                                <div class="col-md-12">
+                                <div class="single-product">
                                 <div class="product-img"> 
-                                <a href="single-product.html">
-                                            <img src="<?=$img?>" alt="" class="primary-img">
-                                            <img src="<?=$img?>" alt="" class="secondary-img"></a> 
+                                <a href="'.$linksp.'">
+                                            <img src="'.$img.'" alt="" class="primary-img">
+                                            <img src="'.$img.'" alt="" class="secondary-img"></a> 
                                 </div>
                                 <div class="product-price">
                                     <div class="product-name">
-                                        <a href="single-product.html" title="Fusce aliquam">Fusce aliquam</a>
+                                        <a href="single-product.html" title="Fusce aliquam">'.$name.'</a>
                                     </div>
                                     <div class="price-rating">
-                                        <span>$170.00</span>
+                                        <span>'.$price.'</span>
                                     </div>
                                 </div>
+                            </div> 
                             </div>
-                        </div>
+                            ';
+                            }
+                       ?>
+                        
                         
                     </div>
                 </div>
