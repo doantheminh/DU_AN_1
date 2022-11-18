@@ -56,6 +56,10 @@ if (isset($_GET['act'])) {
             case 'listbill':
                 listbill();
                 break;
+
+                case 'xoabill':
+                    xoabill();
+                    break;
             /**------------------------------- */
 
         case 'xoabl':

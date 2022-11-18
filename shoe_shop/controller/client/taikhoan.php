@@ -79,3 +79,7 @@ function quenmk()
     }
     include "view/taikhoan/quenmk.php";
 }
+function thoat(){
+    session_unset();
+    header('Location:index.php');
+}

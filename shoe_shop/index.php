@@ -49,6 +49,9 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             break;
 
             // bill
+            case 'mybill':
+                mybill();
+                break;
 
             case 'billcomfirm':
                 billcomfirm();

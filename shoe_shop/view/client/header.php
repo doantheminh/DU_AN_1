@@ -74,12 +74,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7 offset-lg-3 col-md-9 d-none d-md-block">
-                       
+                        
                             <div class="call-support">
-                                <p>Call support free: <span> (+84) 343462877</span></p>
+                                <p>Cần hỗ trợ gọi: <span> (+84) 343462877</span></p>
                             </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 position-relative">
+                            </div>
+                            <div class="col-lg-2 col-md-3 position-relative">
                             
                             <div class="dashboard">
                                 
@@ -90,47 +90,18 @@
                                                 <i class="fa fa-bars"></i>
                                             </a>
                                             <ul>
-                                                <li><a href="my-account.html">my account</a></li>
-                                                <li><a href="wishlist.html">my wishlist</a></li>
-                                                <li><a href="cart.html">my cart</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="index.php?act=dangnhap">Log in</a></li>
+                                                <li><a href="index.php?act=edit_taikhoan">Tài khoản của tôi</a></li>
+                                                <li><a href="index.php?act=mybill">Đơn hàng của tôi</a></li>
+                                                <li><a href="index.php?act=dangnhap">Đăng nhập</a></li>
+                                            
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="cart-menu">
                                     <ul>
-                                        <li><a href="index.php?act=addtocart"> <img src="view/client/img/icon-cart.png" alt=""> <span>2</span> </a>
-                                            <div class="cart-info">
-                                                <ul>
-                                                    <li>
-                                                        <div class="cart-img">
-                                                            <img src="img/cart/1.png" alt="">
-                                                        </div>
-                                                        <div class="cart-details">
-                                                            <a href="#">Fusce aliquam</a>
-                                                            <p>1 x $174.00</p>
-                                                        </div>
-                                                        <div class="btn-edit"></div>
-                                                        <div class="btn-remove"></div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cart-img">
-                                                            <img src="img/cart/2.png" alt="">
-                                                        </div>
-                                                        <div class="cart-details">
-                                                            <a href="#">Fusce aliquam</a>
-                                                            <p>1 x $777.00</p>
-                                                        </div>
-                                                        <div class="btn-edit"></div>
-                                                        <div class="btn-remove"></div>
-                                                    </li>
-                                                </ul>
-                                                <h3>Subtotal: <span> $951.00</span></h3>
-                                                <a href="checkout.html" class="checkout">checkout</a>
-                                            </div>
+                                        <li><a href="index.php?act=addtocart"> <img src="view/client/img/icon-cart.png" alt="">  </a>
+                                       
                                         </li>
                                     </ul>
                                 </div>
@@ -356,7 +327,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="shop.html">Foorwear</a>
+                                        <li><a href="index.php">Foorwear</a>
                                             <ul>
                                                 <li><a href="#">footwear men</a>
                                                     <ul>

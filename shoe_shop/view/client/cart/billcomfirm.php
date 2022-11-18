@@ -1,74 +1,63 @@
-<div class="row">
-    <div class="row mb">
-        <div class="boxtrai mr">
-            <div class="row mb">
-                <div class="boxtitle">Cám ơn</div>
-                    <h2>Cám ơn quý khách đã đặt hàng</h2>
-                   
-            </div>
-       
-        <?php
-        if(isset($bill)&&(is_array($bill))){
-            extract($bill);
-        }
 
-        ?>
-        <div class="row mb">
-            <div class="boxtitle">Thông tin đơn hàng</div>
-            <div class="row boxcontent" style="text-align:center">
-            <li>Mã đơn hàng-  <?=$bill['id'];?></li>
-            <li>Ngày đặt hàng-  <?=$bill['ngaydathang'];?></li>
-            <li>Tổng đơn hàng-  <?=$bill['total'];?></li>
-            <li>Phương thức thanh toán-  <?=$bill['bill_pttt'];?></li>
 
-        </div>
-        </div>
-        <div class="row mb">
-            <div class="boxtitle">Thông tin đặt hàng</div>
-            <div class="row boxcontent billform">
-                <table>
-                    <tr>
-                        <td>Người đặt hàng</td>
-                        <td><?=$bill['bill_name'];?></td>
-                    </tr>
-                    <tr>
-                        <td>Địa chỉ</td>
-                        <td><?=$bill['bill_address'];?></td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td><?=$bill['bill_email'];?></td>
-                    </tr>
-                    <tr>
-                        <td>Điện thoại</td>
-                        <td><?=$bill['bill_tel'];?></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="row mb">
-            <div class="boxtitle">
-                Chi  tiết giỏ hàng
-            </div>
-            <div class="row boxcontent cart">
-                <table>
-                    <tr>
-                        <th>STT</th>                        
-                        <th>Hình</th>
-                        <th>Sản phẩm</th>
-                        <th>Đơn giá</th>
-                        <th>Số lượng</th>
-                        <th>Thành tiền</th>
 
-                    </tr>
-                    <?php
-                        bill_chi_tiet($billct);
-                    ?>
-                </table>
+
+        <!-- checkout area start -->
+        <div class="checkout-area">
+            <div class="container">
+            <form action="index.php?act=billcomfirm" method="post">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="location">
+                            <ul>
+                                <li><a href="index.html" title="go to homepage">Home<span>/</span></a>  </li>
+                                <li><strong>Thủ tục thanh toán</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="product-sidebar">
+                            <div class="sidebar-title">
+                                <h2>Danh mục sản phẩm</h2>
+                            </div>
+                            <div class="single-sidebar">
+                                <div class="single-sidebar-title">
+                                    <h3>Loại sản phẩm</h3>
+                                </div>
+                                <div class="single-sidebar-content">
+                                    <ul>
+                                        <li><a href="#">Dresses (4)</a></li>
+                                        <li><a href="#">shoes (6)</a></li>
+                                        <li><a href="#">Handbags (1)</a></li>
+                                        <li><a href="#">Clothing (3)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="banner-left">
+                                <a href="#">
+                                    <img src="view/client/img/product/banner_left.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="checkout-banner hidden-xs">
+                            <a href="#">
+                                <img src="view/client/img/checkout/checkout_banner.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="checkout-heading">
+                        <h2>Đặt hàng thành công</h2>
+                        </div>
+                        <div class="checkout-accordion">
+
+                        </div>
+                    </div>
+                </div>
+                 </form>
             </div>
         </div>
-        
-    </div>
-
-    </div>
-</div>

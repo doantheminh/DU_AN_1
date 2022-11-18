@@ -43,10 +43,8 @@
                                             </div>
                                             <div class="col-md-7">
                                                 <div class="rate-product hidden-xs">
-                                                    <div class="rate-product-heading">  
-                                                        <h3>You're reviewing: Fusce aliquam</h3>
-                                                        <h3>How do you rate this product? <em>*</em></h3>
-                                                    </div>
+
+                                                 
                                                     <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
                                                         <!-- <table class="product-review-table">
                                                             <thead>
@@ -96,14 +94,19 @@
                                                                 <input type="text">
                                                             </li> -->
                                                             <input type="hidden" name="idpro" value="<?=$idpro?>">
-
+                                                            <?php if (isset($_SESSION['user'])) {
+                              ?>
+                                                            <div class="rate-product-heading">  
+                                                        <h3>Bạn muốn nói gì về sản phẩm này</h3>
+                                                        <h3>Hãy để lại cảm nhận về sản phẩm. <em>*</em></h3>
+                                                        </div>
                                                             <li>
-                                                                <label> Review <em>*</em> </label>
+                                                                <label> Bình luận <em>*</em> </label>
                                                                 <textarea cols="3" rows="5" name="noidung"></textarea>
                                                             </li>
                                                         </ul>
                                                         <input type="submit" value="Bình luận" name="guibinhluan">
-
+                                                        <?php } ?>
                                                         <!-- <button type="submit"> submit review</button> -->
                                                     </form>
                                                 </div>

@@ -45,4 +45,16 @@ function billcomfirm(){
     $billct=loadall_cart($idbill);  
     include "view/client/cart/billcomfirm.php";
 }
+
+function mybill(){
+    $listbill=loadall_bill($_SESSION['user']['id']);
+    include "view/client/cart/mybill.php";
+}
+function xoabill(){
+    if (isset($_GET['id'])&&($_GET['id']>0)){
+        delete_bill($_GET['id']);
+          }
+          $listbill=loadall_bill("",0);
+          include "view/client/bill/listbill.php";
+}
 ?>

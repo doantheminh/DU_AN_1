@@ -16,43 +16,38 @@
        <thead>
                                     <tr>
                                         <th class="cart-item-img"></th>
-                                        <th class="cart-product-name">Product Name</th>
-                                        <th class="edit"></th>
-                                        <th class="move-wishlist">Move to Wishlist</th>
-                                        <th class="unit-price">Unit Price</th>
-                                        <th class="quantity">Qty</th>
-                                        <th class="subtotal">Subtotal</th>
+                                        <th class="cart-product-name">Tên sản phẩm</th>
+                                        <th class="unit-price">Giá sản phẩm</th>
+                                        <th class="quantity">Số lượng</th>
+                                        <th class="subtotal">Thành tiền</th>
                                         <th class="remove-icon"></th>
+
                                     </tr>
                                 </thead>';
             foreach ($_SESSION['mycart'] as $cart) {
-                $hinh=$img_path.$cart[2];
-                $ttien=$cart[3]*$cart[4];
+                $hinh=$img_path.$cart[4];
+                $ttien=$cart[3]*$cart[4];   
                 $tong+=$ttien;
                 if($dell==1){
-                    $xoasp_td='<td><a href="index.php?act=delcart&idcart='.$i.'"><input type="button" value="Xóa"></a></td>';
+                    $xoasp_td='<td><a href="index.php?act=delcart&idcart='.$i.'"></a></td>';
                 }else {
                     $xoasp_td='';
 
                 }
                 
                 echo'
-                <tbody class="text-center">
-                <tr>
-                    <td class="cart-item-img">
+                        <tbody class="text-center">
+                        <tr>
+                        <td class="cart-item-img">
                         <a href="#">
-                            <img src="" alt="">
+                            <img src="'.$hinh.'" alt="">
                         </a>
-                    </td>
-                    <td class="cart-product-name">
+                        </td>
+
+                    <td class="#">
                         <a href="single-product.html">'.$cart[1].'</a>
                     </td>
-                    <td class="edit">
-                        <a href="#">Edit</a>
-                    </td>
-                    <td class="move-wishlist">
-                        <a href="#">Move</a>
-                    </td>
+
                     <td class="unit-price">
                         <span>'.$cart[3].'</span>
                     </td>
