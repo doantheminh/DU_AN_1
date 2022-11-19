@@ -16,11 +16,12 @@ function addtocart(){
 
 function delcart(){
     if (isset($_GET['idcart'])) {
-        array_splice($_SESSION['mycart'], $_GET['idcart'], 1);
+        array_slice($_SESSION['mycart'],$_GET['idcart'],1);
     } else {
         $_SESSION['mycart'] = [];
     }
     include "view/client/cart/viewcart.php";
+    // header('Location: index.php?act=viewcart');
 }
 function billcomfirm(){
     if(isset($_POST['dongydathang'])&&($_POST['dongydathang'])){
@@ -34,7 +35,6 @@ function billcomfirm(){
         $ngaydathang=date('h:i:sa d/m/Y');
         $tongdonhang=tongdonhang();
        $idbill=insert_bill($iduser,$name,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang);
-        
        foreach ($_SESSION['mycart'] as $cart) {
             insert_cart($_SESSION['user']['id'],$cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$cart[5],$idbill);
        }
@@ -50,11 +50,5 @@ function mybill(){
     $listbill=loadall_bill($_SESSION['user']['id']);
     include "view/client/cart/mybill.php";
 }
-function xoabill(){
-    if (isset($_GET['id'])&&($_GET['id']>0)){
-        delete_bill($_GET['id']);
-          }
-          $listbill=loadall_bill("",0);
-          include "view/client/bill/listbill.php";
-}
+
 ?>

@@ -90,7 +90,7 @@
                         <div class="col-lg-3">
                             <div class="product-menu">
                                 <div class="menu-title">
-                                    <h2>Best seller <strong>Danh mục</strong></h2>
+                                    <h2><strong>Danh mục</strong></h2>
                                 </div>
                                 <div class="side-menu">
                                     <ul class="nav tab-navigation" role="tablist">
@@ -210,7 +210,7 @@
                             foreach ($dstop10 as $sp) {
                                 extract($sp);
                                 $linksp = "index.php?act=sanphamct&idsp=" . $id;
-                                $img = "upload/" . $img;
+                                $img = "upload/".$img;
                                 echo '
                                 <div class="col">
                                 <div class="single-product">

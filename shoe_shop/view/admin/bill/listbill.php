@@ -1,7 +1,4 @@
 
-
-
-
 <main class="app-content">
         <div class="app-title">
             <ul class="app-breadcrumb breadcrumb side">
@@ -62,7 +59,7 @@
                             </thead>
                             <tbody>
                                 <?php
-                                foreach ($listbill as $bill) {
+                                foreach($listbill as $bill) {
                                     extract($bill);
                                     $kh=$bill["bill_name"].'
                                     <br>'.$bill["bill_email"].'
@@ -70,8 +67,6 @@
                                     <br>'.$bill["bill_tel"];
                                     $countsp=loadall_cart_count($bill["id"]);
                                     $ttdh=get_ttdh($bill["bill_status"]);
-                                    $suasp="index.php?act=suabill=".$id;
-
                                     echo '<tr>
                                     <td width="10"><input type="checkbox" name="check1" value="1"></td>
                                     <td>'.$bill['id'].'</td>
@@ -81,7 +76,7 @@
                                     <td>'.$ttdh.'</td>
                                     <td>'.$bill["ngaydathang"].'</td>
 
-                                    <td><a href="'.$suasp.'"><input class="btn btn-primary btn-sm trash" type="button" value="Sửa"></a>
+                                    <td>
                                     <a href="index.php?act=xoabill"><input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>
                                     </td>
                                 </tr>';

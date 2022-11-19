@@ -159,22 +159,22 @@
         <!--Right-->
         <div class="col-md-12 col-lg-6">
             <div class="row">
-            <div class="col-md-12">
-                <div class="tile">
-                <h3 class="tile-title">Dữ liệu 6 tháng đầu vào</h3>
-                <div class="embed-responsive embed-responsive-16by9">
-                    <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
+                <div class="col-md-12">
+                    <div class="tile">
+                    <h3 class="tile-title">Dữ liệu 6 tháng đầu vào</h3>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
+                    </div>
+                    </div>
                 </div>
+                <div class="col-md-12">
+                    <div class="tile">
+                    <h3 class="tile-title">Thống kê Sản phẩm theo danh mục</h3>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <canvas class="embed-responsive-item" id="barChartDemo"></canvas>
+                    </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-12">
-                <div class="tile">
-                <h3 class="tile-title">Thống kê 6 tháng doanh thu</h3>
-                <div class="embed-responsive embed-responsive-16by9">
-                    <canvas class="embed-responsive-item" id="barChartDemo"></canvas>
-                </div>
-                </div>
-            </div>
             </div>
 
         </div>
@@ -186,10 +186,11 @@
         <p><b>Copyright
             <script type="text/javascript">
                 document.write(new Date().getFullYear());
-            </script> Phần mềm quản lý bán hàng | Dev By Trường
+            </script> Phần mềm quản lý bán hàng | Dev By Minh
             </b></p>
         </div>
     </main>
+    
     <script src="../js/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->
     <script src="../js/popper.min.js"></script>
@@ -231,7 +232,7 @@
         var ctxl = $("#lineChartDemo").get(0).getContext("2d");
         var lineChart = new Chart(ctxl).Line(data);
 
-        var ctxb = $("#barChartDemo").get(0).getContext("2d");
+        var ctxb = $("#barChartDemo").get(0).getContext("2d");  
         var barChart = new Chart(ctxb).Bar(data);
     </script>
     <script type="text/javascript">

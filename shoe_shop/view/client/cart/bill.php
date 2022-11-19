@@ -25,12 +25,20 @@
                                     <h3>Loại sản phẩm</h3>
                                 </div>
                                 <div class="single-sidebar-content">
-                                    <ul>
-                                        <li><a href="#">Dresses (4)</a></li>
-                                        <li><a href="#">shoes (6)</a></li>
-                                        <li><a href="#">Handbags (1)</a></li>
-                                        <li><a href="#">Clothing (3)</a></li>
-                                    </ul>
+                                        <?php
+                                        foreach ($dsdm as $dm){
+                                            extract($dm);
+                                            $linkdm = "index.php?act=sanpham&iddm=" . $id;
+                                            echo '
+                                            <ul>
+                                                <li><a href="' . $linkdm . '">' . $name . '</a></li>
+                                            </ul>
+                                               
+                                                
+                                                ';
+                                        }
+                                        ?>
+                                    
                                 </div>
                             </div>
 

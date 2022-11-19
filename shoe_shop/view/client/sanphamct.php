@@ -27,47 +27,61 @@
                 <div class="container">
                     <div class="row">
                     <div class="col-lg-6">
+                        
                         <div class="single-product-img tab-content">
+
                         <?php
                         extract($onesp);
                         ?>
                             <div class="single-pro-main-image tab-pane active" id="pro-large-img-1">
                             <?php
                         $img="upload/".$img;
-                              echo  '<a href=""><img class="optima_zoom" src="'.$img.'" data-zoom-image="img/product/7.png" alt="optima"/></a>';
-                        ?>
-                                </div>
-                           
+                              echo  '<a href=""><img class="optima_zoom" src="'.$img.'" data-zoom-image="img/product/7.png" alt="optima"/></a>
+                                                              </div>
                         </div>
-
+                        <div class="nav product-page-slider">
+                            <div class="single-product-slider">
+                                <a class="active" href="#pro-large-img-1" data-bs-toggle="tab">
+                                    <img src="view/client/img/product/28.png" alt="">
+                                </a>
+                            </div>
+                            <div class="single-product-slider">
+                                <a href="#pro-large-img-2" data-bs-toggle="tab">
+                                    <img src="view/client/img/product/30.png" alt="">
+                                </a>
+                            </div>
+                            <div class="single-product-slider">
+                                <a href="#pro-large-img-3" data-bs-toggle="tab">
+                                    <img src="view/client/img/product/29.png" alt="">
+                                </a>
+                            </div>
+                            <div class="single-product-slider">
+                                <a href="#pro-large-img-4" data-bs-toggle="tab">
+                                    <img src="view/client/img/product/31.png" alt="">
+                                </a>
+                            </div>
+                            <div class="single-product-slider">
+                                <a href="#pro-large-img-5" data-bs-toggle="tab">
+                                    <img src="view/client/img/product/29.png" alt="">
+                                </a>
+                            </div>
+                        </div>  
                     </div>
                     <div class="col-lg-6">
                         <div class="single-product-details">
-                            <a href="#" class="product-name"><?=$name?></a>
-                            <div class="list-product-info">
-                                <div class="price-rating">
-                                    <div class="ratings">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-half-o"></i>
-                                        <a href="#" class="review">1 Review(s)</a>
-                                        <a href="#" class="add-review">Add Your Review</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <a href="#" class="product-name">'.$name.'</a>
+                           
 
                             <div class="item-price">
-                            <?php
-                                    echo '<p><span>'.$price.'</span></p>';
-                                ?>
+                           
+                                    <p><span>$'.$price.'</span></p>
+                               
                                 
                             </div>
                             <div class="single-product-info">
-                                <?php
-                                    echo '<p>'.$mota.'</p>';
-                                ?>
+                               
+                                     <p>'.$mota.'</p>
+                             
                                 
                                 <div class="share">
                                     <img src="img/product/share.png" alt="">
@@ -123,30 +137,29 @@
                                 <div class="price-box">
                                     <span>$170</span>
                                 </div>
-                                <!-- <div class="single-cart">
-                                    <div class="cart-plus-minus">
-                                        <label>Qty: </label>
-                                        <input class="cart-plus-minus-box" type="text" name="qtybutton" value="0">
-                                        
-                                        <div class="actions">
+                                <div class="single-cart">
+
+                                    <div class="actions">
                                                     <form action="index.php?act=addtocart" method="post">
                                                       <input type="hidden" name="id" value="'.$id.'">
                                                       <input type="hidden" name="name" value="'.$name.'">
                                                       <input type="hidden" name="img" value="'.$img.'">
                                                       <input type="hidden" name="price" value="'.$price.'">
-                                                      <input type="submit" value="Mua" name="addtocart">
-                                                      <button type="submit" class="cart-btn" title="Add to cart" name="addtocart">add to cart</button>
+
+                                                      <input type="submit" value="Add to cart" name="addtocart" class="btn btn-dark">
                                                         </form>
                                                    </div>
-                                    </div>
 
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+                              ';
+                        ?>
+
         <!-- single product details end -->
         <!-- single product tab start -->
         <div class="single-product-tab-area">
@@ -227,7 +240,9 @@
                                     <div class="price-rating">
                                         <span>'.$price.'</span>
                                     </div>
+                                    
                                 </div>
+                                
                             </div> 
                             </div>
                             ';

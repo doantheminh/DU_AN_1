@@ -17,7 +17,7 @@
                                 extract($bill);
                                 $ttdh=get_ttdh($bill['bill_status']);
                                 $countsp=loadall_cart_count($bill['id']);
-                               echo '   <tr>
+                               echo '<tr>
                                <td>'.$bill['id'].'</td>
                                <td>'.$bill['ngaydathang'].'</td>
                                <td>'.$countsp.'</td>

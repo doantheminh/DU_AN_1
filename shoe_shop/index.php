@@ -62,12 +62,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'bill':
             include "view/client/cart/bill.php";
             break;
-        case 'gioithieu':
-            include "view/client/gioithieu.php";
-            break;
-        case 'lienhe':
-            include "view/client/lienhe.php";
-            break;
+
         default:
             include "view/client/home.php";
             break;

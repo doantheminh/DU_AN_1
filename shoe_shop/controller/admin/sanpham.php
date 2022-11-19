@@ -29,6 +29,7 @@ function addsp(){
         } else {
             // echo "Lỗi!";
         }
+
         if($tensp==''){
             $error['tensp'] = "Chưa nhập tên sản phẩm";
         }

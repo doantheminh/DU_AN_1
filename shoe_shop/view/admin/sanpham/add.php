@@ -13,13 +13,7 @@
           <h3 class="tile-title">Tạo mới sản phẩm</h3>
           <div class="tile-body">
             <form class="row" action="index.php?act=addsp" method="post" enctype="multipart/form-data">
-
-              <div class="form-group col-md-3">
-                <label class="control-label">Tên sản phẩm</label>
-                <input class="form-control" type="text"  name="tensp">
-              </div>
-
-              <div class="form-group col-md-3">
+            <div class="form-group col-md-3">
                 <label  class="control-label">Danh mục</label>
 
                 <select name="iddm" class="form-control">
@@ -32,6 +26,12 @@
                     ?>
                 </select>
               </div>
+              <div class="form-group col-md-3">
+                <label class="control-label">Tên sản phẩm</label>
+                <input class="form-control" type="text"  name="tensp">
+              </div>
+
+
 
               <div class="form-group col-md-3">
                 <label class="control-label">Giá bán</label>
@@ -53,6 +53,8 @@
                 </div>
     
               </div>
+
+
               <div class="form-group col-md-12">
                 <label class="control-label">Mô tả sản phẩm</label>
                 <textarea class="form-control" name="mota" ></textarea>

@@ -25,11 +25,11 @@
                                     </tr>
                                 </thead>';
             foreach ($_SESSION['mycart'] as $cart) {
-                $hinh=$img_path.$cart[4];
+                $hinh=$img_path.$cart[5];
                 $ttien=$cart[3]*$cart[4];   
                 $tong+=$ttien;
                 if($dell==1){
-                    $xoasp_td='<td><a href="index.php?act=delcart&idcart='.$i.'"></a></td>';
+                    $xoasp_td='<a href="index.php?act=delcart&idcart='.$i.'"></a>';
                 }else {
                     $xoasp_td='';
 
@@ -39,9 +39,9 @@
                         <tbody class="text-center">
                         <tr>
                         <td class="cart-item-img">
-                        <a href="#">
-                            <img src="'.$hinh.'" alt="">
-                        </a>
+                       
+                            <img src="'.$hinh.'" alt="" height="80px">
+                        
                         </td>
 
                     <td class="#">

@@ -125,14 +125,7 @@
                                 <nav>
                                     <ul>
                                         <li><a href="index.php">Home</a>
-                                            <div class="sub-menu">
-                                                <span>
-                                                    <a href="index.html">Home version 1</a>
-                                                </span>
-                                                <span>
-                                                    <a href="index-2.html">Home version 2</a>
-                                                </span>
-                                            </div>
+                                           
                                         </li>
                                         <li class="mega-women"><a href="shop.html">Women</a>
                                             <div class="mega-menu women">
@@ -263,11 +256,8 @@
                             <div class="mobile-menu">
                                 <nav>
                                     <ul>
-                                        <li><a href="index.html">Home</a>
-                                            <ul>
-                                                <li><a href="index.html">Home 1</a></li>
-                                                <li><a href="index-2.html">Home 2</a></li>
-                                            </ul>
+                                        <li><a href="index.php">Home</a>
+                                           
                                         </li>
                                         <li><a href="shop.html">Women</a>
                                             <ul>
