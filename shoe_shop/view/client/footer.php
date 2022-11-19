@@ -4,7 +4,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-contact">
                             <img src="view/client/img/logo-white.png" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                            <p>Lorem Ipsum chỉ đơn giản là văn bản giả của ngành công nghiệp in ấn và sắp chữ.</p>
                             <ul class="address">
                                 <li>
                                     <span class="fa fa-fax"></span>
@@ -24,7 +24,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-tweets">
                             <div class="footer-title">
-                                <h3>Latest tweets</h3>
+                                <h3>tweet mới nhất</h3>
                             </div>
                             <div class="twitter-feed">
                                 <div class="twitter-article">
@@ -34,7 +34,7 @@
                                         </a>
                                     </div>
                                     <div class="twitter-text">
-                                        <p>Raboda Fashion #Magento #Theme comes up with pure white and grey, which great show your products. Check it: </p>
+                                        <p>Raboda Fashion #Magento #Theme xuất hiện với màu trắng và xám tinh khiết, giúp hiển thị tuyệt vời các sản phẩm của bạn. Kiểm tra nó: </p>
                                         <a href="#"></a>
                                         <div class="twitter-time">
                                             <a href="#">16h</a>
@@ -48,7 +48,7 @@
                                         </a>
                                     </div>
                                     <div class="twitter-text">
-                                        <p>Raboda Fashion #Magento #Theme comes up with pure white and grey, which great show your products. Check it: </p>
+                                        <p>Raboda Fashion #Magento #Theme xuất hiện với màu trắng và xám tinh khiết, giúp hiển thị tuyệt vời các sản phẩm của bạn. Kiểm tra nó:</p>
                                         <a href="#"></a>
                                         <div class="twitter-time">
                                             <a href="#">16h</a>
@@ -61,15 +61,15 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-support">
                             <div class="footer-title">
-                                <h3>Our support</h3>
+                                <h3>Hỗ Trợ</h3>
                             </div>
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="#">Sitemap</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Your Account</a></li>
-                                    <li><a href="#">Advanced Search</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="#">Sơ đồ trang web</a></li>
+                                    <li><a href="#">Chính sách bảo mật</a></li>
+                                    <li><a href="#">Tài khoản của bạn</a></li>
+                                    <li><a href="#">Tìm kiếm nâng cao</a></li>
+                                    <li><a href="contact.html">Liên hệ với chúng tôi</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -77,15 +77,15 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-info">
                             <div class="footer-title">
-                                <h3>Our information</h3>
+                                <h3>Các thông tin về chúng tôi</h3>
                             </div>
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="#">Customer Service</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Orders and Returns</a></li>
-                                    <li><a href="#">Site Map</a></li>
+                                    <li><a href="about-us.html">Về chúng tôi</a></li>
+                                    <li><a href="#">Dịch vụ khách hàng</a></li>
+                                    <li><a href="#">Chính sách bảo mật</a></li>
+                                    <li><a href="#">Đặt hàng và trả hàng</a></li>
+                                    <li><a href="#">Sở đồ trang web</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -135,21 +135,21 @@
                                     <div class="price-box">
                                         <p class="price"><span class="special-price"><span class="amount">$132.00</span></span></p>
                                     </div>
-                                    <a href="shop.html" class="see-all">See all features</a>
+                                    <a href="shop.html" class="see-all">Xem tất cả các tính năng</a>
                                     <div class="quick-add-to-cart">
                                         <form method="post" class="cart">
                                             <div class="numbers-row">
                                                 <input type="number" id="french-hens" value="3">
                                             </div>
-                                            <button class="single_add_to_cart_button" type="submit">Add to cart</button>
+                                            <button class="single_add_to_cart_button" type="submit">Thêm vào giỏ hàng</button>
                                         </form>
                                     </div>
                                     <div class="quick-desc">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
+                                        <p>Khách hàng là rất quan trọng, khách hàng sẽ được theo dõi bởi khách hàng. Vì Fringilla không phải là một tác giả buồn. Thật không may, không có trang điểm vulputate miễn phí. Giường bệnh lúc nào cũng chỉ có thai. Không có đất đai của tôi, tất nhiên, không ai chấp nhận điều đó.</p>
                                     </div>
                                     <div class="share-post">
                                         <div class="share-title">
-                                            <h3>share this product</h3>
+                                            <h3>Chia sẻ sản phẩm này</h3>
                                         </div>
                                         <div class="share-social">
                                             <ul>
