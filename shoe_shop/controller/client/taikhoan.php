@@ -6,6 +6,7 @@ function dangnhap()
         $user = $_POST['user'];
         $pass = $_POST['pass'];
         $error = [];
+        // echo "helo";
         if ($user == '') {
             $error['user1'] = 'Ban chua nhap user';
         }
@@ -16,10 +17,10 @@ function dangnhap()
             if (is_array($checkuser)) {
                 $_SESSION['user'] = $checkuser;
                 $thongbao = "Đã đăng nhập thành công.";
-                // include "index.php";
-                    // header('Location:index.php');
+                include "view/client/home.php";
             } else {
                 $thongbao = "Tài khoản không tồn tại.Vui lòng kiểm tra lại.";
+                echo '222';
             }
         }
     }
