@@ -53,13 +53,15 @@ if (isset($_GET['act'])) {
             deletetk();
             break;
             /**------------------------------- */
-            case 'listbill':
-                listbill();
-                break;
+        case 'listbill':
+            listbill();
+            break;
 
-                case 'xoabill':
-                    xoabill();
-                    break;
+        case 'xoabill':
+            xoabill();
+            break;
+        case 'updatebill';
+            updatebill();
             /**------------------------------- */
 
         case 'xoabl':
