@@ -1,5 +1,6 @@
 
-
+<?php $dsdm = loadall_danhmuc();
+$dstop10 = loadall_sanpham_top10(); ?>
 <!doctype html>
 <html class="no-js" lang="">
 <!-- Mirrored from htmldemo.net/james/james/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Nov 2022 08:57:02 GMT -->
@@ -74,40 +75,72 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7 offset-lg-3 col-md-9 d-none d-md-block">
-                        
-                            <div class="call-support">
-                                <p>Cần hỗ trợ gọi: <span> (+84) 343462877</span></p>
-                            </div>
+                            <?php
+                            if (isset($_SESSION['user'])) {
+                                extract($_SESSION['user']);
+                            ?>
+                                <div class="call-support">
+                                    <p>Xin Chào: <span><?= $user ?></span></p>
+                                </div>
+                                
+                            
+                           
                             </div>
                             <div class="col-lg-2 col-md-3 position-relative">
-                            
-                            <div class="dashboard">
+                                <div class="dashboard">
+                                    <div class="account-menu">
+                                        <ul>
+                                            <li>        
+                                                <a href="#">
+                                                    <i class="fa fa-bars"></i>
+                                                </a>
+                                                <ul>
+                                                    <li><a href="index.php?act=edit_taikhoan">Tài khoản của tôi</a></li>
+                                                    <li><a href="index.php?act=mybill">Đơn hàng của tôi</a></li>
+                                                    <?php
+                                                    if ($role == 1) { ?><li><a href="view/admin/index.php">Đăng nhập Admin</a></li> <?php } ?>
+                                                    <li><a href="index.php?act=thoat">Thoát</a></li>
+
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <?php
+                                    } else {
+
+                                    ?>
+                                    <div class="call-support">
+                                </div>
                                 
-                                <div class="account-menu">
-                                    <ul>
-                                        <li>        
-                                            <a href="#">
-                                                <i class="fa fa-bars"></i>
-                                            </a>
-                                            <ul>
-                                                <li><a href="index.php?act=edit_taikhoan">Tài khoản của tôi</a></li>
-                                                <li><a href="index.php?act=mybill">Đơn hàng của tôi</a></li>
-                                                <li><a href="index.php?act=thoat">Thoat</a></li>
-                                                <li class="text-white"><?= isset($_SESSION['user'])?$_SESSION['user']['user']:""?></li>
-                                                
-                                            
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="cart-menu">
-                                    <ul>
-                                        <li><a href="index.php?act=addtocart"> <img src="view/client/img/icon-cart.png" alt="">  </a>
-                                       
-                                        </li>
-                                    </ul>
-                                </div>
+                            
+                           
                             </div>
+                            <div class="col-lg-2 col-md-3 position-relative">
+                                <div class="dashboard">
+                                        <div class="account-menu">
+                                        <ul>
+                                            <li>        
+                                                <a href="#">
+                                                    <i class="fa fa-bars"></i>
+                                                </a>
+                                                <ul>
+                                                    <li><a href="index.php?act=dangnhap">Đăng nhập</a></li>
+                                                    <li><a href="index.php?act=quenmk">Quên mật khẩu</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <?php } ?>
+                                    <div class="cart-menu">
+                                        <ul>
+                                            <li><a href="index.php?act=addtocart"> <img src="view/client/img/icon-cart.png" alt="">  </a>
+                                        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                </div>
+
                         </div>
                     </div>
                 </div>
@@ -124,120 +157,46 @@
                         </div>
                         <div class="col-lg-9">
                             <div class="mainmenu">
+                                
                                 <nav>
                                     <ul>
                                         <li><a href="index.php">Home</a>
-                                           
-                                        <li><a href="index.php">Trang Chủ</a>
-                                            <div class="sub-menu">
-                                            </div>
-                                        </li>
-                                        <li class="mega-women"><a href="shop.html">Phụ Nữ</a>
-                                            <div class="mega-menu women">
-                                                <div class="part-1">
-                                                    <span>
-                                                        <a href="#">Váy Đầm</a>
-                                                        <a href="#">Cocktail</a>
-                                                        <a href="#">Sáng</a>
-                                                        <a href="#">Tối</a>
-                                                        <a href="#">Các Môn Thể Thao</a>
-                                                    </span>
-                                                    <span>
-                                                        <a href="#">Đôi Giày</a>
-                                                        <a href="#">Các môn thể thao</a>
-                                                        <a href="#">giày Chạy</a>
-                                                        <a href="#">dép sandal</a>
-                                                        <a href="#">Sách dạy</a>
-                                                    </span>
-                                                    <span>
-                                                        <a href="#">Túi xách</a>
-                                                        <a href="#">Trẻ em</a>
-                                                        <a href="#">Người Lớn</a>
-                                                    </span>
-                                                    <span>
-                                                        <a href="#">Quần Áo</a>
-                                                        <a href="#">Áo khoác</a>
-                                                        <a href="#">Quần jeans</a>
-                                                    </span>
-                                                </div>
-                                                <div class="part-2">
-                                                    <a href="#">
-                                                        <img src="img/banner/menu-banner.png" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="mega-men"><a href="shop.html">Đàn Ông</a>
-                                            <div class="mega-menu men">
-                                                <span>
-                                                    <a href="#">Túi</a>
-                                                    <a href="#">Túi bốt</a>
-                                                    <a href="#">Áo cộc tay</a>
-                                                </span>
-                                                <span>
-                                                    <a href="#">Quần Áo</a>
-                                                    <a href="#">Áo khoác</a>
-                                                    <a href="#">áo phông</a>
-                                                </span>
-                                                <span>
-                                                    <a href="#">Đồ lót</a>
-                                                    <a href="#">đồ nội thất</a>
-                                                  
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li class="mega-footwear"><a href="shop.html">Giày dép</a>
+                                        <li class="mega-footwear"><a href="index.php">Giày dép</a>
                                             <div class="mega-menu footwear">
-                                                <span>
-                                                    <a href="#">GIày dép nam</a>
-                                                    <a href="#">quà</a>
+                                            <?php
+                                                foreach ($dsdm as $dm) {
+                                                    extract($dm);
+                                                    $linkdm = "index.php?act=sanpham&iddm=" . $id;
+                                                    echo '<span>
+                                                    <a href="' . $linkdm . '">' . $name . '</a>
+                                                    
                                                 </span>
-                                                <span>
-                                                    <a href="#">GIày dép nữ</a>
-                                                    <a href="#">bốt</a>
-                                                </span>
+                                            ';
+                                                }
+                                                ?>
+                                                
                                             </div>
                                         </li>
-                                        <li class="mega-jewellery"><a href="shop.html">Đồ kim hoàn</a>
-                                            <div class="mega-menu jewellery">
-                                                <span>
-                                                    <a href="#">Nhẫn</a>
-                                                </span>
-                                            </div>
-                                        </li>
+
                                      
                                         <li><a href="#">Trang</a>
                                             <div class="sub-menu pages">
+           
                                                 <span>
-                                                    <a href="about-us.html">Giới Thiệu</a>
+                                                    <a href="index.php?act=addtocart">Giỏ Hàng</a>
                                                 </span>
                                                 <span>
-                                                    <a href="blog.html">Bài Viết</a>
+                                                    <a href="index.php?act=bill">Thủ tục Thanh toán</a>
                                                 </span>
                                                 <span>
-                                                    <a href="blog-details.html">Chi tiết bài viết</a>
-                                                </span>
-                                                <span>
-                                                    <a href="cart.html">Giỏ Hàng</a>
-                                                </span>
-                                                <span>
-                                                    <a href="checkout.html">Thủ tục Thanh toán</a>
-                                                </span>
-                                                <span>
-                                                    <a href="my-account.html">Tài khoản của tôi</a>
+                                                    <a href="index.php?act=edit_taikhoan">Tài khoản của tôi</a>
                                                 </span>
                                                 <span>
                                                     <a href="index.php">Cửa hàng</a>
                                                 </span>
+                                        
                                                 <span>
-                                                    <a href="shop-list.html">Danh sách cửa hàng</a>
-                                                </span>
-                                                <span>
-                                                    <a href="index.php?act=dangky">Trang Đăng Nhập</a>
-                                                </span>
-                                               
-                                                <span>
-                                                    <a href="wishlist.html">Danh sách yêu thích</a>
+                                                    <a href="index.php?act=dangnhap">Trang Đăng Nhập</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -343,7 +302,7 @@
                                                 <li><a href="shop-list.html">Shop list</a></li>
                                                 <li><a href="single-product.html">Single Shop</a></li>
                                                 <li><a href="wishlist.html">Wishlist</a></li>
-                                                <li><a href="index.php?act=dangky">login page</a></li>
+                                                <li><a href="index.php?act=dangnhap">login page</a></li>
                                                 <li><a href="register.html">register page</a></li>
                                             </ul>
                                         </li>

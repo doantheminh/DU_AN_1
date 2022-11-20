@@ -24,7 +24,7 @@
     </div>
     <div class="col-sm-12 col-md-6">
       <div id="sampleTable_filter" class="dataTables_filter">
-        <label>Tìm kiếm:<input type="text" class="form-control form-control-sm" placeholder="Nhập mã đơn hàng" name="kyw">
+        <label>Tìm kiếm:<input type="text" class="form-control form-control-sm" placeholder="Nhập tên khách hàng..." name="kyw">
         <input type="submit" value="Go" name="listok">
         </label>
       </div>
@@ -77,7 +77,9 @@
                                     <td>'.$bill["ngaydathang"].'</td>
 
                                     <td>
-                                    <a href="index.php?act=xoabill"><input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>
+                                    <a href="index.php?act=suabill"><input class="btn btn-primary btn-sm edit" type="button" value="Sửa"></a>
+
+                                    <a href="index.php?act=xoabill"><input class="btn btn-primary btn-sm delete" type="button" value="Xóa"></a></td>
                                     </td>
                                 </tr>';
                                 }

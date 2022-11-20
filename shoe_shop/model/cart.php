@@ -25,7 +25,7 @@
                                     </tr>
                                 </thead>';
             foreach ($_SESSION['mycart'] as $cart) {
-                $hinh=$img_path.$cart[5];
+                $hinh=$img_path.$cart[2];
                 $ttien=$cart[3]*$cart[4];   
                 $tong+=$ttien;
                 if($dell==1){
@@ -37,11 +37,10 @@
                 
                 echo'
                         <tbody class="text-center">
+
                         <tr>
                         <td class="cart-item-img">
-                       
-                            <img src="'.$hinh.'" alt="" height="80px">
-                        
+                            <img src="'.$hinh.'" >
                         </td>
 
                     <td class="#">
@@ -114,7 +113,7 @@ function loadall_cart_count($idbill){
 function loadall_bill($kyw="",$iduser=0){
     $sql="select*from bill where 1";
     if($iduser>0) $sql.=" AND iduser=".$iduser;
-    if($kyw!="") $sql.=" AND id like '%".$kyw."%'";
+    // if($kyw!="") $sql.=" AND bill_name like '%".$kyw."%'";
     $sql.=" order by id desc";
     $listbill=pdo_query($sql);
     return $listbill;

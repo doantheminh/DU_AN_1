@@ -17,10 +17,10 @@ function dangnhap()
             if (is_array($checkuser)) {
                 $_SESSION['user'] = $checkuser;
                 $thongbao = "Đã đăng nhập thành công.";
-                include "view/client/home.php";
+                // include "view/client/home.php";
             } else {
                 $thongbao = "Tài khoản không tồn tại.Vui lòng kiểm tra lại.";
-                echo '222';
+                echo $thongbao;
             }
         }
     }
