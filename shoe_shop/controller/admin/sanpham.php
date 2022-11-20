@@ -30,6 +30,12 @@ function addsp(){
             // echo "Lỗi!";
         }
 
+       foreach ($_FILES['images']['name'] as $key => $value) {
+        $image_name=$_FILES['images']['name'][$key];
+        $tmp_name=$_FILES['images']['tmp_name'][$key];
+        $target_files=$target_dir.$image_name;
+        move_uploaded_file($tmp_name,$target_files);
+       }
         if($tensp==''){
             $error['tensp'] = "Chưa nhập tên sản phẩm";
         }
@@ -41,6 +47,10 @@ function addsp(){
         }
         else{
             insert_sanpham($tensp, $giasp, $hinh, $mota, $iddm);
+            $id_pro=mysqlli_insert_id($conn);
+            foreach ($tmp_name as $key => $value) {
+                mysqli_query($conn,"insert into id_products (id_product,image) values('$id_pro','$value')");
+            }
             $thongbao = "thêm thành công";
         }
     }

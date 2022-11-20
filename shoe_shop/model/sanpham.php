@@ -3,6 +3,7 @@ function insert_sanpham($tensp,$giasp,$hinh,$mota,$iddm){
     $sql="insert into sanpham(name,price,img,mota,iddm) values('$tensp','$giasp','$hinh','$mota','$iddm')";
       pdo_execute($sql);
 }
+ 
 function delete_sanpham($id){
     $sql="delete from sanpham where id=".$_GET['id'];
       pdo_execute($sql);
@@ -15,7 +16,7 @@ function loadall_sanpham($kyw="",$iddm=0){
     if ($iddm>0) {
         $sql.=" and iddm like '".$iddm."'";
     }
-    $sql.=" order by id desc";
+    $sql.=" order by id desc limit 0,10";
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }
@@ -34,7 +35,7 @@ function update_sanpham($id,$iddm,$tensp,$giasp,$mota,$hinh){
 }
 
 function loadall_sanpham_home(){
-    $sql="select * from sanpham where 1 order by id limit 0,6";
+    $sql="select * from sanpham where 1 order by id desc limit 0,7";
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }
