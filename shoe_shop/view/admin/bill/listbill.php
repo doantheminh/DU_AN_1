@@ -61,6 +61,8 @@
                                 <?php
                                 foreach($listbill as $bill) {
                                     extract($bill);
+                                    $xoabill="index.php?act=xoabill&id=".$id;
+                                    $updatebill="index.php?act=updatebill&id=".$id;
                                     $kh=$bill["bill_name"].'
                                     <br>'.$bill["bill_email"].'
                                     <br>'.$bill["bill_address"].'
@@ -73,13 +75,17 @@
                                     <td>'.$kh.'</td>
                                     <td>'.$countsp.'</td>
                                     <td><strong>'.$bill["total"].'</strong>VND</td>
-                                    <td>'.$ttdh.'</td>
+                                    <td><a href="'.$updatebill.'">'.$ttdh.'</a></td>
                                     <td>'.$bill["ngaydathang"].'</td>
 
                                     <td>
+<<<<<<< HEAD
                                     <a href="index.php?act=suabill"><input class="btn btn-primary btn-sm edit" type="button" value="Sửa"></a>
 
                                     <a href="index.php?act=xoabill"><input class="btn btn-primary btn-sm delete" type="button" value="Xóa"></a></td>
+=======
+                                    <a href="'.$xoabill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>
+>>>>>>> 5e87be8c56c43013c86d81be184e7a20ea99c6a6
                                     </td>
                                 </tr>';
                                 }
