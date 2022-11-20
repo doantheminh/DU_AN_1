@@ -9,9 +9,9 @@
                     <div class="slider-progress"></div>
                     <div class="slider-content t-lfl s-tb slider-1">
                         <div class="title-container s-tb-c title-compress">
-                            <h1 class="title1">Sale products</h1>
+                            <h1 class="title1">Giảm Giá Sập Sàn</h1>
                             <h2 class="title2" >nike Ari max 2015</h2>
-                            <h3 class="title3" >Lorem Ipsum is simply dummy text of the printing</h3>
+                            <h3 class="title3" >Lorem Ipsum chỉ đơn giản là một bản ghi của giày </h3>
                             <a href="#"><span>read more</span></a>
                         </div>
                     </div>
@@ -21,9 +21,9 @@
                     <div class="slider-progress"></div>
                     <div class="slider-content t-lfl s-tb slider-2">
                         <div class="title-container s-tb-c">
-                            <h1 class="title1">Sale products</h1>
+                            <h1 class="title1">Giảm Giá Sản Phẩm</h1>
                             <h2 class="title2" >GET UP TO 50% SALE</h2>
-                            <h3 class="title3" >Lorem Ipsum is simply dummy text of the printing</h3>
+                            <h3 class="title3" >Lorem Ipsum mang đến cho người dùng sự thoải mái </h3>
                             <a href="#"><span>read more</span></a>
                         </div>
                     </div>

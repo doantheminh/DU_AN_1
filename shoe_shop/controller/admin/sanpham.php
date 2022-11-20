@@ -47,12 +47,10 @@ function addsp(){
         }
         else{
             insert_sanpham($tensp, $giasp, $hinh, $mota, $iddm);
-            $id_pro=mysqlli_insert_id($conn);
-            foreach ($tmp_name as $key => $value) {
-                mysqli_query($conn,"insert into id_products (id_product,image) values('$id_pro','$value')");
-            }
+           
             $thongbao = "thêm thành công";
         }
+    
     }
     $listdanhmuc = loadall_danhmuc();
     include "sanpham/add.php";

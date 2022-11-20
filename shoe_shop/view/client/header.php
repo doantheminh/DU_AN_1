@@ -92,7 +92,9 @@
                                             <ul>
                                                 <li><a href="index.php?act=edit_taikhoan">Tài khoản của tôi</a></li>
                                                 <li><a href="index.php?act=mybill">Đơn hàng của tôi</a></li>
-                                                <li><a href="index.php?act=dangnhap">Đăng nhập</a></li>
+                                                <li><a href="index.php?act=thoat">Thoat</a></li>
+                                                <li class="text-white"><?= isset($_SESSION['user'])?$_SESSION['user']['user']:""?></li>
+                                                
                                             
                                             </ul>
                                         </li>
@@ -126,37 +128,36 @@
                                     <ul>
                                         <li><a href="index.php">Home</a>
                                            
+                                        <li><a href="index.php">Trang Chủ</a>
+                                            <div class="sub-menu">
+                                            </div>
                                         </li>
-                                        <li class="mega-women"><a href="shop.html">Women</a>
+                                        <li class="mega-women"><a href="shop.html">Phụ Nữ</a>
                                             <div class="mega-menu women">
                                                 <div class="part-1">
                                                     <span>
-                                                        <a href="#">Dresses</a>
+                                                        <a href="#">Váy Đầm</a>
                                                         <a href="#">Cocktail</a>
-                                                        <a href="#">Day</a>
-                                                        <a href="#">Evening</a>
-                                                        <a href="#">Sports</a>
+                                                        <a href="#">Sáng</a>
+                                                        <a href="#">Tối</a>
+                                                        <a href="#">Các Môn Thể Thao</a>
                                                     </span>
                                                     <span>
-                                                        <a href="#">shoes</a>
-                                                        <a href="#">Sports</a>
-                                                        <a href="#">run</a>
-                                                        <a href="#">sandals</a>
-                                                        <a href="#">Books</a>
+                                                        <a href="#">Đôi Giày</a>
+                                                        <a href="#">Các môn thể thao</a>
+                                                        <a href="#">giày Chạy</a>
+                                                        <a href="#">dép sandal</a>
+                                                        <a href="#">Sách dạy</a>
                                                     </span>
                                                     <span>
-                                                        <a href="#">Handbags</a>
-                                                        <a href="#">Blazers</a>
-                                                        <a href="#">table</a>
-                                                        <a href="#">coats</a>
-                                                        <a href="#">kids</a>
+                                                        <a href="#">Túi xách</a>
+                                                        <a href="#">Trẻ em</a>
+                                                        <a href="#">Người Lớn</a>
                                                     </span>
                                                     <span>
-                                                        <a href="#">Clothing</a>
-                                                        <a href="#">T-shirts</a>
-                                                        <a href="#">coats</a>
-                                                        <a href="#">Jackets</a>
-                                                        <a href="#">jeans</a>
+                                                        <a href="#">Quần Áo</a>
+                                                        <a href="#">Áo khoác</a>
+                                                        <a href="#">Quần jeans</a>
                                                     </span>
                                                 </div>
                                                 <div class="part-2">
@@ -166,85 +167,77 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="mega-men"><a href="shop.html">Men</a>
+                                        <li class="mega-men"><a href="shop.html">Đàn Ông</a>
                                             <div class="mega-menu men">
                                                 <span>
-                                                    <a href="#">Bags</a>
-                                                    <a href="#">Bootees  Bags</a>
-                                                    <a href="#">Blazers</a>
+                                                    <a href="#">Túi</a>
+                                                    <a href="#">Túi bốt</a>
+                                                    <a href="#">Áo cộc tay</a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">Clothing</a>
-                                                    <a href="#">coats</a>
-                                                    <a href="#">T-shirts</a>
+                                                    <a href="#">Quần Áo</a>
+                                                    <a href="#">Áo khoác</a>
+                                                    <a href="#">áo phông</a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">Lingerie</a>
-                                                    <a href="#">Bands</a>
-                                                    <a href="#">Furniture</a>
+                                                    <a href="#">Đồ lót</a>
+                                                    <a href="#">đồ nội thất</a>
+                                                  
                                                 </span>
                                             </div>
                                         </li>
-                                        <li class="mega-footwear"><a href="shop.html">Footwear</a>
+                                        <li class="mega-footwear"><a href="shop.html">Giày dép</a>
                                             <div class="mega-menu footwear">
                                                 <span>
-                                                    <a href="#">Footwear Man</a>
-                                                    <a href="#">gifts</a>
+                                                    <a href="#">GIày dép nam</a>
+                                                    <a href="#">quà</a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">Footwear Womens</a>
-                                                    <a href="#">boots</a>
+                                                    <a href="#">GIày dép nữ</a>
+                                                    <a href="#">bốt</a>
                                                 </span>
                                             </div>
                                         </li>
-                                        <li class="mega-jewellery"><a href="shop.html">Jewellery</a>
+                                        <li class="mega-jewellery"><a href="shop.html">Đồ kim hoàn</a>
                                             <div class="mega-menu jewellery">
                                                 <span>
-                                                    <a href="#">Rings</a>
+                                                    <a href="#">Nhẫn</a>
                                                 </span>
                                             </div>
                                         </li>
-                                        <li><a href="shop.html">accessories</a></li>
-                                        <li><a href="#">Pages</a>
+                                     
+                                        <li><a href="#">Trang</a>
                                             <div class="sub-menu pages">
                                                 <span>
-                                                    <a href="about-us.html">About us</a>
+                                                    <a href="about-us.html">Giới Thiệu</a>
                                                 </span>
                                                 <span>
-                                                    <a href="blog.html">Blog</a>
+                                                    <a href="blog.html">Bài Viết</a>
                                                 </span>
                                                 <span>
-                                                    <a href="blog-details.html">Blog Details</a>
+                                                    <a href="blog-details.html">Chi tiết bài viết</a>
                                                 </span>
                                                 <span>
-                                                    <a href="cart.html">Cart</a>
+                                                    <a href="cart.html">Giỏ Hàng</a>
                                                 </span>
                                                 <span>
-                                                    <a href="checkout.html">Checkout</a>
+                                                    <a href="checkout.html">Thủ tục Thanh toán</a>
                                                 </span>
                                                 <span>
-                                                    <a href="contact.html">Contact</a>
+                                                    <a href="my-account.html">Tài khoản của tôi</a>
                                                 </span>
                                                 <span>
-                                                    <a href="my-account.html">My account</a>
+                                                    <a href="index.php">Cửa hàng</a>
                                                 </span>
                                                 <span>
-                                                    <a href="index.php">Shop</a>
+                                                    <a href="shop-list.html">Danh sách cửa hàng</a>
                                                 </span>
                                                 <span>
-                                                    <a href="shop-list.html">Shop list</a>
+                                                    <a href="index.php?act=dangky">Trang Đăng Nhập</a>
                                                 </span>
+                                               
                                                 <span>
-                                                    <a href="single-product.html">Single Shop</a>
-                                                </span>
-                                                <span>
-                                                    <a href="index.php?act=dangky">Login page</a>
-                                                </span>
-                                                <span>
-                                                    <a href="register.html">Ragister page</a>
-                                                </span>
-                                                <span>
-                                                    <a href="wishlist.html">Wishlist</a>
+                                                    <a href="wishlist.html">Danh sách yêu thích</a>
                                                 </span>
                                             </div>
                                         </li>
