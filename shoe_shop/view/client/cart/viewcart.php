@@ -15,7 +15,7 @@
                         <div class="table-responsive">
                             <table class="table-bordered table table-hover">
                             <?php
-                                    viewcart(2);
+                                    viewcart(1);
                                 ?>
                             </table>
                             

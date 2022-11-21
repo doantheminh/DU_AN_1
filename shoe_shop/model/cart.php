@@ -29,7 +29,7 @@
                 $ttien=$cart[3]*$cart[4];   
                 $tong+=$ttien;
                 if($dell==1){
-                    $xoasp_td='<a href="index.php?act=delcart&idcart='.$i.'"></a>';
+                    $xoasp_td='index.php?act=delcart&idcart='.$i.'';
                 }else {
                     $xoasp_td='';
 
