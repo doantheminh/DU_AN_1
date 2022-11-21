@@ -40,7 +40,7 @@
 
                         <tr>
                         <td class="cart-item-img">
-                            <img src="'.$hinh.'" >
+                            <img src="'.$hinh.'" style="width:100px">
                         </td>
 
                     <td class="#">
