@@ -12,7 +12,7 @@
                             <h1 class="title1">Giảm Giá Sập Sàn</h1>
                             <h2 class="title2" >nike Ari max 2015</h2>
                             <h3 class="title3" >Lorem Ipsum chỉ đơn giản là một bản ghi của giày </h3>
-                            <a href="#"><span>read more</span></a>
+                            <a href="#"><span>Đọc thêm</span></a>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                             <h1 class="title1">Giảm Giá Sản Phẩm</h1>
                             <h2 class="title2" >GET UP TO 50% SALE</h2>
                             <h3 class="title3" >Lorem Ipsum mang đến cho người dùng sự thoải mái </h3>
-                            <a href="#"><span>read more</span></a>
+                            <a href="#"><span>Đọc thêm</span></a>
                         </div>
                     </div>
                 </div>
@@ -38,8 +38,8 @@
                     <div class="box-1 box">
                         <h4>nike ari max 2015</h4>
                         <h2>air superiority</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <a href="#">shopping now</a>
+                        <p>Lorem Ipsum chỉ đơn giản là văn bản giả của ngành công nghiệp in ấn và sắp chữ.</p>
+                        <a href="#">Mua ngay</a>
                     </div>
                     <div class="box-2">
                         <a href="#">
@@ -65,8 +65,8 @@
                     <div class="box-4 box">
                         <h4>nike ari max 2015</h4>
                         <h2>air superiority</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <a href="#">shopping now</a>
+                        <p>Lorem Ipsum chỉ đơn giản là văn bản giả của ngành công nghiệp in ấn và sắp chữ.</p>
+                        <a href="#">Mua ngay</a>
                     </div>
                     <div class="box-5">
                         <a href="#">
@@ -157,7 +157,11 @@
                                                       <input type="hidden" name="img" value="'.$img.'">
                                                       <input type="hidden" name="price" value="'.$price.'">
 
+<<<<<<< HEAD
                                                       <input type="submit" value="Mua" name="addtocart" class="btn btn-dark">
+=======
+                                                      <input type="submit" value="Thêm vào giỏ hàng" name="addtocart" class="btn btn-dark">
+>>>>>>> 582e66a54317ceefab873393e93e014db5c73b33
                                                     
                                                       <ul class="add-to-link">
                                                            <li><a class="modal-view" data-target="#productModal" data-bs-toggle="modal" href="#"> <i class="fa fa-search"></i></a></li>
@@ -237,7 +241,11 @@
                                                       <input type="hidden" name="name" value="'.$name.'">
                                                       <input type="hidden" name="img" value="'.$img.'">
                                                       <input type="hidden" name="price" value="'.$price.'">
+<<<<<<< HEAD
                                                       <input type="submit" value="Mua" name="addtocart" class="btn btn-dark">
+=======
+                                                      <input type="submit" value="Thêm vào giỏ hàng" name="addtocart" class="btn btn-dark">
+>>>>>>> 582e66a54317ceefab873393e93e014db5c73b33
 
                                                       <ul class="add-to-link">
                                                            <li><a class="modal-view" data-target="#productModal" data-bs-toggle="modal" href="#"> <i class="fa fa-search"></i></a></li>
