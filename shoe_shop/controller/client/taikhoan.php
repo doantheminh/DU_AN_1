@@ -6,7 +6,6 @@ function dangnhap()
         $user = $_POST['user'];
         $pass = $_POST['pass'];
         $error = [];
-        // echo "helo";
         if ($user == '') {
             $error['user1'] = 'Ban chua nhap user';
         }
@@ -17,6 +16,7 @@ function dangnhap()
             if (is_array($checkuser)) {
                 $_SESSION['user'] = $checkuser;
                 $thongbao = "Đã đăng nhập thành công.";
+                echo $thongbao;
                 // include "view/client/home.php";
             } else {
                 $thongbao = "Tài khoản không tồn tại.Vui lòng kiểm tra lại.";
@@ -45,6 +45,7 @@ function dangky()
         } else {
             insert_taikoan($email, $user, $pass);
             $thongbao = "Đã đăng ký thành công.Vui lòng đăng nhập để thực hiện chức năng khác.";
+            echo $thongbao;
         }
     }
     include "view/taikhoan/dangky.php";
@@ -63,6 +64,7 @@ function edit_taikhoan()
         $_SESSION['user'] = checkuser($user, $pass);
 
         $thongbao = "Cap nhat thành công";
+        echo $thongbao;
     }
     include "view/taikhoan/edit_taikhoan.php";
 }
@@ -76,6 +78,7 @@ function quenmk()
             $thongbao = "Mật khẩu của bạn là " . $checkemail['pass'];
         } else {
             $thongbao = "Email không tồn tại.";
+            echo $thongbao;
         }
     }
     include "view/taikhoan/quenmk.php";

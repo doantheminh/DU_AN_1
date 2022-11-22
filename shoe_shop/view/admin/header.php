@@ -60,8 +60,7 @@
             class='app-menu__icon bx bx-purchase-tag-alt'></i>
             <span class="app-menu__label">Quản lý bình luận</span></a>
       </li>
-      <li><a class="app-menu__item " href="#"><i class='app-menu__icon bx bx-id-card'></i> <span
-            class="app-menu__label">Quản lý nhân viên</span></a></li>
+
       <li><a class="app-menu__item" href="index.php?act=dskh"><i class='app-menu__icon bx bx-user-voice'></i><span
             class="app-menu__label">Quản lý khách hàng</span></a></li>
       <li><a class="app-menu__item" href="index.php?act=addsp"><i

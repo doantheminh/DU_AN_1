@@ -32,6 +32,7 @@
 
                         <?php
                         extract($onesp);
+                       
                         ?>
                             <div class="single-pro-main-image tab-pane active" id="pro-large-img-1">
                             <?php
@@ -39,6 +40,7 @@
                               echo  '<a href=""><img class="optima_zoom" src="'.$img.'" data-zoom-image="img/product/7.png" alt="optima"/></a>
                                                               </div>
                         </div>
+                        
                         <div class="nav product-page-slider">
                             <div class="single-product-slider">
                                 <a class="active" href="#pro-large-img-1" data-bs-toggle="tab">
@@ -145,8 +147,7 @@
                                                       <input type="hidden" name="name" value="'.$name.'">
                                                       <input type="hidden" name="img" value="'.$img.'">
                                                       <input type="hidden" name="price" value="'.$price.'">
-
-                                                      <input type="submit" value="Add to cart" name="addtocart" class="btn btn-dark">
+                                                      <input type="submit" value="Mua" name="addtocart" class="btn btn-dark">
                                                         </form>
                                                    </div>
 

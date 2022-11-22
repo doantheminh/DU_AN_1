@@ -15,13 +15,12 @@
                         <div class="table-responsive">
                             <table class="table-bordered table table-hover">
                             <?php
-                                    viewcart(2);
+                                    viewcart(1);
                                 ?>
                             </table>
                             
                         </div>
                         <div class="shopping-button">
-
                                 <div class="shopping-cart-left">
                                     <button type="submit"><a href="index.php?act=delcart">Xóa giỏ hàng  </a></button>
                                     <button type="submit"><a href="index.php?act=bill">Đồng ý đặt hàng</button>
@@ -31,4 +30,4 @@
                 </div>
 
             </div>
-        </div>
+ 

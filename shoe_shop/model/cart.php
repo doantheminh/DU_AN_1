@@ -15,7 +15,7 @@
        echo'
        <thead>
                                     <tr>
-                                        <th class="cart-item-img"></th>
+                                        <th class="cart-item-img">Sản phẩm</th>
                                         <th class="cart-product-name">Tên sản phẩm</th>
                                         <th class="unit-price">Giá sản phẩm</th>
                                         <th class="quantity">Số lượng</th>
@@ -29,18 +29,17 @@
                 $ttien=$cart[3]*$cart[4];   
                 $tong+=$ttien;
                 if($dell==1){
-                    $xoasp_td='<a href="index.php?act=delcart&idcart='.$i.'"></a>';
+                    $xoasp_td='index.php?act=delcart&idcart='.$i.'';
                 }else {
                     $xoasp_td='';
 
                 }
-                
                 echo'
                         <tbody class="text-center">
 
                         <tr>
                         <td class="cart-item-img">
-                            <img src="'.$hinh.'" >
+                            <img src="'.$hinh.'" style="width: 100px;">
                         </td>
 
                     <td class="#">

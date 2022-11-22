@@ -30,12 +30,21 @@ function addsp(){
             // echo "Lỗi!";
         }
 
-       foreach ($_FILES['images']['name'] as $key => $value) {
-        $image_name=$_FILES['images']['name'][$key];
-        $tmp_name=$_FILES['images']['tmp_name'][$key];
-        $target_files=$target_dir.$image_name;
-        move_uploaded_file($tmp_name,$target_files);
-       }
+    //    foreach ($_FILES['images']['name'] as $key => $value) {
+    //     $image_name=$_FILES['images']['name'][$key];
+    //     $tmp_name=$_FILES['images']['tmp_name'][$key];
+    //     $target_files=$target_dir.$image_name;
+    //     move_uploaded_file($tmp_name,$target_files);
+    //    }
+if (isset($_FILES["images"])) {
+    $images=$_FILES['images'];
+    $image_name=$images['name'];
+    $target_dir = "../../upload/";
+    foreach ($image_name as $key => $value) {
+        move_uploaded_file($_FILES["images"]["tmp_name"][$key], $target_dir.$value);
+    }
+}
+    
         if($tensp==''){
             $error['tensp'] = "Chưa nhập tên sản phẩm";
         }
@@ -47,10 +56,15 @@ function addsp(){
         }
         else{
             insert_sanpham($tensp, $giasp, $hinh, $mota, $iddm);
-           
+            // $last_id = pdo_execute_return_lastInsertID($sql);
+            // foreach ($image_name as $key => $value) {
+            //     $sql="insert into img_products(id_product,image) values($last_id,'$value')";
+            //     $add_img = pdo_execute($sql);
+            // }
             $thongbao = "thêm thành công";
+            
         }
-    
+        echo $thongbao;
     }
     $listdanhmuc = loadall_danhmuc();
     include "sanpham/add.php";

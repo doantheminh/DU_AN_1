@@ -124,16 +124,10 @@ $dstop10 = loadall_sanpham_top10(); ?>
                                     <div role="tabpanel" class="tab-pane fade show active" id="tab1">
                                         <div class="product-slider carousel-margin">
                                                 <?php
-                                                    $i=0;
                                                     foreach ($dssp as $sp) {
                                                         extract($sp);
                                                         $linksp="index.php?act=sanphamct&idsp=".$id;
                                                         $hinh="upload/".$img;
-                                                        if (($i==2)||($ii=5)||($i==8)||($i==11)) {
-                                                        $mr="";
-                                                        }else {
-                                                            $mr="mr";
-                                                        }
                                                         echo '
                                                         <div class="col">
                                                         <div class="single-product">
@@ -178,7 +172,7 @@ $dstop10 = loadall_sanpham_top10(); ?>
                                                    </div>
                                                    </div>
                                                    ';
-                                                   $i+=1;
+                                               
                                                     }
                                                ?>
                                             

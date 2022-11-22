@@ -99,11 +99,9 @@
                                             extract($dm);
                                             $linkdm = "index.php?act=sanpham&iddm=" . $id;
                                             echo '
-                                            
                                                 <li role="presentation">
                                                 <a class="active" href="' . $linkdm . '">' . $name . '</a>
                                                 </li>
-                                                
                                                 ';
                                         }
                                         ?>
@@ -120,16 +118,12 @@
                                     <div role="tabpanel" class="tab-pane fade show active" id="tab1">
                                         <div class="product-slider carousel-margin">
                                                 <?php
-                                                    $i=0;
+                                                    
                                                     foreach ($spnew as $sp) {
                                                         extract($sp);
                                                         $linksp="index.php?act=sanphamct&idsp=".$id;
                                                         $hinh="upload/".$img;
-                                                        if (($i==2)||($ii=5)||($i==8)) {
-                                                        $mr="";
-                                                        }else {
-                                                            $mr="mr";
-                                                        }
+                                      
                                                         echo '
                                                         <div class="col">
                                                         <div class="single-product">
@@ -163,7 +157,7 @@
                                                       <input type="hidden" name="img" value="'.$img.'">
                                                       <input type="hidden" name="price" value="'.$price.'">
 
-                                                      <input type="submit" value="Add to cart" name="addtocart" class="btn btn-dark">
+                                                      <input type="submit" value="Mua" name="addtocart" class="btn btn-dark">
                                                     
                                                       <ul class="add-to-link">
                                                            <li><a class="modal-view" data-target="#productModal" data-bs-toggle="modal" href="#"> <i class="fa fa-search"></i></a></li>
@@ -174,7 +168,7 @@
                                                    </div>
                                                    </div>
                                                    ';
-                                                   $i+=1;
+                                               
                                                     }
                                                ?>
                                             
@@ -243,7 +237,7 @@
                                                       <input type="hidden" name="name" value="'.$name.'">
                                                       <input type="hidden" name="img" value="'.$img.'">
                                                       <input type="hidden" name="price" value="'.$price.'">
-                                                      <input type="submit" value="Add to cart" name="addtocart" class="btn btn-dark">
+                                                      <input type="submit" value="Mua" name="addtocart" class="btn btn-dark">
 
                                                       <ul class="add-to-link">
                                                            <li><a class="modal-view" data-target="#productModal" data-bs-toggle="modal" href="#"> <i class="fa fa-search"></i></a></li>

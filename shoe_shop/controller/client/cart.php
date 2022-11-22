@@ -16,7 +16,7 @@ function addtocart(){
 
 function delcart(){
     if (isset($_GET['idcart'])) {
-        array_slice($_SESSION['mycart'],$_GET['idcart'],1);
+        array_splice($_SESSION['mycart'],$_GET['idcart'],1);
     } else {
         $_SESSION['mycart'] = [];
     }

@@ -17,8 +17,8 @@
                             <th width="10"><input type="checkbox" ></th>
                             <th>ID</th>
                             <th>Nội dung bình luận</th>
-                            <th>IDUser</th>
-                            <th>IDpro</th>
+                            <th>Tên người bình luận</th>
+                            <th>Tên sản phẩm</th>
                             <th>Ngày bình luận</th>
                             <th></th>
                         </tr>
@@ -30,8 +30,8 @@
                             <td><input type="checkbox" name="" id=""></td>
                             <td>'.$id.'</td>
                             <td>'.$noidung.'</td>
-                            <td>'.$iduser.'</td>
-                            <td>'.$idpro.'</td>
+                            <td>'.$user.'</td>
+                            <td>'.$name.'</td>
                             <td>'.$ngaybinhluan.'</td>
 
                             <td><a href="'.$xoabl.'"> <input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>

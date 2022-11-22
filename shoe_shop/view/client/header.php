@@ -82,9 +82,6 @@ $dstop10 = loadall_sanpham_top10(); ?>
                                 <div class="call-support">
                                     <p>Xin Chào: <span><?= $user ?></span></p>
                                 </div>
-                                
-                            
-                           
                             </div>
                             <div class="col-lg-2 col-md-3 position-relative">
                                 <div class="dashboard">

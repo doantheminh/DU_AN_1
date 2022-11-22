@@ -79,13 +79,8 @@
                                     <td>'.$bill["ngaydathang"].'</td>
 
                                     <td>
-<<<<<<< HEAD
-                                    <a href="index.php?act=suabill"><input class="btn btn-primary btn-sm edit" type="button" value="Sửa"></a>
-
-                                    <a href="index.php?act=xoabill"><input class="btn btn-primary btn-sm delete" type="button" value="Xóa"></a></td>
-=======
+                                    <a href="'.$updatebill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Sửa"></a>
                                     <a href="'.$xoabill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>
->>>>>>> 5e87be8c56c43013c86d81be184e7a20ea99c6a6
                                     </td>
                                 </tr>';
                                 }
