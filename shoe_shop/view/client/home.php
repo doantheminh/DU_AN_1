@@ -122,7 +122,7 @@
                                                     foreach ($spnew as $sp) {
                                                         extract($sp);
                                                         $linksp="index.php?act=sanphamct&idsp=".$id;
-                                                        $hinh="upload/".$img;
+                                                        $img="upload/".$img;
                                       
                                                         echo '
                                                         <div class="col">
@@ -132,8 +132,8 @@
                                                     </div>
                                                     <div class="product-img">
                                                         <a href="'.$linksp.'">
-                                                            <img src="'.$hinh.'" alt="" class="primary-img">
-                                                            <img src="'.$hinh.'" alt="" class="secondary-img">
+                                                            <img src="'.$img.'" alt="" class="primary-img">
+                                                            <img src="'.$img.'" alt="" class="secondary-img">
 
                                                         </a>
                                                     </div>
@@ -157,12 +157,7 @@
                                                       <input type="hidden" name="img" value="'.$img.'">
                                                       <input type="hidden" name="price" value="'.$price.'">
 
-<<<<<<< HEAD
                                                       <input type="submit" value="Mua" name="addtocart" class="btn btn-dark">
-=======
-                                                      <input type="submit" value="Thêm vào giỏ hàng" name="addtocart" class="btn btn-dark">
->>>>>>> 582e66a54317ceefab873393e93e014db5c73b33
-                                                    
                                                       <ul class="add-to-link">
                                                            <li><a class="modal-view" data-target="#productModal" data-bs-toggle="modal" href="#"> <i class="fa fa-search"></i></a></li>
                                                            <li><a href="#"> <i class="fa fa-heart-o"></i></a></li>
@@ -241,11 +236,7 @@
                                                       <input type="hidden" name="name" value="'.$name.'">
                                                       <input type="hidden" name="img" value="'.$img.'">
                                                       <input type="hidden" name="price" value="'.$price.'">
-<<<<<<< HEAD
                                                       <input type="submit" value="Mua" name="addtocart" class="btn btn-dark">
-=======
-                                                      <input type="submit" value="Thêm vào giỏ hàng" name="addtocart" class="btn btn-dark">
->>>>>>> 582e66a54317ceefab873393e93e014db5c73b33
 
                                                       <ul class="add-to-link">
                                                            <li><a class="modal-view" data-target="#productModal" data-bs-toggle="modal" href="#"> <i class="fa fa-search"></i></a></li>

@@ -36,8 +36,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             quenmk();
             break;
         case 'thoat':
-            session_unset();
-            header('Location:index.php');
+            thoat();
             break;
         case 'addtocart':
             addtocart();

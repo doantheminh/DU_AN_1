@@ -28,3 +28,5 @@ function sanphamct(){
         include "view/client/home.php";
     }
 }
+
+

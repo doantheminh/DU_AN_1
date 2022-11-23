@@ -13,14 +13,16 @@ function dangnhap()
             $error['pass1'] = 'Ban chua nhap pass';
         } else {
             $checkuser = checkuser($user, $pass);
+            
             if (is_array($checkuser)) {
                 $_SESSION['user'] = $checkuser;
-                $thongbao = "Đã đăng nhập thành công.";
-                echo $thongbao;
-                // include "view/client/home.php";
+                echo '<script>alert("Đăng nhập thành công");</script>';
+                // include "index.php";
+
             } else {
-                $thongbao = "Tài khoản không tồn tại.Vui lòng kiểm tra lại.";
-                echo $thongbao;
+                echo '<script>alert("Tài khoản hoặc mật khẩu không đúng.Làm ơn đăng nhập lại.");</script>';
+                include "view/taikhoan/dangnhap.php";
+
             }
         }
     }
@@ -36,16 +38,18 @@ function dangky()
         $error = [];
         if ($email == '') {
             $error['email'] = 'Ban chua nhap email';
+            echo '<script>alert("'.$error['email'].'");</script>';
         }
         if ($user == '') {
             $error['user'] = 'Ban chua nhap user';
+            echo '<script>alert("'.$error['user'].'");</script>';
         }
         if ($pass == '') {
             $error['pass'] = 'Ban chua nhap pass';
+            echo '<script>alert("'.$error['pass'].'");</script>';
         } else {
             insert_taikoan($email, $user, $pass);
-            $thongbao = "Đã đăng ký thành công.Vui lòng đăng nhập để thực hiện chức năng khác.";
-            echo $thongbao;
+            echo '<script>alert("Bạn đã đăng ký thành công");</script>';
         }
     }
     include "view/taikhoan/dangky.php";
@@ -62,9 +66,8 @@ function edit_taikhoan()
         $id = $_POST['id'];
         update_taikhoan($id, $user, $pass, $email, $address, $tel);
         $_SESSION['user'] = checkuser($user, $pass);
+        echo '<script>alert("Cập nhật thành công");</script>';
 
-        $thongbao = "Cap nhat thành công";
-        echo $thongbao;
     }
     include "view/taikhoan/edit_taikhoan.php";
 }
@@ -75,10 +78,10 @@ function quenmk()
         $email = $_POST['email'];
         $checkemail = checkemail($email);
         if (is_array($checkemail)) {
-            $thongbao = "Mật khẩu của bạn là " . $checkemail['pass'];
+            echo '<script>alert("Mật khẩu của bạn là :'.$checkemail['pass'].' ");</script>';
+            include "view/taikhoan/dangnhap.php";
         } else {
-            $thongbao = "Email không tồn tại.";
-            echo $thongbao;
+            echo '<script>alert("Email này không tồn tại");</script>';
         }
     }
     include "view/taikhoan/quenmk.php";

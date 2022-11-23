@@ -17,11 +17,6 @@
                         header("Location:".$_SERVER['HTTP_REFERER']);
                     }
                     ?>
-
-
-
-
-
 <div class="row">
                                             <div class="col-md-5">
                                             <?php
@@ -29,8 +24,7 @@
                                                 extract($bl);
                                                 echo '
                                                 <div class="product-review">
-                                                    <p> <a href="#"></a> <span>Review by - </span>'.$iduser.'</p>
-                                                    
+                                                    <p> <a href="#"></a> <span>Bình luận bởi - </span>'.$iduser.'</p>
                                                     <div class="review-date">
                                                         <p>'.$noidung.'</p>
                                                         <p>'.$ngaybinhluan.'</p><br>

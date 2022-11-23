@@ -30,8 +30,8 @@
                             <td><input type="checkbox" name="" id=""></td>
                             <td>'.$id.'</td>
                             <td>'.$noidung.'</td>
-                            <td>'.$user.'</td>
-                            <td>'.$name.'</td>
+                            <td>'.$arrtaikhoan[$iduser].'</td>
+                            <td>'.$listsanpham[$idpro].'</td>
                             <td>'.$ngaybinhluan.'</td>
 
                             <td><a href="'.$xoabl.'"> <input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>

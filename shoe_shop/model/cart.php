@@ -39,11 +39,7 @@
 
                         <tr>
                         <td class="cart-item-img">
-<<<<<<< HEAD
                             <img src="'.$hinh.'" style="width: 100px;">
-=======
-                            <img src="'.$hinh.'" style="width:100px">
->>>>>>> 582e66a54317ceefab873393e93e014db5c73b33
                         </td>
 
                     <td class="#">
