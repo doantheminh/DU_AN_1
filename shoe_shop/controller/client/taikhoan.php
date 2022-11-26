@@ -7,10 +7,10 @@ function dangnhap()
         $pass = $_POST['pass'];
         $error = [];
         if ($user == '') {
-            $error['user1'] = 'Ban chua nhap user';
+            $error['user1'] = 'Bạn Chưa Nhập User' ;
         }
         if ($pass == '') {
-            $error['pass1'] = 'Ban chua nhap pass';
+            $error['pass1'] = 'Bạn Chưa Nhập Pass';
         } else {
             $checkuser = checkuser($user, $pass);
             
@@ -24,9 +24,13 @@ function dangnhap()
                 include "view/taikhoan/dangnhap.php";
 
             }
+            
         }
+        
     }
-    include "view/taikhoan/dangnhap.php";
+    include "view/taikhoan/index.php";
+    // sua:
+
 }
 
 function dangky()
@@ -37,16 +41,16 @@ function dangky()
         $pass = $_POST['pass'];
         $error = [];
         if ($email == '') {
-            $error['email'] = 'Ban chua nhap email';
-            echo '<script>alert("'.$error['email'].'");</script>';
+            $error['email'] = 'Bạn Chưa Nhập Email';
+            // echo '<script>alert("'.$error['email'].'");</script>';
         }
         if ($user == '') {
-            $error['user'] = 'Ban chua nhap user';
-            echo '<script>alert("'.$error['user'].'");</script>';
+            $error['user'] = 'Bạn Chưa Nhập User';
+            // echo '<script>alert("'.$error['user'].'");</script>';
         }
         if ($pass == '') {
-            $error['pass'] = 'Ban chua nhap pass';
-            echo '<script>alert("'.$error['pass'].'");</script>';
+            $error['pass'] = 'Bạn Chưa Nhập Pass';
+            // echo '<script>alert("'.$error['pass'].'");</script>';
         } else {
             insert_taikoan($email, $user, $pass);
             echo '<script>alert("Bạn đã đăng ký thành công");</script>';
@@ -88,5 +92,5 @@ function quenmk()
 }
 function thoat(){
     session_unset();
-    header('Location:index.php');
+    include "index.php";
 }

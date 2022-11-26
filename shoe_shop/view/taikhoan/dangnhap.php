@@ -27,12 +27,16 @@
                                 </div>
                                 <div class="login-form">
                                     <form action="index.php?act=dangnhap" method="post">
-                                        <input type="text" name="user" placeholder="Username" require>
-                                        <input type="password" name="pass" placeholder="Password" require>
+                      
+                                        <input type="text" name="user" placeholder="Username">
+                                        <p style="color: red;"><?= isset($error['user1'])? $error['user1']: ''?></p>
+                                        <input type="password" name="pass" placeholder="Password">
+                                        <p style="color: red;"><?= isset($error['pass1'])? $error['pass1']: ''?></p>
                                         <div class="button-box">
                                             <div class="login-toggle-btn">
                                                 <input type="checkbox" id="remember">
                                                 <label for="remember">Remember me</label>
+                                                <!--  -->
                                             </div>
                                             <input type="submit" value="Đăng nhập" name="dangnhap" class="default-btn">
                                             <a href="index.php?act=dangky" class="default-btn">Đăng Ký</a>

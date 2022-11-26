@@ -24,9 +24,12 @@
                                 </div>
                                 <div class="login-form">
                                     <form action="index.php?act=dangky" method="post">
-                                        <input type="email" name="email" placeholder="Email" id="" require>
-                                        <input type="text" name="user" placeholder="Username" require>
+                                        <input type="email" name="email" placeholder="Email" id="" >
+                                        <p style="color: red;"><?=isset($error["email"])?($error["email"]):''?></p>
+                                        <input type="text" name="user" placeholder="Username" >
+                                        <p style="color: red;"><?=isset($error["user"])?($error["user"]):''?></p>
                                         <input type="password" name="pass" placeholder="Password" require>
+                                        <p style="color: red;"><?=isset($error["pass"])?($error["pass"]):''?></p>
                                         <div class="button-box">
                                             <div class="login-toggle-btn">
                                                 <input type="checkbox" id="remember">

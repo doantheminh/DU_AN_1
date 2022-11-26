@@ -26,6 +26,8 @@
                                 <div class="login-form">
                                     <form action="index.php?act=quenmk" method="post">
                                         <input type="text" name="email" placeholder="Email" require>
+                                        <p style="color: red;"><?=isset($error["email"])?($error["email"]):''?></p>
+                                        
                                         <div class="button-box">
                                             <div class="login-toggle-btn">
                                                 <input type="checkbox" id="remember">
