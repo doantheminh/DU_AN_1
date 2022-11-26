@@ -36,6 +36,7 @@
                                             <div class="login-toggle-btn">
                                                 <input type="checkbox" id="remember">
                                                 <label for="remember">Remember me</label>
+                                                <!--  -->
                                             </div>
                                             <input type="submit" value="Đăng nhập" name="dangnhap" class="default-btn">
                                             <a href="index.php?act=dangky" class="default-btn">Đăng Ký</a>
