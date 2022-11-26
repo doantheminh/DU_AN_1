@@ -175,6 +175,7 @@ function loadall_thongke(){
     $listtk=pdo_query($sql);
     return $listtk;
 }
+
 function delete_bill($id){
     $sql="delete from bill where id=".$_GET['id'];
       pdo_execute($sql);

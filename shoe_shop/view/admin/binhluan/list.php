@@ -15,7 +15,7 @@
                           <table class="table table-hover table-bordered" id="sampleTable">
                         <tr>
                             <th width="10"><input type="checkbox" ></th>
-                            <th>ID</th>
+                            <th>Id</th>
                             <th>Nội dung bình luận</th>
                             <th>Tên người bình luận</th>
                             <th>Tên sản phẩm</th>
@@ -33,7 +33,6 @@
                             <td>'.$arrtaikhoan[$iduser].'</td>
                             <td>'.$listsanpham[$idpro].'</td>
                             <td>'.$ngaybinhluan.'</td>
-
                             <td><a href="'.$xoabl.'"> <input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>
                         </tr>';
                         }

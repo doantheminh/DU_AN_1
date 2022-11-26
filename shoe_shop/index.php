@@ -43,7 +43,6 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
 
             break;
         case 'delcart':
-            //lỗi
             delcart();
             break;
 

@@ -32,7 +32,7 @@
 
                         <?php
                         extract($onesp);
-                       
+                        extract($anh_mo_ta);                        
                         ?>
                             <div class="single-pro-main-image tab-pane active" id="pro-large-img-1">
                             <?php
@@ -40,34 +40,16 @@
                               echo  '<a href=""><img class="optima_zoom" src="'.$img.'" data-zoom-image="img/product/7.png" alt="optima"/></a>
                                                               </div>
                         </div>
-                        
+                        // load ảnh mô tả 
                         <div class="nav product-page-slider">
                             <div class="single-product-slider">
                                 <a class="active" href="#pro-large-img-1" data-bs-toggle="tab">
                                     <img src="view/client/img/product/28.png" alt="">
                                 </a>
                             </div>
-                            <div class="single-product-slider">
-                                <a href="#pro-large-img-2" data-bs-toggle="tab">
-                                    <img src="view/client/img/product/30.png" alt="">
-                                </a>
-                            </div>
-                            <div class="single-product-slider">
-                                <a href="#pro-large-img-3" data-bs-toggle="tab">
-                                    <img src="view/client/img/product/29.png" alt="">
-                                </a>
-                            </div>
-                            <div class="single-product-slider">
-                                <a href="#pro-large-img-4" data-bs-toggle="tab">
-                                    <img src="view/client/img/product/31.png" alt="">
-                                </a>
-                            </div>
-                            <div class="single-product-slider">
-                                <a href="#pro-large-img-5" data-bs-toggle="tab">
-                                    <img src="view/client/img/product/29.png" alt="">
-                                </a>
-                            </div>
+                            
                         </div>  
+                
                     </div>
                     <div class="col-lg-6">
                         <div class="single-product-details">

@@ -1,7 +1,3 @@
-
-
-
-
 <main class="app-content">
         <div class="app-title">
             <ul class="app-breadcrumb breadcrumb side">
@@ -41,8 +37,12 @@
                     </div>
                     <div class="row mb10">
             <a href="index.php?act=bieudo"><input type="button" value="Xem biểu đồ" class="btn btn-primary btn-sm edit"></a>
-        </div>
-                </div>
+            <a href="index.php?act=doanhthu"><input type="button" value="Xem biểu đồ doanh thu" class="btn btn-primary btn-sm edit"></a>
+            </div>
+            </div>
             </div>
         </div>
+
+
+        
     </main>

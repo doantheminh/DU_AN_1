@@ -3,10 +3,14 @@
     $idpro=$_REQUEST['idpro'];
     include "../../../model/pdo.php";
     include "../../../model/binhluan.php";
+    include "../../../model/taikhoan.php";
+
     $dsbl=loadall_binhluan($idpro);
-
+    $listtaikhoan = loadall_taikhoan();
+    foreach($listtaikhoan as $key => $value) {
+        $arrtaikhoan[$value['id']] = $value['user'];
+    }
 ?>
-
                     <?php
                     if (isset($_POST['guibinhluan'])&&($_POST['guibinhluan'])) {
                         $noidung=$_POST['noidung'];
@@ -24,7 +28,7 @@
                                                 extract($bl);
                                                 echo '
                                                 <div class="product-review">
-                                                    <p> <a href="#"></a> <span>Bình luận bởi - </span>'.$iduser.'</p>
+                                                    <p> <a href="#"></a> <span>Bình luận bởi - </span>'.$arrtaikhoan[$iduser].'</p>
                                                     <div class="review-date">
                                                         <p>'.$noidung.'</p>
                                                         <p>'.$ngaybinhluan.'</p><br>
