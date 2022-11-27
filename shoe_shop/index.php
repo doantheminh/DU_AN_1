@@ -1,9 +1,10 @@
 <?php
-session_unset();
+session_start();
 include "model/pdo.php";
 include "model/danhmuc.php";
 include "model/cart.php";
 include "model/sanpham.php";
+include "model/taikhoan.php";
 // goi header vao index
 include "view/client/header.php";
 include "controller/client/taikhoan.php";

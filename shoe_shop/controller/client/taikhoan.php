@@ -1,5 +1,4 @@
 <?php
-include "model/taikhoan.php";
 function dangnhap()
 {
     if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
@@ -17,8 +16,7 @@ function dangnhap()
             if (is_array($checkuser)) {
                 $_SESSION['user'] = $checkuser;
                 echo '<script>alert("Đăng nhập thành công");</script>';
-                // include "index.php";
-
+                echo "Đăng nhập thành công. <a href='index.php'>Về trang chủ</a>";
             } else {
                 echo '<script>alert("Tài khoản hoặc mật khẩu không đúng.Làm ơn đăng nhập lại.");</script>';
                 include "view/taikhoan/dangnhap.php";
@@ -28,7 +26,7 @@ function dangnhap()
         }
         
     }
-    include "view/taikhoan/index.php";
+    include "view/taikhoan/dangnhap.php";
     // sua:
 
 }
@@ -92,5 +90,8 @@ function quenmk()
 }
 function thoat(){
     session_unset();
-    include "index.php";
+    echo '<script>alert("Thoát thành công");</script>';
+    // header('location: index.php');
+
+    include "view/taikhoan/dangnhap.php";
 }
