@@ -1,5 +1,4 @@
 <?php
-include "model/taikhoan.php";
 function dangnhap()
 {
     if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
@@ -7,26 +6,32 @@ function dangnhap()
         $pass = $_POST['pass'];
         $error = [];
         if ($user == '') {
-            $error['user1'] = 'Ban chua nhap user' ;
+            $error['user1'] = 'Bạn Chưa Nhập User' ;
         }
         if ($pass == '') {
-            $error['pass1'] = 'Ban chua nhap pass';
+            $error['pass1'] = 'Bạn Chưa Nhập Pass';
         } else {
             $checkuser = checkuser($user, $pass);
             
             if (is_array($checkuser)) {
                 $_SESSION['user'] = $checkuser;
                 echo '<script>alert("Đăng nhập thành công");</script>';
-                // include "index.php";
-
+                echo "Đăng nhập thành công. <a href='index.php'>Về trang chủ</a>";
             } else {
                 echo '<script>alert("Tài khoản hoặc mật khẩu không đúng.Làm ơn đăng nhập lại.");</script>';
                 include "view/taikhoan/dangnhap.php";
 
             }
+            
         }
+        
     }
     include "view/taikhoan/dangnhap.php";
+<<<<<<< HEAD
+=======
+    // sua:
+
+>>>>>>> 3c8afb7a56790f0d63d3b0caecb18d5bf79ff0ba
 }
 
 function dangky()
@@ -37,15 +42,15 @@ function dangky()
         $pass = $_POST['pass'];
         $error = [];
         if ($email == '') {
-            $error['email'] = 'Ban chua nhap email';
+            $error['email'] = 'Bạn Chưa Nhập Email';
             // echo '<script>alert("'.$error['email'].'");</script>';
         }
         if ($user == '') {
-            $error['user'] = 'Ban chua nhap user';
+            $error['user'] = 'Bạn Chưa Nhập User';
             // echo '<script>alert("'.$error['user'].'");</script>';
         }
         if ($pass == '') {
-            $error['pass'] = 'Ban chua nhap pass';
+            $error['pass'] = 'Bạn Chưa Nhập Pass';
             // echo '<script>alert("'.$error['pass'].'");</script>';
         } else {
             insert_taikoan($email, $user, $pass);
@@ -88,5 +93,8 @@ function quenmk()
 }
 function thoat(){
     session_unset();
-    header('<Location:view');
+    echo '<script>alert("Thoát thành công");</script>';
+    // header('location: index.php');
+
+    include "view/taikhoan/dangnhap.php";
 }

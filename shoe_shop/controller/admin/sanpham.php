@@ -43,8 +43,7 @@ if (isset($_FILES["images"])) {
     foreach ($image_name as $key => $value) {
         move_uploaded_file($_FILES["images"]["tmp_name"][$key], $target_dir.$value);
     }
-}
-    
+}   
         if($tensp==''){
             $error['tensp'] = "Chưa nhập tên sản phẩm";
         }
@@ -55,16 +54,17 @@ if (isset($_FILES["images"])) {
             $error['mota'] = "Chưa nhập tên mô tả";
         }
         else{
-            insert_sanpham($tensp, $giasp, $hinh, $mota, $iddm);
-            // $last_id = pdo_execute_return_lastInsertID($sql);
-            // foreach ($image_name as $key => $value) {
-            //     $sql="insert into img_products(id_product,image) values($last_id,'$value')";
-            //     $add_img = pdo_execute($sql);
-            // }
+            // insert_sanpham($tensp, $giasp, $hinh, $mota, $iddm);
+            $sql="insert into sanpham(name,price,img,mota,iddm) values('$tensp','$giasp','$hinh','$mota','$iddm')";
+            $last_id = pdo_execute_return_lastInsertID($sql);
+            foreach ($image_name as $key => $value) {
+                $sql="insert into img_products(id_product,image) values($last_id,'$value')";
+                $add_img = pdo_execute($sql);
+            }
             $thongbao = "thêm thành công";
-            
+             echo $thongbao;
         }
-        echo $thongbao;
+       
     }
     $listdanhmuc = loadall_danhmuc();
     include "sanpham/add.php";

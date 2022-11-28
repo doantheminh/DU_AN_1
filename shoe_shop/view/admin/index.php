@@ -1,5 +1,6 @@
 <?php
 include "../../model/pdo.php";
+include "../../model/config.php";
 include "../../model/sanpham.php";
 include "../../model/danhmuc.php";
 include "../../model/taikhoan.php";
@@ -17,7 +18,7 @@ if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
         case 'adddm':
-            //
+             /**controller cho danh mục */
             adddm();
             break;
         case 'xoadm':
@@ -42,7 +43,13 @@ if (isset($_GET['act'])) {
         case 'suasp':
             suasp();
             break;
-            /**  ------------------------    */
+            case 'listsp':
+                listsp();
+                break;
+            case 'updatesp':
+                updatesp();
+                break;
+             /**controller tai khoan */
         case 'dskh':
             listtaikhoan();
             break;
@@ -52,7 +59,7 @@ if (isset($_GET['act'])) {
         case 'xoatk':
             deletetk();
             break;
-            /**------------------------------- */
+             /**controller cho bill */
         case 'listbill':
             listbill();
             break;
@@ -62,27 +69,23 @@ if (isset($_GET['act'])) {
             break;
         case 'updatebill';
             updatebill();
-            /**------------------------------- */
-
+                /**controller cho comment */
         case 'xoabl':
             xoabl();
-            break;
-        case 'listsp':
-            listsp();
-            break;
-        case 'updatesp':
-            updatesp();
             break;
 
         case 'dsbl':
             dsbl();
             break;
+            /**controller cho thống kê */
         case 'thongke':
             listthongke();
-            
             break;
         case 'bieudo':
             listbieudo();
+            break;
+        case 'doanhthu':
+            doanhthu();
             break;
         default:
             include "home.php";

@@ -1,8 +1,8 @@
 <?php
-function insert_sanpham($tensp,$giasp,$hinh,$mota,$iddm){
-    $sql="insert into sanpham(name,price,img,mota,iddm) values('$tensp','$giasp','$hinh','$mota','$iddm')";
-      pdo_execute($sql);
-}
+// function insert_sanpham($tensp,$giasp,$hinh,$mota,$iddm){
+//     $sql="insert into sanpham(name,price,img,mota,iddm) values('$tensp','$giasp','$hinh','$mota','$iddm')";
+//       pdo_execute($sql);
+// }
  
 function delete_sanpham($id){
     $sql="delete from sanpham where id=".$_GET['id'];
@@ -25,6 +25,7 @@ function loadone_sanpham($id){
     $sql="select*from sanpham where id=".$id;
     $sp=pdo_query_one($sql);
     return $sp;
+    // 
 }
 function update_sanpham($id,$iddm,$tensp,$giasp,$mota,$hinh){
     if($hinh!="")
@@ -60,5 +61,9 @@ function load_ten_dm($iddm){
 
 }
 
-
+function layanhmota($id){
+    $sql="SELECT * from img_products where id_product = '$id'";
+    $anhmota=pdo_query($sql);
+    return $anhmota;
+}
 ?>

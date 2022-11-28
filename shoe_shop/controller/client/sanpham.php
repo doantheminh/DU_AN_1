@@ -23,6 +23,8 @@ function sanphamct(){
         $onesp = loadone_sanpham($id);
         extract($onesp);
         $sp_cung_loai = load_sanpham_cungloai($id, $iddm);
+        $anh_mo_ta = layanhmota($id);
+        extract($anh_mo_ta);
         include "view/client/sanphamct.php";
     } else {
         include "view/client/home.php";

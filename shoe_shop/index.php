@@ -4,6 +4,7 @@ include "model/pdo.php";
 include "model/danhmuc.php";
 include "model/cart.php";
 include "model/sanpham.php";
+include "model/taikhoan.php";
 // goi header vao index
 include "view/client/header.php";
 include "controller/client/taikhoan.php";
@@ -43,7 +44,6 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
 
             break;
         case 'delcart':
-            //lỗi
             delcart();
             break;
 

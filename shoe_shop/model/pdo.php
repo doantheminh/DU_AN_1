@@ -116,3 +116,13 @@ function pdo_query_value($sql){
         unset($conn);
     }
 }
+// function pdo_execute_get_last_id($sql){
+//     try {
+//         $conn = getConnect();
+//         $stat = $conn->prepare($sql);
+//         $stat->execute();
+//         return $conn->lastInse
+//     } catch (\Throwable $th) {
+//         //throw $th;
+//     }
+// }

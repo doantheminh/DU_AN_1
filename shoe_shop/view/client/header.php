@@ -78,6 +78,7 @@ $dstop10 = loadall_sanpham_top10(); ?>
                             <?php
                             if (isset($_SESSION['user'])) {
                                 extract($_SESSION['user']);
+                                
                             ?>
                                 <div class="call-support">
                                     <p>Xin Chào: <span><?= $user ?></span></p>
@@ -104,13 +105,9 @@ $dstop10 = loadall_sanpham_top10(); ?>
                                     </div>
                                     <?php
                                     } else {
-
                                     ?>
                                     <div class="call-support">
                                 </div>
-                                
-                            
-                           
                             </div>
                             <div class="col-lg-2 col-md-3 position-relative">
                                 <div class="dashboard">

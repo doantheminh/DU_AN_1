@@ -4,7 +4,6 @@ function dsbl()
     $listbinhluan = loadall_binhluan(0);
     $listtaikhoan = loadall_taikhoan();
     $listsanpham = loadall_sanpham();
-    //$arrtaikhoan = [];
     foreach($listtaikhoan as $key => $value) {
         $arrtaikhoan[$value['id']] = $value['user'];
     }
