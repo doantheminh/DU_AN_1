@@ -18,38 +18,38 @@
                             <table class="table-bordered table table-hover">
                                 <thead>
                                     <tr>
-                                        <th class="cart-product-name">Mã đơn hàng</th>
-                                        <th class="unit-price">Ngày đặt</th>
-                                        <th class="quantity">Tổng số lượng hàng</th>
-                                        <th class="subtotal">Tổng thanh toán</th>
-                                        <th class="remove-icon">Tình trạng đơn hàng</th>
-                                        <th class="remove-icon">Xem chi tiết</th>
+                                        <th class="cart-product-name">Sản phẩm</th>
+                                        <th class="unit-price">Tên sản phẩm</th>
+                                        <th class="quantity">Giá sản phẩm</th>
+                                        <th class="subtotal">Số lượng</th>
+                                        <th class="remove-icon">Thành tiền</th>
 
                                     </tr>
                                 </thead>
                                 <?php
-                                    if(is_array($listbill)){
-                                        foreach ($listbill as $bill) {
+                                        foreach ($billct as $bill) {
                                             extract($bill);
-                                            $ttdh=get_ttdh($bill['bill_status']);
-                                            $countsp=loadall_cart_count($bill['id']);
-                                            $ctdh='index.php?act=ctdh&bill='.$id.'';
+                                            $img="upload/".$img;
                                             echo '
                                         <tbody class="text-center">
                                         <tr>
-                        
-                                            <td class="cart-product-name">
-                                                <a href="#">'.$bill['id'].'</a>
+                                            <td class="cart-item-img">
+                                                <a href="single-product.html">
+                                                    <img src="'.$img.'" alt="">
+                                                </a>
                                             </td>
-                     
+                                            <td class="cart-product-name">
+                                                <a href="#">'.$name.'</a>
+                                            </td>
+                    
                                             <td class="unit-price">
-                                                <span>'.$bill['ngaydathang'].'</span>
+                                                <span>'.$name.'</span>
                                             </td>
                                             <td class="quantity">
-                                                <span>'.$countsp.'</span>
+                                                <span>'.$name.'</span>
                                             </td>
                                             <td class="subtotal">
-                                                <span>'.$bill['total'].'</span>
+                                                <span>'.$cả['name '].'</span>
                                             </td>
                                             <td class="subtotal">
                                             <span>'.$ttdh.'</span>
@@ -59,9 +59,9 @@
                                                 Chi tiết
                                             </td> 
                                         </tr>
-                                    </tbody>';
+                                        </tbody>';
                                         }
-                                    }
+                                    
                                 ?>
           
                             </table>

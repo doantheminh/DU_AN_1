@@ -27,29 +27,36 @@
                 <div class="container">
                     <div class="row">
                     <div class="col-lg-6">
-                        
+                    <div class="nav product-page-slider">
+                    <?php
+                        foreach ($anh_mo_ta as $key => $value) {
+                            $hinh="upload/".$value['image'];
+                           echo'
+                            
+                                <div class="single-product-slider"> 
+                                    <a class="active" href="#pro-large-img-1" data-bs-toggle="tab">
+                                        <img src="'.$hinh.'" alt="">
+                                    </a>
+                                </div>
+                                
+                            
+                        ';
+                        }
+                        ?>
+                        </div>
                         <div class="single-product-img tab-content">
-
+                        
                         <?php
                         extract($onesp);
-                        extract($anh_mo_ta);                        
                         ?>
                             <div class="single-pro-main-image tab-pane active" id="pro-large-img-1">
                             <?php
                         $img="upload/".$img;
+
                               echo  '<a href=""><img class="optima_zoom" src="'.$img.'" data-zoom-image="img/product/7.png" alt="optima"/></a>
-                                                              </div>
-                        </div>
-                        // load ảnh mô tả 
-                        <div class="nav product-page-slider">
-                            <div class="single-product-slider">
-                                <a class="active" href="#pro-large-img-1" data-bs-toggle="tab">
-                                    <img src="view/client/img/product/28.png" alt="">
-                                </a>
                             </div>
-                            
-                        </div>  
-                
+                        </div>
+                        
                     </div>
                     <div class="col-lg-6">
                         <div class="single-product-details">
@@ -119,7 +126,7 @@
                             </div>
                             <div class="cart-item">
                                 <div class="price-box">
-                                    <span>$170</span>
+                                    <span></span>
                                 </div>
                                 <div class="single-cart">
 

@@ -54,6 +54,9 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             case 'billcomfirm':
                 billcomfirm();
                 break;
+            case 'ctdh':
+                ctdh();
+                break;
         case 'viewcart':
             include "view/client/cart/viewcart.php";
             break;

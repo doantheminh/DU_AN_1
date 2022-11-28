@@ -125,33 +125,34 @@
                                                         $img="upload/".$img;
                                       
                                                         echo '
-                                                        <div class="col">
-                                                        <div class="single-product">
-                                                        <div class="level-pro-sale">
-                                                       
-                                                    </div>
-                                                    <div class="product-img">
-                                                        <a href="'.$linksp.'">
-                                                            <img src="'.$img.'" alt="" class="primary-img">
-                                                            <img src="'.$img.'" alt="" class="secondary-img">
 
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-name">
-                                                    <a href="'.$linksp.'" title="Fusce aliquam">'.$name.'</a>
-                                                        </div>  
-                                                        <div class="price-rating">
-                                                        <span>'.$price.'</span>
-                                                        <div class="ratings">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-half-o"></i>
-                                                    </div>
-                                                    </div>
-                                                    <div class="actions">
-                                                    <form action="index.php?act=addtocart" method="post">
+    
+                                                    <div class="col">
+                                                        <div class="single-product">
+                                                            <div class="level-pro-new">
+                                                                <span>new</span>
+                                                            </div>
+                                                            <div class="product-img">
+                                                                <a href="'.$linksp.'">
+                                                                    <img src="'.$img.'" alt="" class="primary-img">
+                                                                    <img src="'.$img.'" alt="" class="secondary-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="product-name">
+                                                                <a href="'.$linksp.'="Fusce aliquam">'.$name.'</a>
+                                                            </div>
+                                                            <div class="price-rating">
+                                                                <span>$'.$price.'</span>
+                                                                <div class="ratings">
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star-half-o"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="actions">
+                                                                <form action="index.php?act=addtocart" method="post">
                                                       <input type="hidden" name="id" value="'.$id.'">
                                                       <input type="hidden" name="name" value="'.$name.'">
                                                       <input type="hidden" name="img" value="'.$img.'">
@@ -163,9 +164,12 @@
                                                            <li><a href="#"> <i class="fa fa-heart-o"></i></a></li>
                                                       </ul>
                                                         </form>
-                                                   </div>
-                                                   </div>
-                                                   </div>
+                                                            </div>
+                                                        </div>
+                                           
+                                                    </div>
+
+    
                                                    ';
                                                
                                                     }

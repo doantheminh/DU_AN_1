@@ -16,19 +16,16 @@ function dangnhap()
             if (is_array($checkuser)) {
                 $_SESSION['user'] = $checkuser;
                 echo '<script>alert("Đăng nhập thành công");</script>';
-                echo "Đăng nhập thành công. <a href='index.php'>Về trang chủ</a>";
-            } else {
-                echo '<script>alert("Tài khoản hoặc mật khẩu không đúng.Làm ơn đăng nhập lại.");</script>';
-                include "view/taikhoan/dangnhap.php";
-
+            }        
+             else {
+                echo '<script>alert("Tài khoản hoặc mật khẩu không tồn tại.Xin hãy đăng ký.");</script>';
             }
-            
+           
         }
-        
+        include "view/taikhoan/dangky.php";
+
     }
     include "view/taikhoan/dangnhap.php";
-    // sua:
-
 }
 
 function dangky()
@@ -52,6 +49,7 @@ function dangky()
         } else {
             insert_taikoan($email, $user, $pass);
             echo '<script>alert("Bạn đã đăng ký thành công");</script>';
+
         }
     }
     include "view/taikhoan/dangky.php";

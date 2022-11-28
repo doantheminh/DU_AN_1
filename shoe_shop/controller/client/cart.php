@@ -39,10 +39,9 @@ function billcomfirm(){
             insert_cart($_SESSION['user']['id'],$cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$cart[5],$idbill);
        }
        $_SESSION['cart']=[];
-
     }
     $bill=loadone_bill($idbill);
-    $billct=loadall_cart($idbill);  
+    $billct=loadall_cart($idbill);
     include "view/client/cart/billcomfirm.php";
 }
 
@@ -50,5 +49,11 @@ function mybill(){
     $listbill=loadall_bill($_SESSION['user']['id']);
     include "view/client/cart/mybill.php";
 }
-
+function ctdh(){
+    if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+        
+    }
+    $billct=chi_tiet_bill(0);
+    include "view/client/cart/chi_tiet_bill.php";
+}
 ?>

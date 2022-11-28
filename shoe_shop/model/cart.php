@@ -77,7 +77,6 @@
 
  function tongdonhang(){
         $tong=0;
-
             foreach ($_SESSION['mycart'] as $cart) {
                 $ttien=$cart[3]*$cart[4];
                 $tong+=$ttien;
@@ -133,7 +132,6 @@ function bill_chi_tiet($listbill)
             $hinh=$img_path.$cart['img'];
             $tong+=$cart['thanhtien'];
             echo'<tr> 
-            
                 <td><img src="'.$hinh.'" height="70px"></td>
                 <td>'.$cart['name'].'</td>
                 <td>'.$cart['price'].'</td>
@@ -176,9 +174,17 @@ function loadall_thongke(){
     return $listtk;
 }
 
+
+
 function delete_bill($id){
     $sql="delete from bill where id=".$_GET['id'];
       pdo_execute($sql);
+}
+
+function chi_tiet_bill($id){
+    $sql="select*from cart where idbill='$id'";
+    $billct=pdo_query($sql);
+    return $billct;
 }
 
 ?>

@@ -30,12 +30,7 @@ function addsp(){
             // echo "Lỗi!";
         }
 
-    //    foreach ($_FILES['images']['name'] as $key => $value) {
-    //     $image_name=$_FILES['images']['name'][$key];
-    //     $tmp_name=$_FILES['images']['tmp_name'][$key];
-    //     $target_files=$target_dir.$image_name;
-    //     move_uploaded_file($tmp_name,$target_files);
-    //    }
+
 if (isset($_FILES["images"])) {
     $images=$_FILES['images'];
     $image_name=$images['name'];

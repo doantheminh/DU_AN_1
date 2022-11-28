@@ -11,11 +11,10 @@
 
     while ($val = mysqli_fetch_array($sql_query)) {
         $chart_data[]= array(
-            'date' => $val['ngaydathang'],
+            'date' => $val['ngaydathang'],  
             'order' => $val['donhang'],
             'sales' => $val['doanhthu'],
             'quantity' => $val['soluongban']
-
         );
     }
             // print_r($chart_data);
