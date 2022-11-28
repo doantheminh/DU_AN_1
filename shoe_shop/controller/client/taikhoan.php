@@ -26,7 +26,7 @@ function dangnhap()
             }
         }
     }
-    include "view/taikhoan/index.php";
+    include "view/taikhoan/dangnhap.php";
 }
 
 function dangky()
