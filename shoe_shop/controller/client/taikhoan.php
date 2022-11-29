@@ -27,11 +27,6 @@ function dangnhap()
         
     }
     include "view/taikhoan/dangnhap.php";
-<<<<<<< HEAD
-=======
-    // sua:
-
->>>>>>> 3c8afb7a56790f0d63d3b0caecb18d5bf79ff0ba
 }
 
 function dangky()

@@ -22,15 +22,23 @@ function updatebill(){
     if(isset($_GET['id']) && ($_GET['id']>1)){
         $bill = loadone_bill($_GET['id']);
         if($bill['bill_status'] == 0){
-            $sql="update bill set ttdh='1' where id=".$_GET['id'];
+            $sql="update bill set bill_status='1' where id=".$_GET['id'];
+            pdo_execute($sql);
         }
         else if($bill['bill_status'] == 1){
-            $sql="update bill set ttdh='2' where id=".$_GET['id'];
+            $sql="update bill set bill_status='2' where id=".$_GET['id'];
+            pdo_execute($sql);
         }
         else if($bill['bill_status'] == 2){
-            $sql="update bill set ttdh='3' where id=".$_GET['id'];
+            $sql="update bill set bill_status='3' where id=".$_GET['id'];
+            pdo_execute($sql);
+        }
+        else if($bill['bill_status'] == 3){
+            $sql="update bill set bill_status='0' where id=".$_GET['id'];
+            pdo_execute($sql);
         }
         $listbill=loadall_bill("",0);
+        echo '<script>alert("Cập nhật thành công");</script>';
               include "bill/listbill.php";
     }
 

@@ -69,6 +69,7 @@ if (isset($_GET['act'])) {
             break;
         case 'updatebill';
             updatebill();
+            break;
                 /**controller cho comment */
         case 'xoabl':
             xoabl();
