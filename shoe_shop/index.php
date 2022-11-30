@@ -41,7 +41,6 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             break;
         case 'addtocart':
             addtocart();
-
             break;
         case 'delcart':
             delcart();

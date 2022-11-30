@@ -18,7 +18,7 @@
    <script type="text/javascript">
     $(document).ready(function() {
         thong_ke();
- var char = new Morris.Area({
+ var chart = new Morris.Area({
  element : 'chart',
  xkey:'date',
  ykeys:['date', 'order', 'sales','quantity'],
@@ -33,7 +33,7 @@ function thong_ke() {
             method:"POST",
             dataType:"JSON",
             success:function (data) {
-              char.setData(data);
+              chart.setData(data);
               $('#text-date').text(text);
             }
         });

@@ -19,10 +19,11 @@ function dangnhap()
             }        
              else {
                 echo '<script>alert("Tài khoản hoặc mật khẩu không tồn tại.Xin hãy đăng ký.");</script>';
+                include "view/taikhoan/dangky.php";
             }
-           
+            
         }
-        include "view/taikhoan/dangky.php";
+       
 
     }
     include "view/taikhoan/dangnhap.php";

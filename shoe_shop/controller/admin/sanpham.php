@@ -91,7 +91,7 @@ function xoasp(){
     if (isset($_GET['id']) && ($_GET['id'] > 0)) {
         delete_sanpham($_GET['id']);
     }
-    $listsanpham = loadall_sanpham("", 0);
+    $listsanpham = loadall_sanpham("",0);
     include "sanpham/list.php";
 }
 

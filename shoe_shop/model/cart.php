@@ -116,7 +116,7 @@ function loadall_bill($kyw="",$iduser=0){
     $listbill=pdo_query($sql);
     return $listbill;
 }
-function bill_chi_tiet($listbill)
+function bill_chi_tiet($billct)
 {
     global $img_path;
     $tong=0;
@@ -126,9 +126,8 @@ function bill_chi_tiet($listbill)
                 <th>Sản phẩm</th>
                 <th>Đơn giá</th>
                 <th>Số lượng</th>
-                <th>Thành tiền</th>
             </tr>';
-        foreach ($listbill as $cart) {
+        foreach ($billct as $cart) {
             $hinh=$img_path.$cart['img'];
             $tong+=$cart['thanhtien'];
             echo'<tr> 
@@ -136,15 +135,11 @@ function bill_chi_tiet($listbill)
                 <td>'.$cart['name'].'</td>
                 <td>'.$cart['price'].'</td>
                 <td>'.$cart['soluong'].'</td>
-                <td>'.$cart['thanhtien'].'</td>
                 </tr>';
                 $i+=1;
         }
-        echo '<tr> 
-        <td colspan="4">Tổng đơn hàng</td>
-        <td>'.$tong.'</td>
-        </tr>';
-    
+
+
 }
 function get_ttdh($n){
     switch ($n) {
@@ -186,7 +181,6 @@ function chi_tiet_bill($id){
     $billct=pdo_query($sql);
     return $billct;
 }
-
 ?>
 
                         

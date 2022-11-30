@@ -51,9 +51,10 @@ function mybill(){
 }
 function ctdh(){
     if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-        
+        $id = $_GET['id'];
     }
     $billct=chi_tiet_bill(0);
+
     include "view/client/cart/chi_tiet_bill.php";
 }
 ?>

@@ -78,25 +78,7 @@
                                     <img src="img/product/share.png" alt="">
                                 </div>
                             </div>
-                            <div class="action">
-                                <ul class="add-to-links">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-heart"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-refresh"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-envelope"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                           
                             <div class="select-catagory">
                                 <!-- <div class="color-select">
                                     <label class="required">

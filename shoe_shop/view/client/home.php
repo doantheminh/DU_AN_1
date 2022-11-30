@@ -142,7 +142,7 @@
                                                                 <a href="'.$linksp.'="Fusce aliquam">'.$name.'</a>
                                                             </div>
                                                             <div class="price-rating">
-                                                                <span>$'.$price.'</span>
+                                                                <span>'.$price.'VND</span>
                                                                 <div class="ratings">
                                                                     <i class="fa fa-star"></i>
                                                                     <i class="fa fa-star"></i>
@@ -225,7 +225,7 @@
                                     <a href="'.$linksp.'" title="Fusce aliquam">'.$name.'</a>
                                 </div>
                                 <div class="price-rating">
-                                    <span>'.$price.'</span>
+                                    <span>'.$price.'VND</span>
                                     <div class="ratings">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>

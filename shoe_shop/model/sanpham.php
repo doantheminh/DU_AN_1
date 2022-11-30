@@ -25,7 +25,7 @@ function loadone_sanpham($id){
     $sql="select*from sanpham where id=".$id;
     $sp=pdo_query_one($sql);
     return $sp;
-    // 
+
 }
 function update_sanpham($id,$iddm,$tensp,$giasp,$mota,$hinh){
     if($hinh!="")
@@ -65,5 +65,19 @@ function layanhmota($id){
     $sql="SELECT * from img_products where id_product = '$id'";
     $anhmota=pdo_query($sql);
     return $anhmota;
+}
+function format_currency($n=0){
+    $n=(string)$n;
+    $n=strrev($n);
+    $res='';
+    for ($i=0; $i<strlen($n); $i++) { 
+        if ($i%3==0 && $i!=0) {
+            $res='.';
+
+        }
+        $res.=$n[$i];
+    }
+    $res=strrev($res);
+    return $res;
 }
 ?>
