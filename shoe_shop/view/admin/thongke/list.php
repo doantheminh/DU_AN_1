@@ -26,7 +26,7 @@
                        <td>'.$madm.'</td>
                        <td>'.$tendm.'</td>
                        <td>'.$countsp.'</td>
-                       <td>'.$maxprice.'</td>
+                       <td>'.number_format($maxprice).' vnd</td>
                        <td>'.$minprice.'</td>
                        <td>'.$avgprice.'</td>
                    </tr>';

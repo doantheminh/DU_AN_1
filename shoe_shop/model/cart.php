@@ -153,7 +153,7 @@ function get_ttdh($n){
             $tt="Đang giao hàng";
              break;
         case '3':
-            $tt="Hoàn tất";
+            $tt="Mua thành công";
              break;         
         default:
             $tt="Đơn hàng mới";

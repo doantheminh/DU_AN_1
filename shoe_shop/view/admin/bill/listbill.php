@@ -74,12 +74,12 @@
                                     <td>'.$bill['id'].'</td>
                                     <td>'.$kh.'</td>
                                     <td>'.$countsp.'</td>
-                                    <td><strong>'.$bill["total"].'</strong>VND</td>
+                                    <td><strong>'.number_format($bill["total"]).'</strong>VND</td>
                                     <td><a href="'.$updatebill.'">'.$ttdh.'</a></td>
                                     <td>'.$bill["ngaydathang"].'</td>
 
                                     <td>
-                                    <a href="'.$updatebill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Sửa"></a>
+                                    <a href="'.$updatebill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Cập nhật"></a>
                                     <a href="'.$xoabill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>
                                     </td>
                                 </tr>';

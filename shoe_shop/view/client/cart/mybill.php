@@ -48,7 +48,7 @@
                                                 <span>'.$countsp.'</span>
                                             </td>
                                             <td class="subtotal">
-                                                <span>'.$bill['total'].'</span>
+                                                <span>'.number_format($bill['total']).' vnd</span>
                                             </td>
                                             <td class="subtotal">
                                             <span>'.$ttdh.'</span>

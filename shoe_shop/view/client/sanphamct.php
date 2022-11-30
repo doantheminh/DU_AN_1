@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
+
         <!-- single product area end -->
         <!-- single product details start -->
         <div class="single-product-details">
@@ -54,63 +54,7 @@
                         $img="upload/".$img;
 
                               echo  '<a href=""><img class="optima_zoom" src="'.$img.'" data-zoom-image="img/product/7.png" alt="optima"/></a>
-=======
-    </div>
-</div>
-<!-- single product area end -->
-<!-- single product details start -->
-<div class="single-product-details">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
 
-                <div class="single-product-img tab-content">
-
-                    <?php
-                    extract($onesp);
-                    extract($anh_mo_ta);
-                    // load ảnh mô tả 
-                
-                    ?>
-                    <div class="single-pro-main-image tab-pane active" id="pro-large-img-1">
-                        <?php
-                        $img = "upload/" . $img;
-                        echo  '<a href=""><img class="optima_zoom" src="' . $img . '" data-zoom-image="img/product/7.png" alt="optima"/></a>
-                                                              </div>
-                        </div>
-                                <div class="nav product-page-slider">
-                                    <div class="single-product-slider">
-                                    <div class="nav product-page-slider">
-                                    <div class="single-product-slider">
-                                        <a class="active" href="#pro-large-img-1" data-bs-toggle="tab">
-                                            <img src="view/client/img/product/28.png" alt="" >
-                                        </a>
-                                    </div>
-                                    <div class="single-product-slider">
-                                        <a href="#pro-large-img-2" data-bs-toggle="tab">
-                                            <img src="view/client/img/product/28.png" alt="" >
-                                        </a>
-                                    </div>
-                                    <div class="single-product-slider">
-                                        <a href="#pro-large-img-3" data-bs-toggle="tab">
-                                            <img src="view/client/img/product/28.png" alt="" >
-                                        </a>
-                                    </div>
-                                    <div class="single-product-slider">
-                                        <a href="#pro-large-img-4" data-bs-toggle="tab">
-                                            <img src="view/client/img/product/28.png" alt="" >
-                                        </a>
-                                    </div>
-                                    <div class="single-product-slider">
-                                        <a href="#pro-large-img-5" data-bs-toggle="tab">
-                                            <img src="view/client/img/product/28.png" alt="" >
-                                        </a>
-                                    </div>
-                                </div>
-                                <a class="active" href="#pro-large-img-1" data-bs-toggle="tab">
-                                    <img src="view/client/img/product/28.png" alt="">
-                                </a>
->>>>>>> 2e824fcee2ab9ff0dd4288bee5632d1d278e516a
                             </div>
                         </div>
                         
@@ -122,7 +66,7 @@
 
                             <div class="item-price">
                            
-                                    <p><span>$' . $price . '</span></p>
+                                    <p><span>$' . number_format($price) . 'VND</span></p>
                                
                                 
                             </div>
@@ -267,7 +211,7 @@
                                         <a href="single-product.html" title="Fusce aliquam">' . $name . '</a>
                                     </div>
                                     <div class="price-rating">
-                                        <span>' . $price . '</span>
+                                        <span>' . number_format($price) . '</span>
                                     </div>
                                     
                                 </div>

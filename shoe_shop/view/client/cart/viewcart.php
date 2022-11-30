@@ -24,6 +24,8 @@
                                 <div class="shopping-cart-left">
                                     <button type="submit"><a href="index.php?act=delcart">Xóa giỏ hàng  </a></button>
                                     <button type="submit"><a href="index.php?act=bill">Đồng ý đặt hàng</button>
+                                    <button type="submit"><a href="index.php">Tiếp tục mua </a></button>
+
                                 </div>
                             </div>
                     </div>

@@ -86,7 +86,7 @@
                                     <td>'.$id.'</td>
                                     <td>'.$name.'</td>
                                     <td>'.$img.'</td>
-                                    <td>'.$price.'</td>
+                                    <td>'.number_format($price).' vnd</td>
                                     <td>'.$luotxem.'</td>
                                     <td><a href="'.$suasp.'"><input class="btn btn-primary btn-sm trash" type="button" value="Sửa"></a>
                                         <a href="'.$xoasp.'"> <input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>
