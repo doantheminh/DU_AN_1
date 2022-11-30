@@ -105,6 +105,7 @@
                                                 ';
                                         }
                                         ?>
+
                                             <li><img src="view/client/img/banner/banner-5.jpg" alt=""></li>
 
                                     </ul>
@@ -123,9 +124,19 @@
                                                         extract($sp);
                                                         $linksp="index.php?act=sanphamct&idsp=".$id;
                                                         $img="upload/".$img;
+                                                     
+                                                        // $num = 1999.9;
+                                                        // $price = number_format($num)."<br>";
+                                                        // echo $price;
+                                                        // $price = number_format($num, 2);
+                                                        // echo $price; 
+                                                      
+                                                        
+                                                    
                                       
                                                         echo '
 
+<<<<<<< HEAD
     
                                                     <div class="col">
                                                         <div class="single-product">
@@ -153,6 +164,26 @@
                                                             </div>
                                                             <div class="actions">
                                                                 <form action="index.php?act=addtocart" method="post">
+=======
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-name">
+                                                    <a href="'.$linksp.'" title="Fusce aliquam">'.$name.'</a>
+                                                        </div>  
+                                                        <div class="price-rating">
+                                                        
+                                                        <span>'.number_format($price).'</span>
+s                                                        <div class="ratings">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </div>
+                                                    </div>
+                                                    <div class="actions">
+                                                    <form action="index.php?act=addtocart" method="post">
+>>>>>>> 2e824fcee2ab9ff0dd4288bee5632d1d278e516a
                                                       <input type="hidden" name="id" value="'.$id.'">
                                                       <input type="hidden" name="name" value="'.$name.'">
                                                       <input type="hidden" name="img" value="'.$img.'">
