@@ -1,9 +1,5 @@
 <?php
-// function insert_sanpham($tensp,$giasp,$hinh,$mota,$iddm){
-//     $sql="insert into sanpham(name,price,img,mota,iddm) values('$tensp','$giasp','$hinh','$mota','$iddm')";
-//       pdo_execute($sql);
-// }
- 
+
 function delete_sanpham($id){
     $sql="delete from sanpham where id=".$_GET['id'];
       pdo_execute($sql);

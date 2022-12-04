@@ -43,3 +43,10 @@ function updatebill(){
     }
 
 }
+function ct(){
+    if (isset($_GET['bill']) && ($_GET['bill'] > 0)) {
+        $id = $_GET['bill'];
+        $billct=chi_tiet_bill($id);
+        include "bill/chi_tiet.php";
+    }
+}

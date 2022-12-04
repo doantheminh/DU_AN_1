@@ -4,6 +4,7 @@
         global $img_path;
         $tong=0;
         $i=0;
+        $number=0;
         if($dell==1){
             $xoasp_th='<th>Thao tác</th>';
             $xoa_td2='<th></th>';
@@ -28,6 +29,7 @@
                 $hinh=$img_path.$cart[2];
                 $ttien=$cart[3]*$cart[4];   
                 $tong+=$ttien;
+                $number+=$cart[4];
                 if($dell==1){
                     $xoasp_td='index.php?act=delcart&idcart='.$i.'';
                 }else {
@@ -70,6 +72,7 @@
            <div class="col-md-4">   
            <div class="totals">
                <h3>Tổng: <span>'.$tong.'</span></h3>
+
            </div>
            ';
         
@@ -80,10 +83,12 @@
             foreach ($_SESSION['mycart'] as $cart) {
                 $ttien=$cart[3]*$cart[4];
                 $tong+=$ttien;
+                
                 }
                 return $tong;
 
 }
+
 function insert_bill($iduser,$name,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang){
     $sql="insert into bill(iduser,bill_name,bill_email,bill_address,bill_tel,bill_pttt,ngaydathang,total) values('$iduser','$name','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang')";
     return pdo_execute_return_lastInsertID($sql);
@@ -108,6 +113,8 @@ function loadall_cart_count($idbill){
     $bill=pdo_query($sql);
     return sizeof($bill);
 }
+
+
 function loadall_bill($kyw="",$iduser=0){
     $sql="select*from bill where 1";
     if($iduser>0) $sql.=" AND iduser=".$iduser;
@@ -122,8 +129,8 @@ function bill_chi_tiet($billct)
     $tong=0;
     $i=0;
    echo'<tr>
-                <th>Hình</th>
                 <th>Sản phẩm</th>
+                <th>Tên</th>
                 <th>Đơn giá</th>
                 <th>Số lượng</th>
             </tr>';
@@ -131,7 +138,7 @@ function bill_chi_tiet($billct)
             $hinh=$img_path.$cart['img'];
             $tong+=$cart['thanhtien'];
             echo'<tr> 
-                <td><img src="'.$hinh.'" height="70px"></td>
+                <td><img src="'.$hinh.'" style="width: 110px;"></td>
                 <td>'.$cart['name'].'</td>
                 <td>'.$cart['price'].'</td>
                 <td>'.$cart['soluong'].'</td>
@@ -168,8 +175,11 @@ function loadall_thongke(){
     $listtk=pdo_query($sql);
     return $listtk;
 }
-
-
+function doanh_thu(){
+    $sql="select*from bill where ngaydathang";
+    $dt=pdo_query($sql);
+    return $dt;
+}
 
 function delete_bill($id){
     $sql="delete from bill where id=".$_GET['id'];

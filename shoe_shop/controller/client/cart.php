@@ -50,11 +50,13 @@ function mybill(){
     include "view/client/cart/mybill.php";
 }
 function ctdh(){
-    if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-        $id = $_GET['id'];
-    }
-    $billct=chi_tiet_bill(0);
+    if (isset($_GET['bill']) && ($_GET['bill'] > 0)) {
+        $id = $_GET['bill'];
+        $billct=chi_tiet_bill($id);
 
-    include "view/client/cart/chi_tiet_bill.php";
+        include "view/client/cart/chi_tiet_bill.php";
+    } else {
+        include "view/client/home.php";
+    }
 }
 ?>

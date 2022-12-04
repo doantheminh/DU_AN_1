@@ -25,5 +25,6 @@ function deletetk(){
         delete_taikhoan($_GET['id']);
     }
     $listtaikhoan = loadall_taikhoan();
+    
     include "taikhoan/list.php";
 }

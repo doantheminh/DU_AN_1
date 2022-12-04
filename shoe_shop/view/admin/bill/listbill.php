@@ -58,11 +58,14 @@
                                 </tr>
                             </thead>
                             <tbody>
+                          
                                 <?php
+                                
                                 foreach($listbill as $bill) {
                                     extract($bill);
                                     $xoabill="index.php?act=xoabill&id=".$id;
                                     $updatebill="index.php?act=updatebill&id=".$id;
+                                    $ctdh='index.php?act=ct&bill='.$id.'';
                                     $kh=$bill["bill_name"].'
                                     <br>'.$bill["bill_email"].'
                                     <br>'.$bill["bill_address"].'
@@ -75,11 +78,11 @@
                                     <td>'.$kh.'</td>
                                     <td>'.$countsp.'</td>
                                     <td><strong>'.number_format($bill["total"]).'</strong>VND</td>
-                                    <td><a href="'.$updatebill.'">'.$ttdh.'</a></td>
+                                    <td><select class="form-control" id="exampleSelect1">
+                                    <option>'.$ttdh.'</option></select></td>
                                     <td>'.$bill["ngaydathang"].'</td>
-
                                     <td>
-                                    <a href="'.$updatebill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Cập nhật"></a>
+                                    <a href="'.$ctdh.'"><input class="btn btn-primary btn-sm edit" type="button" value="Chi tiết"></a>
                                     <a href="'.$xoabill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>
                                     </td>
                                 </tr>';

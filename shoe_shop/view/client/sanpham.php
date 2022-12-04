@@ -145,7 +145,7 @@ $dstop10 = loadall_sanpham_top10(); ?>
                                                     <a href="'.$linksp.'" title="Fusce aliquam">'.$name.'</a>
                                                         </div>  
                                                         <div class="price-rating">
-                                                        <span>'.$price.'</span>
+                                                        <span>' . number_format($price) . ' vnd</span>
                                                         <div class="ratings">
                                                         <i class="fa fa-star"></i>
                                                         <i class="fa fa-star"></i>
@@ -226,7 +226,7 @@ $dstop10 = loadall_sanpham_top10(); ?>
                                     <a href="'.$linksp.'" title="Fusce aliquam">'.$name.'</a>
                                 </div>
                                 <div class="price-rating">
-                                    <span>'.$price.'</span>
+                                    <span>' . number_format($price) . ' vnd</span>
                                     <div class="ratings">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>

@@ -26,4 +26,10 @@
         $sql="delete from taikhoan where id=".$_GET['id'];
           pdo_execute($sql);
     }
+    // function loadone_taikhoan($id){
+    //     $sql="select*from taikhoan where id=".$id;
+    //     $tk=pdo_query_one($sql);
+    //     return $tk;
+
+    // }
 ?>

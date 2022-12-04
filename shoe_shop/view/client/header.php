@@ -125,13 +125,30 @@ $dstop10 = loadall_sanpham_top10(); ?>
                                         </ul>
                                     </div>
                                     <?php } ?>
-                                    <div class="cart-menu">
-                                        <ul>
-                                            <li><a href="index.php?act=addtocart"> <img src="view/client/img/icon-cart.png" alt="">  </a>
-                                        
-                                            </li>
-                                        </ul>
-                                    </div>
+
+
+                                
+                                                <div class="cart-menu">
+                                                <ul>
+                                                <li><a href="index.php?act=addtocart"> <img src="view/client/img/icon-cart.png" alt="">
+                                                    <?php
+                                                        $number=0;
+                                                        foreach ($_SESSION['mycart'] as $cart) {
+                                                            $number+=$cart[4];
+                                                                echo '  <span>'.$number.'</span>';
+                                                            }
+
+                                                    ?>
+                          
+                                                 </a>
+                                            
+                                                </li>
+                                            </ul>
+                                            </div>
+                   
+                                   
+                                             
+                                    
                                 </div>
                                 </div>
 

@@ -16,6 +16,7 @@ function dangnhap()
             if (is_array($checkuser)) {
                 $_SESSION['user'] = $checkuser;
                 echo '<script>alert("Đăng nhập thành công");</script>';
+
             }        
              else {
                 echo '<script>alert("Tài khoản hoặc mật khẩu không tồn tại.Xin hãy đăng ký.");</script>';
@@ -24,7 +25,6 @@ function dangnhap()
             
         }
        
-
     }
     include "view/taikhoan/dangnhap.php";
 }

@@ -70,6 +70,9 @@ if (isset($_GET['act'])) {
         case 'updatebill';
             updatebill();
             break;
+            case 'ct';
+            ct();
+            break;
                 /**controller cho comment */
         case 'xoabl':
             xoabl();
@@ -85,9 +88,7 @@ if (isset($_GET['act'])) {
         case 'bieudo':
             listbieudo();
             break;
-        case 'doanhthu':
-            doanhthu();
-            break;
+
         default:
             include "home.php";
             break;

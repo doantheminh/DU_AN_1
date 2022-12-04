@@ -22,7 +22,6 @@
                     foreach ($listtaikhoan as $taikhoan) {
                         extract($taikhoan);
                    if($id==$taikhoan['id']) echo '<option value="'.$taikhoan['id'].'" selected>'.$taikhoan['user'].'</option>';
-                    echo '<option value="'.$taikhoan['id'].'">'.$taikhoan['user'].'</option>';
                     }
                     ?>
                 </select>

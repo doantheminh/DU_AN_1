@@ -12,11 +12,7 @@
           <div class="tile">
             <div class="tile-body">
               <div class="row element-button">
-                <div class="col-sm-2">
-  
-                  <a class="btn btn-add btn-sm" href="form-add-bi-cam.html" title="Thêm"><i class="fas fa-plus"></i>
-                    Tạo mới</a>
-                </div>
+      
                 
               <table class="table table-hover table-bordered" id="sampleTable">
                 <thead>

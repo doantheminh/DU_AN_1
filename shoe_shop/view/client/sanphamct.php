@@ -66,7 +66,7 @@
 
                             <div class="item-price">
                            
-                                    <p><span>$' . number_format($price) . 'VND</span></p>
+                                    <p><span>' . number_format($price) . 'VND</span></p>
                                
                                 
                             </div>
@@ -143,10 +143,10 @@
                                         <div class="single-product-tab">
                                             <ul class="nav single-product-tab-navigation" role="tablist">
                                                 <li role="presentation">
-                                                    <a class="active" href="#tab1" aria-controls="tab1" role="tab" data-bs-toggle="tab">Product Description</a>
+                                                    <a class="active" href="#tab1" aria-controls="tab1" role="tab" data-bs-toggle="tab">Mô tả về sản phẩm</a>
                                                 </li>
                                                 <li role="presentation">
-                                                    <a href="#tab2" aria-controls="tab2" role="tab" data-bs-toggle="tab">reviews</a>
+                                                    <a href="#tab2" aria-controls="tab2" role="tab" data-bs-toggle="tab">Bình luận</a>
                                                 </li>
 
                                             </ul>

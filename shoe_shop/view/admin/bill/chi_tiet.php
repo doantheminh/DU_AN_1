@@ -1,8 +1,8 @@
 
-<main class="app-content">
+        <main class="app-content">
         <div class="app-title">
             <ul class="app-breadcrumb breadcrumb side">
-                <li class="breadcrumb-item active"><a href="#"><b>Danh sách hóa đơn</b></a></li>
+                <li class="breadcrumb-item active"><a href="#"><b>Danh sách sản phẩm</b></a></li>
             </ul>
             <div id="clock"></div>
         </div>
@@ -11,22 +11,23 @@
                 <div class="tile">
                     <div class="tile-body">
                         <div class="row element-button">
-
+              
                             <div id="sampleTable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
   <div class="row">
     <div class="col-sm-12 col-md-6">
       <div class="dataTables_length" id="sampleTable_length">
-      <form action="index.php?act=listbill" method="post">
+      <form action="index.php?act=listsp" method="post">
 
-        <label> 
+  
                     
       </div>
     </div>
     <div class="col-sm-12 col-md-6">
       <div id="sampleTable_filter" class="dataTables_filter">
-        <label>Tìm kiếm:<input type="text" class="form-control form-control-sm" placeholder="Nhập tên khách hàng..." name="kyw">
+        <label>Tìm kiếm:<input type="text" class="form-control form-control-sm" placeholder="Tìm theo tên..." name="kyw">
         <input type="submit" value="Go" name="listok">
-        </label>
+
+        
       </div>
     </div>
     </form>
@@ -44,26 +45,19 @@
           </tr>
         </thead>
               <tbody>
-              <div class="form-group col-md-6">
-                        Tên tên sản phẩm <br>
-                        <input type="text" name="tensp" value="<?=$name?>" class="form-control">
-                    </div>
-                    <div class="form-group col-md-6">
-                        Giá sản phẩm <br>
-                        <input type="text" name="giasp" value="<?=$price?>" id="" class="form-control">
-                    </div>
-                    <div class="form-group col-md-6">
-                        Hình sản phẩm <br>
-                        <input type="file" name="hinh" id="" class="form-control">
-                        <?=$hinh?>
-                    </div>
-                    <div class="form-group col-md-6">
-                        Mô tả sản phẩm <br>
-                        <textarea name="mota" id="" cols="30" rows="10"><?=$mota?></textarea class="form-control">
-                    </div>
-            
+                 <table class="table table-hover table-bordered" id="sampleTable">
+                            <thead>
+                            <?php
+                                            bill_chi_tiet($billct);
+                                        ?>
+                                         <td><a href="index.php?act=listbill"><input class="btn btn-primary btn-sm trash" type="button" value="Quay lại"></a>
+                                    </td>
+                            </thead>
+                            
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+

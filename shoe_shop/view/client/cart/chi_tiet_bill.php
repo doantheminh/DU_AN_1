@@ -19,7 +19,6 @@
                                 <thead>
                                    
                                 </thead>
-                                
                                         <?php
                                             bill_chi_tiet($billct);
                                         ?>
