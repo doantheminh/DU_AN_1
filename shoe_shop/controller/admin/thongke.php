@@ -2,6 +2,7 @@
 function listthongke()
 {
     $listthongke = loadall_thongke();
+    
     include "thongke/list.php";
 }
 function listbieudo()

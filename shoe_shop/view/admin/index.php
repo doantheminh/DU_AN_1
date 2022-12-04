@@ -67,6 +67,9 @@ if (isset($_GET['act'])) {
         case 'xoabill':
             xoabill();
             break;
+        case 'detailbill':
+            detailbill();
+            break;
         case 'updatebill';
             updatebill();
             break;

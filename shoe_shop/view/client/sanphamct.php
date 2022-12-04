@@ -66,7 +66,7 @@
 
                             <div class="item-price">
                            
-                                    <p><span>' . number_format($price) . 'VND</span></p>
+                                    <p><span>' . number_format($price) . ' vnd</span></p>
                                
                                 
                             </div>
@@ -80,38 +80,14 @@
                                 </div>
                             </div>
                            
-                            <div class="select-catagory">
-                                <!-- <div class="color-select">
-                                    <label class="required">
-                                        <em>*</em> Color
-                                    </label>
-                                    <div class="input-box">
-                                        <select id="select-1">
-                                            <option value="">-- Please Select --</option>
-                                            <option value="">black +$2.00</option>
-                                            <option value="">blue +$1.00</option>
-                                            <option value="">yellow +$1.00</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="size-select">
-                                    <label class="required">
-                                        <em>*</em> Size
-                                    </label>
-                                    <div class="input-box">
-                                        <select id="select-2">
-                                            <option value="">-- Please Select --</option>
-                                            <option value="">L +$2.00</option>
-                                            <option value="">M +$1.00</option>
-                                        </select>
-                                    </div>
-                                </div> -->
-                            </div>
+       
                             <div class="cart-item">
-                                <div class="price-box">
-                                    <span></span>
-                                </div>
+                           
                                 <div class="single-cart">
+                                <div class="cart-plus-minus">
+                                <label>Số lượng: </label>
+                                <input class="cart-plus-minus-box" type="text" name="qtybutton" value="0">
+                            </div>
 
                                     <div class="actions">
                                                     <form action="index.php?act=addtocart" method="post">

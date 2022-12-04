@@ -1,6 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
 <?php
 
 function addtocart(){
+    
     if (isset($_POST['addtocart']) && ($_POST['addtocart'])) {
         $id = $_POST['id'];
         $name = $_POST['name'];
@@ -10,6 +21,7 @@ function addtocart(){
         $ttien = $soluong * $price;
         $spadd = [$id, $name, $img, $price, $soluong, $ttien];
         array_push($_SESSION['mycart'], $spadd);
+        
     }
     include "view/client/cart/viewcart.php";
 }
@@ -34,7 +46,8 @@ function billcomfirm(){
         $pttt=$_POST['pttt'];
         $ngaydathang=date('h:i:sa d/m/Y');
         $tongdonhang=tongdonhang();
-       $idbill=insert_bill($iduser,$name,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang);
+        $name_product = $_POST['name_product'];
+       $idbill=insert_bill($iduser,$name,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang,$name_product);
        foreach ($_SESSION['mycart'] as $cart) {
             insert_cart($_SESSION['user']['id'],$cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$cart[5],$idbill);
        }
@@ -60,3 +73,6 @@ function ctdh(){
     }
 }
 ?>
+   
+   </body>
+</html>
