@@ -1,3 +1,4 @@
+
 <?php
     function viewcart($dell)
     {
@@ -43,6 +44,7 @@
                         </td>
 
                     <td class="#">
+                        <input type="text" placeholder="Tên" name="name_product"  value="'.$cart[1].'" hidden>
                         <a href="single-product.html">'.$cart[1].'</a>
                     </td>
 
@@ -84,8 +86,8 @@
                 return $tong;
 
 }
-function insert_bill($iduser,$name,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang){
-    $sql="insert into bill(iduser,bill_name,bill_email,bill_address,bill_tel,bill_pttt,ngaydathang,total) values('$iduser','$name','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang')";
+function insert_bill($iduser,$name,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang,$name_product){
+    $sql="insert into bill(iduser,bill_name,bill_email,bill_address,bill_tel,bill_pttt,ngaydathang,total,name_product) values('$iduser','$name','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang','$name_product')";
     return pdo_execute_return_lastInsertID($sql);
 }
 function insert_cart($iduser,$idpro,$img,$name,$price,$soluong,$thanhtien,$idbill){
@@ -97,6 +99,8 @@ function loadone_bill($id){
     $sql="select*from bill where id=".$id;
     $bill=pdo_query_one($sql);
     return $bill;
+    // 
+               
 }
 function loadall_cart($idbill){
     $sql="select*from cart where idbill=".$idbill;
@@ -142,23 +146,26 @@ function bill_chi_tiet($billct)
 
 }
 function get_ttdh($n){
-    switch ($n) {
+   
+  
+    switch  ($n) {
         case '0':
            $tt="Đơn hàng mới";
             break;
         case '1':
-            $tt="Dang xử lý";
+            $tt="Đang xử lý";
             break;
         case '2':
             $tt="Đang giao hàng";
              break;
         case '3':
-            $tt="Mua thành công";
+            $tt="Đã mua";
              break;         
         default:
             $tt="Đơn hàng mới";
             break;
     }
+  
     return $tt;
 }
 function loadall_thongke(){

@@ -52,7 +52,10 @@
                                     <th>Khách hàng</th>
                                     <th>Số lượng hàng</th>
                                     <th>Giá trị đơn hàng</th>
-                                    <th>Tình trạng đơn hàng</th>
+                                    <th>Tình trạng đơn hàng
+         
+                                  
+                                  </th>
                                     <th>Ngày đặt hàng</th>
                                     <th>Tháo tác</th>
                                 </tr>
@@ -62,7 +65,7 @@
                                 foreach($listbill as $bill) {
                                     extract($bill);
                                     $xoabill="index.php?act=xoabill&id=".$id;
-                                    $updatebill="index.php?act=updatebill&id=".$id;
+                                    $detailbill="index.php?act=detailbill&id=".$id;
                                     $kh=$bill["bill_name"].'
                                     <br>'.$bill["bill_email"].'
                                     <br>'.$bill["bill_address"].'
@@ -75,11 +78,11 @@
                                     <td>'.$kh.'</td>
                                     <td>'.$countsp.'</td>
                                     <td><strong>'.number_format($bill["total"]).'</strong>VND</td>
-                                    <td><a href="'.$updatebill.'">'.$ttdh.'</a></td>
+                                    <td>'.$ttdh.'</td>    
                                     <td>'.$bill["ngaydathang"].'</td>
 
                                     <td>
-                                    <a href="'.$updatebill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Cập nhật"></a>
+                                    <a href="'.$detailbill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Chi tiết"></a>
                                     <a href="'.$xoabill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>
                                     </td>
                                 </tr>';
