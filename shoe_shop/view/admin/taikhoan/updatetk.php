@@ -46,13 +46,20 @@
                 <label class="control-label">Số điện thoại</label>
                 <input class="form-control" type="text"  name="tel" value="<?=$tel?>">
               </div>
-              <div class="form-group col-md-3">
-                <label class="control-label">Vai trò</label>
-                <input class="form-control" type="text"  name="role" value="<?=$role?>">
-              </div>
-
-
-
+              <?php
+                        foreach ($listtaikhoan as $taikhoan) {    
+                            extract($taikhoan);
+                            $vaitro=get_vaitro($role);
+                            echo '<div class="form-group col-md-3">
+                            <label class="control-label">Vai trò</label>
+                              <select name="role"  class="form-control form-control-sm" >
+                                <option value="'. $vaitro .'" selected>'.get_vaitro($role).'</option>
+                                <option value="0" >Khách hàng</option>
+                                <option value="1">Admin</option>
+                              </select>
+                            </div>  ';
+                        }
+                        ?>
             </div>
             <input type="hidden" name="id" value="<?=$id?>">
 

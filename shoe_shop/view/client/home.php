@@ -143,7 +143,7 @@
                                                                 <a href="'.$linksp.'="Fusce aliquam">'.$name.'</a>
                                                             </div>
                                                             <div class="price-rating">
-                                                                <span>'.number_format($price).'VND</span>
+                                                                <span>'.number_format($price).' vnd</span>
                                                                 <div class="ratings">
                                                                     <i class="fa fa-star"></i>
                                                                     <i class="fa fa-star"></i>

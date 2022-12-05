@@ -85,11 +85,11 @@
                            
                                 <div class="single-cart">
                                 <div class="cart-plus-minus">
-                                <label>Số lượng: </label>
+                                <label>SL: </label>
                                 <input class="cart-plus-minus-box" type="text" name="qtybutton" value="0">
                             </div>
 
-                                    <div class="actions">
+                                                    <div class="actions">
                                                     <form action="index.php?act=addtocart" method="post">
                                                       <input type="hidden" name="id" value="' . $id . '">
                                                       <input type="hidden" name="name" value="' . $name . '">
@@ -187,7 +187,7 @@
                                         <a href="single-product.html" title="Fusce aliquam">' . $name . '</a>
                                     </div>
                                     <div class="price-rating">
-                                        <span>' . number_format($price) . '</span>
+                                        <span>' . number_format($price) . ' vnd</span>
                                     </div>
                                     
                                 </div>

@@ -51,13 +51,13 @@
                     </td>
 
                     <td class="unit-price">
-                        <span>'.$cart[3].'</span>
+                        <span>'.number_format($cart[3]).' vnd</span>
                     </td>
                     <td class="quantity">
                         <span>'.$cart[4].'</span>
                     </td>
                     <td class="subtotal">
-                        <span>'.$ttien.'</span>
+                        <span>'.number_format($ttien).' vnd</span>
                     </td>
                     <td class="remove-icon">
                         <a href="'.$xoasp_td.'">
@@ -73,7 +73,7 @@
            echo '
            <div class="col-md-4">   
            <div class="totals">
-               <h3>Tổng: <span>'.$tong.'</span></h3>
+               <h3>Tổng: <span>'.number_format($tong).' vnd</span></h3>
 
            </div>
            ';
@@ -170,6 +170,21 @@ function get_ttdh($n){
              break;         
         default:
             $tt="Đơn hàng mới";
+            break;
+    }
+  
+    return $tt;
+}
+function get_vaitro($v){
+    switch  ($v) {
+        case '0':
+           $tt="Khách hàng";
+            break;
+        case '1':
+            $tt="Admin";
+            break;      
+        default:
+            $tt="Admin";
             break;
     }
   

@@ -27,8 +27,8 @@
                                     <td>'.$tendm.'</td>
                                     <td>'.$countsp.'</td>
                                     <td>'.number_format($maxprice).' vnd</td>
-                                    <td>'.$minprice.' vnd</td>
-                                    <td>'.$avgprice.' vnd</td>
+                                    <td>'.number_format($minprice).' vnd</td>
+                                    <td>'.number_format($avgprice).' vnd</td>
                                 </tr>';
                                     }
                                     ?>
@@ -45,45 +45,4 @@
         </div>
 
 
-        <div class="app-title">
-            <ul class="app-breadcrumb breadcrumb side">
-                <li class="breadcrumb-item active"><a href="#"><b>Thống kê doanh thu theo loại</b></a></li>
-            </ul>
-            <div id="clock"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="tile">
-                        <div class="tile-body">
-
-                            <table class="table table-hover table-bordered" id="sampleTable">
-                                    <tr>
-                                    <th>Mã danh mục</th>
-                                    <th>Tên danh mục</th>
-                                    <th>Số lượng</th>
-                                    <th>Giá cao nhất</th>
-                                    <th>Giá thấp nhất</th>
-                                    <th>Giá trung bình</th>
-                                    </tr>
-                                    <?php
-                                    foreach ($listthongke as $thongke) {
-                                    extract($thongke);
-                                    echo '<tr>
-                                    <td>'.$madm.'</td>
-                                    <td>'.$tendm.'</td>
-                                    <td>'.$countsp.'</td>
-                                    <td>'.number_format($maxprice).' vnd</td>
-                                    <td>'.$minprice.' vnd</td>
-                                    <td>'.$avgprice.' vnd</td>
-                                </tr>';
-                                    }
-                                    ?>
-                                
-                            </table>
-                        </div>
-
-                    
-            </div>
-            </div>
-        </div>
     </main>

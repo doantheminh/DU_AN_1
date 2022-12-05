@@ -65,23 +65,31 @@
                                                                         $countsp = loadall_cart_count($bill["id"]);
                                                                         $ttdh = get_ttdh($bill["bill_status"]);
                                                                         echo '<tr>
-                                                        <td width="10"><input type="checkbox" name="check1" value="1"></td>
-                                                        <td>' . $bill['id'] . '</td>
-                                                        <td>' . $kh . '</td>
-                                                        <td>' . $bill["name_product"] . '</td>
-                                                        <td>' . $countsp . '</td>
-                                                        <td><strong>' . number_format($bill["total"]) . '</strong>VND</td>
-                                                        <form action="'.$updatebill.'" method="POST">
-                                                            <input type="number" name="id_bill" value="' . $bill["id"] . '" hidden>
-                                                            <td>'.$ttdh.'</td> 
-                                                            <td>' . $bill["ngaydathang"] . '</td>
+                                                                                <td width="10"><input type="checkbox" name="check1" value="1"></td>
+                                                                                <td>' . $bill['id'] . '</td>
+                                                                                <td>' . $kh . '</td>
+                                                                                <td>' . $bill["name_product"] . '</td>
+                                                                                <td>' . $countsp . '</td>
+                                                                                <td><strong>' . number_format($bill["total"]) . '</strong>VND</td>
+                                                                                    <form action="'.$updatebill.'" method="POST">
+                                                                                        <input type="number" name="id_bill" value="' . $bill["id"] . '" hidden>
+                                                                                        <td> 
+                                                                                            <select id="cars" name="bill_status"  class="form-control form-control-sm">
+                                                                                                <option value="'. $bill["bill_status"] .'" selected>'.$ttdh=get_ttdh($bill["bill_status"]).'</option>
+                                                                                                <option value="0" >Đơn hàng mới</option>
+                                                                                                <option value="1">Đang xử lý</option>
+                                                                                                <option value="2">Đang giao hàng</option>
+                                                                                                <option value="3">Đã mua</option>
+                                                                                            </select>   
+                                                                                        </td>  
+                                                                                        <td>' . $bill["ngaydathang"] . '</td>
 
-                                                            <td>
-                                                            <input class="btn btn-primary btn-sm edit" type="submit" name="update" value="Cập nhật">
-                                                            <a href=""><input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>
-                                                            </td>
-                                                        </form>
-                                                    </tr>';
+                                                                                        <td>
+                                                                                        <input class="btn btn-primary btn-sm edit" type="submit" name="update" value="Cập nhật">
+                                                                                        <a href=""><input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>
+                                                                                        </td>
+                                                                                        </form>
+                                                                            </tr>';
                                                     ?>
 
                                                 </tbody>

@@ -8,8 +8,8 @@
         $sp=pdo_query_one($sql);
         return $sp;
     }
-    function update_taikhoan($id,$user,$pass,$email,$address,$tel){
-        $sql="update taikhoan set user='".$user."', pass='".$pass."', email='".$email."', address='".$address."', tel='".$tel."' where id=".$id;
+    function update_taikhoan($id,$user,$pass,$email,$address,$tel,$role){
+        $sql="update taikhoan set user='".$user."', pass='".$pass."', email='".$email."', address='".$address."', tel='".$tel."', role='".$role."' where id=".$id;
         pdo_execute($sql);
     }
     function checkemail($email){
@@ -26,10 +26,4 @@
         $sql="delete from taikhoan where id=".$_GET['id'];
           pdo_execute($sql);
     }
-    // function loadone_taikhoan($id){
-    //     $sql="select*from taikhoan where id=".$id;
-    //     $tk=pdo_query_one($sql);
-    //     return $tk;
-
-    // }
 ?>

@@ -33,6 +33,7 @@
                             extract($taikhoan);
                             $suatk="index.php?act=suatk&id=".$id;
                             $xoatk="index.php?act=xoatk&id=".$id;
+                            $vaitro=get_vaitro($role);
                             echo '<tr>
                             <td><input type="checkbox" name="" id=""></td>
                             <td>'.$id.'</td>
@@ -41,7 +42,7 @@
                             <td>'.$email.'</td>
                             <td>'.$address.'</td>
                             <td>'.$tel.'</td>
-                            <td>'.$role.'</td>
+                            <td> '.$vaitro.' </td>  
                             <td><a class="btn btn-primary btn-sm edit" href="'.$suatk.'"><i class="fa fa-edit"></i></a> 
                             <a class="btn btn-primary btn-sm trash" href="'.$xoatk.'"><i class="fas fa-trash-alt"></i></a></td></tr>';
                         }

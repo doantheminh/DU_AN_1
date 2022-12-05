@@ -13,7 +13,7 @@ function uptadetk(){
         $address=$_POST['address'];
         $tel=$_POST['tel'];
         $role=$_POST['role'];
-        update_taikhoan($id,$user,$pass,$email,$address,$tel);
+        update_taikhoan($id,$user,$pass,$email,$address,$tel,$role);
           $thongbao="Cập nhật thành công";
          }
         
