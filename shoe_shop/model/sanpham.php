@@ -1,8 +1,11 @@
 <?php
 
 function delete_sanpham($id){
-    $sql="delete from sanpham where id=".$_GET['id'];
-      pdo_execute($sql);
+    var_dump($id);
+    $sql="delete from sanpham where id=".$id;
+    $sql_img = "delete from img_products where id_product=".$id;
+    pdo_execute($sql_img);
+    pdo_execute($sql);
 }
 function loadall_sanpham($kyw="",$iddm=0){
     $sql="select * from sanpham where 1";

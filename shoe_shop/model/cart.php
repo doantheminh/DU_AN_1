@@ -6,6 +6,7 @@
         $tong=0;
         $i=0;
         $number=0;
+        $name_product = '';
         if($dell==1){
             $xoasp_th='<th>Thao tác</th>';
             $xoa_td2='<th></th>';
@@ -31,6 +32,7 @@
                 $ttien=$cart[3]*$cart[4];   
                 $tong+=$ttien;
                 $number+=$cart[4];
+                $name_product .= ' - '. $cart[1];
                 if($dell==1){
                     $xoasp_td='index.php?act=delcart&idcart='.$i.'';
                 }else {
@@ -46,7 +48,6 @@
                         </td>
 
                     <td class="#">
-                        <input type="text" placeholder="Tên" name="name_product"  value="'.$cart[1].'" hidden>
                         <a href="single-product.html">'.$cart[1].'</a>
                     </td>
 
@@ -71,6 +72,7 @@
                     $i+=1;
             }
            echo '
+           <input type="text" placeholder="Tên" name="name_product"  value="'.$name_product.'" hidden>
            <div class="col-md-4">   
            <div class="totals">
                <h3>Tổng: <span>'.number_format($tong).' vnd</span></h3>
@@ -91,8 +93,8 @@
 
 }
 
-function insert_bill($iduser,$name,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang){
-    $sql="insert into bill(iduser,bill_name,bill_email,bill_address,bill_tel,bill_pttt,ngaydathang,total) values('$iduser','$name','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang')";
+function insert_bill($iduser,$name,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang,$name_product){
+    $sql="insert into bill(iduser,bill_name,bill_email,bill_address,bill_tel,bill_pttt,ngaydathang,total,name_product) values('$iduser','$name','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang','$name_product')";
     return pdo_execute_return_lastInsertID($sql);
 }
 function insert_cart($iduser,$idpro,$img,$name,$price,$soluong,$thanhtien,$idbill){

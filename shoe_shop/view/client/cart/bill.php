@@ -2,7 +2,6 @@
 <div class="checkout-area">
     <div class="container">
         <form action="index.php?act=billcomfirm" method="post">
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="location">
@@ -100,11 +99,11 @@
                                                             </div>
                                                             <div class="form-name">
                                                                 <label>Email <em>*</em> </label>
-                                                                <input type="text" placeholder="Email" name="email" id="" value="<?= $email ?>"require pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Bạn phải nhập đúng định dạng của email !">
+                                                                <input type="text" placeholder="Email" name="email" id="" value="<?= $email ?>"required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Bạn phải nhập đúng định dạng của email !">
                                                             </div>
                                                             <div class="form-name">
                                                                 <label>Số điện thoại <em>*</em> </label>
-                                                                <input type="text" placeholder="Số điện thoại" name="tel" id="" value="<?= $tel ?>" pattern="(\+84|0)\d{9,10}" require title="Nhập số điện thoại từ 10 đến 11 số không bao gồm chữ">
+                                                                <input type="text" placeholder="Số điện thoại" name="tel" id="" value="<?= $tel ?>" pattern="(\+84|0)\d{9,10}" required title="Nhập số điện thoại từ 10 đến 11 số không bao gồm chữ">
                                                             </div>
                                                         </div>
                                                     
