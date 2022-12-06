@@ -10,7 +10,7 @@ $dstop10 = loadall_sanpham_top10(); ?>
                         <div class="location">
                             <ul>
                                 <li><a href="index.html" title="go to homepage">Home<span>/</span></a>  </li>
-                                <li><strong> my account</strong></li>
+                                <li><strong> Tài khoản cá nhân</strong></li>
                             </ul>
                         </div>
                     </div>
@@ -54,14 +54,7 @@ $dstop10 = loadall_sanpham_top10(); ?>
                         <div class="my-account-accordion">
                             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                 <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab" id="headingOne">
-                                        <h4 class="panel-title">
-                                            <a role="button" data-bs-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                <i class="fa fa-list-ol"></i>
-                                                Lịch sử đặt hàng
-                                            </a>
-                                        </h4>
-                                    </div>
+                                
                                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" data-bs-parent="#accordion">
                                         <div class="panel-body">
                                             <div class="row">
@@ -105,23 +98,23 @@ $dstop10 = loadall_sanpham_top10(); ?>
                                                             </div>
                                                             <div class="form-name">
                                                                 <label>Email <em>*</em> </label>
-                                                                <input type="email" name="email" id="" value="<?=$email?>">
+                                                                <input type="email" name="email" id="" value="<?=$email?>"require pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Bạn phải nhập đúng định dạng của email !">
                                                             </div>
                                                             <div class="form-name">
                                                                 <label>Tên đăng nhập <em>*</em> </label>
-                                                                <input type="text" name="user" id=""value="<?=$user?>">
+                                                                <input type="text" name="user" id=""value="<?=$user?>" pattern="[a-z]{1,20}" required title="Bạn phải nhập ít hơn 20 ký tự và ký tự phải từ A-Z !">
                                                             </div>
                                                             <div class="form-name">
                                                                 <label>Mật khẩu </label>
-                                                                <input type="password" name="pass" id=""value="<?=$pass?>">
+                                                                <input type="password" name="pass" id=""value="<?=$pass?>" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="Mật khẩu phải chứa 8 ký tự trở lên có ít nhất một số và một chữ hoa và chữ thường">
                                                             </div>
                                                             <div class="form-name">
                                                                 <label>Địa chỉ<em>*</em> </label>
-                                                                <input type="text" name="address" id=""value="<?=$address?>">
+                                                                <input type="text" name="address" id=""value="<?=$address?>" required>
                                                             </div>
                                                             <div class="form-name">
                                                                 <label>Điện thại <em>*</em> </label>
-                                                                <input type="text" name="tel" id=""value="<?=$tel?>">
+                                                                <input type="text" name="tel" id=""value="<?=$tel?>" pattern="(\+84|0)\d{9,10}" require title="Nhập số điện thoại từ 10 đến 11 số không bao gồm chữ">
                                                             </div>
                                                       
                                                             <input type="hidden" name="id" value="<?=$id?>">

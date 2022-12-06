@@ -66,6 +66,7 @@
                                 
                                 foreach($listbill as $bill) {
                                     extract($bill);
+                                    // var_dump(1);
                                     $xoabill="index.php?act=xoabill&id=".$id;
                                     $detailbill="index.php?act=detailbill&id=".$id;
                                     $kh=$bill["bill_name"].'
@@ -77,7 +78,7 @@
                                     echo '<tr>
                                     <td width="10"><input type="checkbox" name="check1" value="1"></td>
                                     <td>'.$bill['id'].'</td>
-                                    <td>'.$kh.'</td>
+                                    <td>'.$kh.'</td>  
                                     <td>'.$countsp.'</td>
                                     <td><strong>'.number_format($bill["total"]).'</strong>VND</td>
                                     <td>'.$ttdh.'</td>    

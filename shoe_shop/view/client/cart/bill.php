@@ -91,20 +91,20 @@
                                                         <div class="list-style">
                                                             <div class="form-name">
                                                                 <label>Tên người đặt <em>*</em> </label>
-                                                                <input type="text" placeholder="Tên" name="name" value="<?= $name ?>">
+                                                                <input type="text" placeholder="Tên" name="name" value="<?= $name ?>"  pattern="[a-z]{1,20}" required title="Bạn phải nhập ít hơn 20 ký tự và ký tự phải từ A-Z !">
                                                             </div>
 
                                                             <div class="form-name">
                                                                 <label>Địa chỉ <em>*</em> </label>
-                                                                <input type="text" placeholder="Address" name="address" value="<?= $address ?>">
+                                                                <input type="text" placeholder="Address" name="address" value="<?= $address ?>"  required>
                                                             </div>
                                                             <div class="form-name">
                                                                 <label>Email <em>*</em> </label>
-                                                                <input type="text" placeholder="Email" name="email" id="" value="<?= $email ?>">
+                                                                <input type="text" placeholder="Email" name="email" id="" value="<?= $email ?>"require pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Bạn phải nhập đúng định dạng của email !">
                                                             </div>
                                                             <div class="form-name">
                                                                 <label>Số điện thoại <em>*</em> </label>
-                                                                <input type="text" placeholder="Số điện thoại" name="tel" id="" value="<?= $tel ?>">
+                                                                <input type="text" placeholder="Số điện thoại" name="tel" id="" value="<?= $tel ?>" pattern="(\+84|0)\d{9,10}" require title="Nhập số điện thoại từ 10 đến 11 số không bao gồm chữ">
                                                             </div>
                                                         </div>
                                                     
@@ -131,8 +131,7 @@
                                             <div class="radio">
                                                 <tr>
                                                     <td><input type="radio" name="pttt" checked id="">Trả tiền khi nhận hàng</td>
-                                                    <td><input type="radio" name="pttt">Chuyển khoản ngân hàng</td>
-                                                    <td><input type="radio" name="pttt">Thanh toán online</td>
+                                  
 
                                                 </tr>
                                             </div>
@@ -162,7 +161,6 @@
                                                     </table>
                                                 </form>
                                             </div>
-
                                             <input type="submit" value="Tiếp tục đặt hàng" class="btn btn-dark" name="dongydathang">
                                         </div>
                                     </div>

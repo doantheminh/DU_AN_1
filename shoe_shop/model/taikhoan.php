@@ -8,8 +8,9 @@
         $sp=pdo_query_one($sql);
         return $sp;
     }
-    function update_taikhoan($id,$user,$pass,$email,$address,$tel,$role){
-        $sql="update taikhoan set user='".$user."', pass='".$pass."', email='".$email."', address='".$address."', tel='".$tel."', role='".$role."' where id=".$id;
+    //cập nhật tài khoản ngoài
+    function update_taikhoan($id,$user,$pass,$email,$address,$tel){
+        $sql="update taikhoan set user='".$user."', pass='".$pass."', email='".$email."', address='".$address."', tel='".$tel."' where id=".$id;
         pdo_execute($sql);
     }
     function checkemail($email){

@@ -24,17 +24,14 @@
                                 </div>
                                 <div class="login-form">
                                     <form action="index.php?act=dangky" method="post">
-                                        <input type="email" name="email" placeholder="Email" id="" >
+                                        <input type="email" name="email" placeholder="Email" id="" require pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Bạn phải nhập đúng định dạng của email !">
                                         <p style="color: red;"><?=isset($error["email"])?($error["email"]):''?></p>
-                                        <input type="text" name="user" placeholder="Username" >
+                                        <input type="text" name="user" placeholder="Username" pattern="[a-z]{1,20}" required title="Bạn phải nhập ít hơn 20 ký tự và ký tự phải từ A-Z !">
                                         <p style="color: red;"><?=isset($error["user"])?($error["user"]):''?></p>
-                                        <input type="password" name="pass" placeholder="Password" require>
+                                        <input type="password" name="pass" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="password phải chứa 8 ký tự trở lên có ít nhất một số và một chữ hoa và chữ thường" >
                                         <p style="color: red;"><?=isset($error["pass"])?($error["pass"]):''?></p>
                                         <div class="button-box">
-                                            <div class="login-toggle-btn">
-                                                <input type="checkbox" id="remember">
-                                                <label for="remember">Remember me</label>
-                                            </div>
+                                    
                                             <input type="submit" value="Đăng ký" name="dangky" class="default-btn">
                                             <a href="index.php?act=dangnhap" class="default-btn">Đăng Nhập</a>
                                             <a href="index.php?act=quenmk" class="default-btn">Quên mật khẩu</a>                                            

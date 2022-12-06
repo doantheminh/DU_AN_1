@@ -15,6 +15,7 @@ function uptadetk(){
         $role=$_POST['role'];
         update_taikhoan($id,$user,$pass,$email,$address,$tel,$role);
           $thongbao="Cập nhật thành công";
+          echo $thongbao;
          }
         
         $listtaikhoan=loadall_taikhoan();

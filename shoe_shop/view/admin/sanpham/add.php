@@ -27,20 +27,35 @@
               </div>
               <div class="form-group col-md-3">
                 <label class="control-label">Tên sản phẩm</label>
-                <input class="form-control" type="text"  name="tensp">
+                <input class="form-control" type="text"  name="tensp" require >
+                <?php
+                if (isset($error['tensp'])) {
+                    echo $error['tensp'];
+                }
+                ?>
               </div>
-
-
-
               <div class="form-group col-md-3">
                 <label class="control-label">Giá bán</label>
-                <input class="form-control" type="text"  name="giasp" >
+                <input class="form-control" type="text"  name="giasp" require parent="[0-9]" title="Bạn phải nhập số tiền!">
+                <?php
+                if (isset($error['giasp'])) {
+                    echo $error['giasp'];
+                }
+                ?>
               </div>
 
               <div class="form-group col-md-12">
                 <label class="control-label">Ảnh sản phẩm</label>
                 <div id="myfileupload">
                   <input type="file" id="uploadfile" name="hinh">
+                  <?php
+                if (isset($error['hinh'])) {
+                    echo $error['hinh'];
+                }
+                ?>
+                 
+               
+            
                 </div>
                 <div id="thumbbox">
                   <img height="450" width="400" alt="Thumb image" id="thumbimage" style="display: none" />
@@ -49,6 +64,7 @@
                 <div id="boxchoice">
                   <a href="javascript:" class="Choicefile"><i class="fas fa-cloud-upload-alt"></i> Chọn ảnh</a>
                   <p style="clear:both"></p>
+                  
                 </div>
     
               </div>
@@ -57,6 +73,11 @@
                 <label class="control-label">Ảnh mô tả sản phẩm</label>
                 <div id="myfileupload">
                   <input type="file" id="uploadfile" name="images[]" multiple="multiple">
+                  <?php
+                if (isset($error['images[]'])) {
+                    echo $error['images[]'];
+                }
+                ?>
                 </div>
                 <div id="thumbbox">
                   <img height="450" width="400" alt="Thumb image" id="thumbimage" style="display: none" />
@@ -71,13 +92,18 @@
               <div class="form-group col-md-12">
                 <label class="control-label">Mô tả sản phẩm</label>
                 <textarea class="form-control" name="mota" ></textarea>
+                <?php
+                if (isset($error['mota'])) {
+                    echo $error['mota'];
+                }
+                ?>
               </div>
               <input class="btn btn-save" type="submit" value="Thêm mới" name="themmoi" id="">
               <input type="reset" value="Nhập lại" class="btn btn-save">
               <a href="index.php?act=listsp"><input type="button" value="Danh sách" class="btn btn-save"></a>
 
 
-</form>
+          </form>
           </div>
             
         </div>

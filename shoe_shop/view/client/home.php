@@ -50,8 +50,8 @@
                 <div class="part-2">
                     <div class="search-box">
                         <form action="index.php?act=sanpham" method="post">
-                            <input type="text" name="kyw" id="">
-                            <button type="submit" value="Tìm kiếm" name="timkiem" >
+                            <input type="text" name="kyw"  >
+                            <button type="submit" value="Tìm kiếm" name="timkiem">
                                 <i class="fa fa-search"></i>
                             </button>
                         </form>

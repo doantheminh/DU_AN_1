@@ -46,8 +46,12 @@ if (isset($_FILES["images"])) {
             $error['giasp'] = "Chưa nhập tên giá";
         }
         if($mota==''){
-            $error['mota'] = "Chưa nhập tên mô tả";
+            $error['mota'] = "Chưa nhập  mô tả sản phẩm";
         }
+        if($hinh==''){
+            $error['hinh'] = "Chưa có ảnh";
+        }
+   
         else{
             // insert_sanpham($tensp, $giasp, $hinh, $mota, $iddm);
             $sql="insert into sanpham(name,price,img,mota,iddm) values('$tensp','$giasp','$hinh','$mota','$iddm')";
@@ -56,10 +60,12 @@ if (isset($_FILES["images"])) {
                 $sql="insert into img_products(id_product,image) values($last_id,'$value')";
                 $add_img = pdo_execute($sql);
             }
-            $thongbao = "thêm thành công";
-             echo $thongbao;
+            echo '<script>alert("Thêm thành công");</script>';
+            
+             
+            
         }
-       
+        
     }
     $listdanhmuc = loadall_danhmuc();
     include "sanpham/add.php";
@@ -80,6 +86,7 @@ function updatesp(){
         update_sanpham($id, $iddm, $name, $price, $mota, $img);
         $sanpham = loadall_sanpham($id);
         $thongbao = "Cập nhật thành công";
+        echo $thongbao;
     }
 
     $listdanhmuc = loadall_danhmuc();

@@ -28,23 +28,23 @@
               </div>  
             <div class="form-group col-md-3">
                 <label class="control-label">Tên đăng nhập</label>
-                <input class="form-control" type="text"  name="user" value="<?=$user?>">
+                <input class="form-control" type="text"  name="user" value="<?=$user?>" require>
               </div>
               <div class="form-group col-md-3">
                 <label class="control-label">Mật khẩu</label>
-                <input class="form-control" type="text"  name="pass" value="<?=$pass?>">
+                <input class="form-control" type="password"  name="pass" value="<?=$pass?>"required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="Mật khẩu phải chứa 8 ký tự trở lên có ít nhất một số và một chữ hoa và chữ thường">
               </div>
               <div class="form-group col-md-3">
                 <label class="control-label">Email</label>
-                <input class="form-control" type="text"  name="email" value="<?=$email?>">
+                <input class="form-control" type="email"  name="email" value="<?=$email?>"require pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Bạn phải nhập đúng định dạng của email !">
               </div>
               <div class="form-group col-md-3">
                 <label class="control-label">Địa chỉ</label>
-                <input class="form-control" type="text"  name="address" value="<?=$address?>">
+                <input class="form-control" type="text"  name="address" value="<?=$address?>" require>
               </div>
               <div class="form-group col-md-3">
                 <label class="control-label">Số điện thoại</label>
-                <input class="form-control" type="text"  name="tel" value="<?=$tel?>">
+                <input class="form-control" type="text"  name="tel" value="<?=$tel?>"pattern="(\+84|0)\d{9,10}" require title="Nhập số điện thoại từ 10 đến 11 số không bao gồm chữ">
               </div>
               <?php
                         foreach ($listtaikhoan as $taikhoan) {    

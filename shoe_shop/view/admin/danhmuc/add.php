@@ -20,7 +20,7 @@
             </div>
             <div class="form-group col-md-12">
               <label class="control-label">Nhập tên danh mục mới</label>
-              <input class="form-control" type="text" name="tenloai" required>
+              <input class="form-control" type="text" name="tenloai" pattern="{1,30}" required>
             </div>
             <div class="error">
                 <?php

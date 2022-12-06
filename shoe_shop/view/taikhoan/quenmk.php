@@ -25,14 +25,11 @@
                                 </div>
                                 <div class="login-form">
                                     <form action="index.php?act=quenmk" method="post">
-                                        <input type="text" name="email" placeholder="Email" require>
+                                        <input type="text" name="email" placeholder="Email" require pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Bạn phải nhập đúng định dạng của email !" >
                                         <p style="color: red;"><?=isset($error["email"])?($error["email"]):''?></p>
                                         
                                         <div class="button-box">
-                                            <div class="login-toggle-btn">
-                                                <input type="checkbox" id="remember">
-                                                <label for="remember">Remember me</label>
-                                            </div>
+                                           
                                             <input type="submit" value="Gửi" name="guiemail" class="default-btn">
                                             <a href="index.php?act=dangky" class="default-btn">Đăng Ký</a>
                                             <a href="index.php?act=quenmk" class="default-btn">Quên mật khẩu</a>                                            

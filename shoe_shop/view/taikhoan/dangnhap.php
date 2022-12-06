@@ -28,14 +28,13 @@
                                 <div class="login-form">
                                     <form action="index.php?act=dangnhap" method="post">
                       
-                                        <input type="text" name="user" placeholder="Username">
+                                        <input type="text" name="user" placeholder="Username" pattern="[a-z]{1,20}" required title="Bạn phải nhập ít hơn 20 ký tự và ký tự phải từ A-Z !">
                                         <p style="color: red;"><?= isset($error['user1'])? $error['user1']: ''?></p>
-                                        <input type="password" name="pass" placeholder="Password">
+                                        <input type="password" name="pass" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="password phải chứa 8 ký tự trở lên có ít nhất một số và một chữ hoa và chữ thường">
                                         <p style="color: red;"><?= isset($error['pass1'])? $error['pass1']: ''?></p>
                                         <div class="button-box">
                                             <div class="login-toggle-btn">
-                                                <input type="checkbox" id="remember">
-                                                <label for="remember">Remember me</label>
+                                               
                                                 <!--  -->
                                             </div>
                                             <input type="submit" value="Đăng nhập" name="dangnhap" class="default-btn">

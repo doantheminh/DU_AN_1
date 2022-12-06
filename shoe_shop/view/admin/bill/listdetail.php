@@ -59,17 +59,17 @@
                                                     <?php
                                                     $updatebill="index.php?act=updatebill";
                                                     $kh = $bill["bill_name"] . '
-                                                        <br>' . $bill["bill_email"] . '
-                                                        <br>' . $bill["bill_address"] . '
-                                                        <br>' . $bill["bill_tel"];
+                                                        <br>' .$bill["bill_email"] . '
+                                                        <br>' .$bill["bill_address"] . '
+                                                        <br>' .$bill["bill_tel"];
                                                                         $countsp = loadall_cart_count($bill["id"]);
                                                                         $ttdh = get_ttdh($bill["bill_status"]);
                                                                         echo '<tr>
                                                                                 <td width="10"><input type="checkbox" name="check1" value="1"></td>
-                                                                                <td>' . $bill['id'] . '</td>
-                                                                                <td>' . $kh . '</td>
-                                                                                <td>' . $bill["name_product"] . '</td>
-                                                                                <td>' . $countsp . '</td>
+                                                                                <td>' .$bill['id'] . '</td>
+                                                                                <td>' .$kh . '</td>
+                                                                                <td>' .$bill["name_product"] . '</td>
+                                                                                <td>' .$countsp . '</td>
                                                                                 <td><strong>' . number_format($bill["total"]) . '</strong>VND</td>
                                                                                     <form action="'.$updatebill.'" method="POST">
                                                                                         <input type="number" name="id_bill" value="' . $bill["id"] . '" hidden>

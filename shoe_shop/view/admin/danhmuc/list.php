@@ -37,7 +37,8 @@
                             <td><input type="checkbox" name="" id=""></td>
                             <td>'.$id.'</td>
                             <td>'.$name.'</td>
-                            <td><a href="'.$suadm.'"><input type="button" value="Sửa" class="btn btn-primary btn-sm edit"></a><a href="'.$xoadm.'"> <input type="button" value="Xóa" class="btn btn-primary btn-sm edit"></a></td>
+                            <td><a href="'.$suadm.'"><input type="button" value="Sửa" class="btn btn-primary btn-sm edit"></a>
+                            <a href="'.$xoadm.'"> <input type="button" value="Xóa" class="btn btn-primary btn-sm edit"></a></td>
                         </tr>';
                         }
                         ?>
