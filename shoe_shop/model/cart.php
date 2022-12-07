@@ -134,19 +134,19 @@ function bill_chi_tiet($billct)
     global $img_path;
     $tong=0;
     $i=0;
-   echo'<tr>
+            echo'<tr>
                 <th>Sản phẩm</th>
                 <th>Tên</th>
                 <th>Đơn giá</th>
                 <th>Số lượng</th>
             </tr>';
         foreach ($billct as $cart) {
-            $hinh=$img_path.$cart['img'];
+            $img=$img_path.$cart['img'];
             $tong+=$cart['thanhtien'];
             echo'<tr> 
-                <td><img src="'.$hinh.'" style="width: 110px;"></td>
+                <td><img src="'.$img.'" style="width: 110px;"></td>
                 <td>'.$cart['name'].'</td>
-                <td>'.$cart['price'].'</td>
+                <td>'. number_format($cart['price']).' vnd</td>
                 <td>'.$cart['soluong'].'</td>
                 </tr>';
                 $i+=1;

@@ -84,10 +84,7 @@
                             <div class="cart-item">
                            
                                 <div class="single-cart">
-                                <div class="cart-plus-minus">
-                                <label>SL: </label>
-                                <input class="cart-plus-minus-box" type="text" name="qtybutton" value="0">
-                            </div>
+                               
 
                                                     <div class="actions">
                                                     <form action="index.php?act=addtocart" method="post">

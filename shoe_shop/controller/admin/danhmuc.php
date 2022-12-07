@@ -33,7 +33,7 @@ function xoadm()
 
 function suadm()
 {
-    if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+    if (isset($_GET['id']) && ($_GET['id'] > 0)) {  
         $sql = "select*from danhmuc where id=" . $_GET['id'];
         $dm = pdo_query_one($sql);
     }
@@ -49,6 +49,7 @@ function updatedm()
         $id = $_POST['id'];
         update_danhmuc($id, $tenloai);
         $thongbao = "Cập nhật thành công";
+        echo $thongbao;
     }
 
     $listdanhmuc = loadall_danhmuc();

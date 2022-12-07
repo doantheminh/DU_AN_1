@@ -14,19 +14,12 @@
           <h3 class="tile-title">Chỉnh sửa tài khoản</h3>
           <div class="tile-body">
             <form class="row" action="index.php?act=suatk" method="post" enctype="multipart/form-data">
-            <div class="form-group col-md-3">
-                <label  class="control-label">Tất cả</label>
-                <select name="id" class="form-control">
-                <option value="<?=$id?>" selected ></option>
                     <?php
                     foreach ($listtaikhoan as $taikhoan) {
                         extract($taikhoan);
-                   if($id==$taikhoan['id']) echo '<option value="'.$taikhoan['id'].'" selected>'.$taikhoan['user'].'</option>';
                     }
                     ?>
-                </select>
-              </div>  
-            <div class="form-group col-md-3">
+              <div class="form-group col-md-3">
                 <label class="control-label">Tên đăng nhập</label>
                 <input class="form-control" type="text"  name="user" value="<?=$user?>" require>
               </div>

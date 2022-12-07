@@ -10,7 +10,11 @@
     }
     function delete_danhmuc($id){
         $sql="delete from danhmuc where id=".$_GET['id'];
-                                     pdo_execute($sql);
+        $sql_id = "delete from sanpham where iddm=".$_GET['id'];
+
+            pdo_execute($sql);
+            pdo_execute($sql_id);
+
     }
     function update_danhmuc($id,$tenloai)
     {

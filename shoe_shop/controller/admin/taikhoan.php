@@ -4,6 +4,15 @@ function listtaikhoan()
     $listtaikhoan = loadall_taikhoan();
     include "taikhoan/list.php";
 }
+// function suatk()
+// {
+//     if (isset($_GET['idtk']) && ($_GET['idtk'] > 0)) {  
+//         $id = $_GET['idtk'];
+//        $tk=load_one_taikhoan($id);
+//     }
+//     $listtaikhoan=loadall_taikhoan();
+//     include "taikhoan/updatetk.php";
+// }
 function uptadetk(){
     if(isset($_POST['capnhattk'])&&($_POST['capnhattk'])){
         $id=$_POST['id'];
@@ -13,7 +22,7 @@ function uptadetk(){
         $address=$_POST['address'];
         $tel=$_POST['tel'];
         $role=$_POST['role'];
-        update_taikhoan($id,$user,$pass,$email,$address,$tel,$role);
+        update_taikhoan_1($id,$user,$pass,$email,$address,$tel,$role);
           $thongbao="Cập nhật thành công";
           echo $thongbao;
          }

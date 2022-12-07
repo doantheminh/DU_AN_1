@@ -68,7 +68,11 @@
                                     extract($bill);
                                     // var_dump(1);
                                     $xoabill="index.php?act=xoabill&id=".$id;
-                                    $detailbill="index.php?act=detailbill&id=".$id;
+                                    // $detailbill="index.php?act=detailbill&id=".$id;
+                                    // <a href="'.$detailbill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Chi tiết"></a>
+
+                                    $updatebill="index.php?act=updatebill";
+                                    $ctdh='index.php?act=ct&bill='.$id.'';
                                     $kh=$bill["bill_name"].'
                                     <br>'.$bill["bill_email"].'
                                     <br>'.$bill["bill_address"].'
@@ -81,12 +85,26 @@
                                     <td>'.$kh.'</td>  
                                     <td>'.$countsp.'</td>
                                     <td><strong>'.number_format($bill["total"]).'</strong>VND</td>
-                                    <td>'.$ttdh.'</td>    
+                                    <form action="'.$updatebill.'" method="POST">
+                                    <input type="number" name="id_bill" value="' . $bill["id"] . '" hidden>
+                                    <td> 
+                                        <select id="cars" name="bill_status"  class="form-control form-control-sm">
+                                            <option value="'. $bill["bill_status"] .'" selected>'.$ttdh=get_ttdh($bill["bill_status"]).'</option>
+                                            <option value="0" >Đơn hàng mới</option>
+                                            <option value="1">Đang xử lý</option>
+                                            <option value="2">Đang giao hàng</option>
+                                            <option value="3">Đã mua</option>
+                                        </select>   
+                                    </td>  
+
+                                                                                  
                                     <td>'.$bill["ngaydathang"].'</td>
                                     <td>
-                                    <a href="'.$detailbill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Chi tiết"></a>
+                                    <input class="btn btn-primary btn-sm edit" type="submit" name="update" value="Cập nhật">
+                                    <a href="'.$ctdh.'"><input class="btn btn-primary btn-sm edit" type="button" value="Chi tiết"></a>
                                     <a href="'.$xoabill.'"><input class="btn btn-primary btn-sm edit" type="button" value="Xóa"></a></td>
                                     </td>
+                                    </form>
                                 </tr>';
                                 }
                                 ?>

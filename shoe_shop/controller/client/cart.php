@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
  
 <?php
 
@@ -21,7 +13,6 @@ function addtocart(){
         $ttien = $soluong * $price;
         $spadd = [$id, $name, $img, $price, $soluong, $ttien];
         array_push($_SESSION['mycart'], $spadd);
-        
     }
     include "view/client/cart/viewcart.php";
 }
@@ -37,6 +28,7 @@ function delcart(){
 }
 function billcomfirm(){
     if(isset($_POST['dongydathang'])&&($_POST['dongydathang'])){
+
         if(isset($_SESSION['user'])) $iduser=$_SESSION['user']['id'];
         else $id=0;
         $name=$_POST['name'];
@@ -51,10 +43,11 @@ function billcomfirm(){
        foreach ($_SESSION['mycart'] as $cart) {
             insert_cart($_SESSION['user']['id'],$cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$cart[5],$idbill);
        }
-       $_SESSION['cart']=[];
+       $_SESSION['mycart'] = [];
     }
     $bill=loadone_bill($idbill);
     $billct=loadall_cart($idbill);
+
     include "view/client/cart/billcomfirm.php";
 }
 
@@ -74,5 +67,3 @@ function ctdh(){
 }
 ?>
    
-   </body>
-</html>

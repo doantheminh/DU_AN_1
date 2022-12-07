@@ -160,7 +160,15 @@
                                                     </table>
                                                 </form>
                                             </div>
-                                            <input type="submit" value="Tiếp tục đặt hàng" class="btn btn-dark" name="dongydathang">
+                                            <?php
+                                                        if (isset($_SESSION['user'])) {
+                                                        echo'<input type="submit" value="Tiếp tục đặt hàng" class="btn btn-dark" name="dongydathang">
+                                                        ';
+                                                        } else {
+                                                            echo "Bạn vui lòng đăng nhập để có thể mua sản phẩm của chúng tôi";
+
+                                                        }
+                                                        ?>
                                         </div>
                                     </div>
                                 </div>

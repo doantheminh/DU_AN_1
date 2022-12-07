@@ -1,7 +1,6 @@
 <?php
 
 function delete_sanpham($id){
-    var_dump($id);
     $sql="delete from sanpham where id=".$id;
     $sql_img = "delete from img_products where id_product=".$id;
     pdo_execute($sql_img);

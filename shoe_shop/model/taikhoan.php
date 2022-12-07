@@ -8,9 +8,12 @@
         $sp=pdo_query_one($sql);
         return $sp;
     }
-    //cập nhật tài khoản ngoài
     function update_taikhoan($id,$user,$pass,$email,$address,$tel){
         $sql="update taikhoan set user='".$user."', pass='".$pass."', email='".$email."', address='".$address."', tel='".$tel."' where id=".$id;
+        pdo_execute($sql);
+    }
+    function update_taikhoan_1($id,$user,$pass,$email,$address,$tel,$role){
+        $sql="update taikhoan set user='".$user."', pass='".$pass."', email='".$email."', address='".$address."', tel='".$tel."', role='".$role."' where id=".$id;
         pdo_execute($sql);
     }
     function checkemail($email){
@@ -27,4 +30,9 @@
         $sql="delete from taikhoan where id=".$_GET['id'];
           pdo_execute($sql);
     }
+    // function load_one_taikhoan($id){
+    //      $sql = "select*from taikhoan where idtk=".$_GET['id'];
+    //     $tk = pdo_query_one($sql);
+    //     return $tk;
+    // }
 ?>

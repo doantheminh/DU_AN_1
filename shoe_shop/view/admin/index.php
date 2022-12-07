@@ -56,6 +56,9 @@ if (isset($_GET['act'])) {
         case 'suatk':
             uptadetk();
             break;
+        // case 'uptadetk':
+            
+        //     break;
         case 'xoatk':
             deletetk();
             break;
