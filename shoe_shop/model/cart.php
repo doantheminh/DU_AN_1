@@ -141,10 +141,9 @@ function bill_chi_tiet($billct)
                 <th>Số lượng</th>
             </tr>';
         foreach ($billct as $cart) {
-            $img=$img_path.$cart['img'];
             $tong+=$cart['thanhtien'];
             echo'<tr> 
-                <td><img src="'.$img.'" style="width: 110px;"></td>
+                <td><img src="../../'.$cart['img'].'" style="width: 110px;"></td>
                 <td>'.$cart['name'].'</td>
                 <td>'. number_format($cart['price']).' vnd</td>
                 <td>'.$cart['soluong'].'</td>

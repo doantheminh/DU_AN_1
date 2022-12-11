@@ -9,13 +9,24 @@
         return $listdanhmuc;
     }
     function delete_danhmuc($id){
-        $sql="delete from danhmuc where id=".$_GET['id'];
-        $sql_id = "delete from sanpham where iddm=".$_GET['id'];
+        $sql="delete from danhmuc where id=".$id;
+        $sql_id = "delete from sanpham where iddm=".$id;
+        
+        $sanpham = "select*from sanpham where iddm=".$id;
+        $spALl = pdo_query($sanpham);
 
-            pdo_execute($sql);
-            pdo_execute($sql_id);
+        foreach($spALl as $sp){
+            $sql_img = "delete from img_products where id_product=".$sp['id'];
+            pdo_execute($sql_img);
+        }
+        pdo_execute($sql_id);
+        pdo_execute($sql);
 
     }
+    // $sql="delete from sanpham where id=".$id;
+    // $sql_img = "delete from img_products where id_product=".$id;
+    // pdo_execute($sql_img);
+    // pdo_execute($sql);
     function update_danhmuc($id,$tenloai)
     {
         $sql="update danhmuc set name='".$tenloai."' where id=".$id;

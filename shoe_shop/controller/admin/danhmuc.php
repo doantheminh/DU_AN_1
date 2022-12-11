@@ -25,12 +25,17 @@ function xoadm()
 {
     if (isset($_GET['id']) && ($_GET['id'] > 0)) {
         delete_danhmuc($_GET['id']);
-    }
+        delete_sanpham($_GET['id']);
+    }   
 
-    $listdanhmuc = loadall_danhmuc();
+    $listdanhmuc = loadall_danhmuc("",0);
     include "danhmuc/list.php";
 }
-
+// if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+//     delete_sanpham($_GET['id']);
+// }
+// $listsanpham = loadall_sanpham("",0);
+// include "sanpham/list.php";
 function suadm()
 {
     if (isset($_GET['id']) && ($_GET['id'] > 0)) {  

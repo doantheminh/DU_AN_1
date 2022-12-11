@@ -32,7 +32,7 @@
                         foreach ($anh_mo_ta as $key => $value) {
                             $hinh="upload/".$value['image'];
                            echo'
-                            
+                           
                                 <div class="single-product-slider"> 
                                     <a class="active" href="#pro-large-img-1" data-bs-toggle="tab">
                                         <img src="'.$hinh.'" alt="">
