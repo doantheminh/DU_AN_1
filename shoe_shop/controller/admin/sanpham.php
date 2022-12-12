@@ -29,7 +29,7 @@ function addsp(){
         } else {
             // echo "Lỗi!";
         }
-
+    
 
 if (isset($_FILES["images"])) {
     $images=$_FILES['images'];
@@ -87,11 +87,10 @@ function updatesp(){
         $sanpham = loadall_sanpham($id);
         $thongbao = "Cập nhật thành công";
         echo $thongbao;
+        echo '<script>alert("Sua thành công");</script>';
     }
 
-    $listdanhmuc = loadall_danhmuc();
-    // $listsanpham = loadall_sanpham();
-    include "sanpham/update.php";
+    header("Location: ../../view/admin/index.php?act=listsp");
 }
 
 function xoasp(){
