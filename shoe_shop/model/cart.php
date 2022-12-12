@@ -135,7 +135,7 @@ function bill_chi_tiet($billct)
     $tong=0;
     $i=0;
             echo'<tr>
-                <th>Sản phẩm</th>
+             <td>Sản phẩm</td>
                 <th>Tên</th>
                 <th>Đơn giá</th>
                 <th>Số lượng</th>
@@ -143,13 +143,39 @@ function bill_chi_tiet($billct)
         foreach ($billct as $cart) {
             $tong+=$cart['thanhtien'];
             echo'<tr> 
-                <td><img src="../../'.$cart['img'].'" style="width: 110px;"></td>
+                <td><img src="../../'.$cart['img'].'" style="width: 110px;"></td> 
                 <td>'.$cart['name'].'</td>
                 <td>'. number_format($cart['price']).' vnd</td>
                 <td>'.$cart['soluong'].'</td>
                 </tr>';
                 $i+=1;
         }
+      
+
+
+}
+function bill_chi_tiet_view($billct)
+{
+    global $img_path;
+    $tong=0;
+    $i=0;
+            echo'<tr>
+             <td>Sản phẩm</td>
+                <th>Tên</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+            </tr>';
+        foreach ($billct as $cart) {
+            $tong+=$cart['thanhtien'];
+            echo'<tr> 
+                <td><img src="'.$cart['img'].'" style="width: 110px;"></td> 
+                <td>'.$cart['name'].'</td>
+                <td>'. number_format($cart['price']).' vnd</td>
+                <td>'.$cart['soluong'].'</td>
+                </tr>';
+                $i+=1;
+        }
+      
 
 
 }

@@ -20,7 +20,7 @@
                                    
                                 </thead>
                                         <?php
-                                            bill_chi_tiet($billct);
+                                            bill_chi_tiet_view($billct);
                                         ?>
                                 </thead>
           
